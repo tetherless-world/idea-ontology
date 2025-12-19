@@ -1,1 +1,1 @@
-# idead-ontology
+# idea-ontology
