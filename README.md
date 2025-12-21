@@ -1,1 +1,5 @@
 # idea-ontology
+
+---
+# Developers
+@nipdep
