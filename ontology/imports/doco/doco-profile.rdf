@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/spar/doco#"
+     xml:base="http://purl.org/spar/doco"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.org/spar/doco">
+        <owl:versionIRI rdf:resource="http://purl.org/spar/doco/2015-07-03"/>
+        <owl:imports rdf:resource="http://purl.org/spar/deo"/>
+        <owl:imports rdf:resource="http://purl.org/spar/po"/>
+        <dc:creator>David Shotton</dc:creator>
+        <dc:creator>Silvio Peroni</dc:creator>
+        <dc:date>2015-07-03</dc:date>
+        <dc:description rdf:resource="http://purl.org/spar/doco/doco%20architecture.png"/>
+        <dc:description xml:lang="en">DoCO, the Document Components Ontology, provides a structured vocabulary written in OWL 2 DL of document components, both structural (e.g. block, inline, paragraph, section, chapter) and rhetorical (e.g. introduction, discussion, acknowledgements, reference list, figure, appendix), enabling these components, and documents composed of them, to be described in RDF. It imports the Discourse Elements Ontology (http://purl.org/spar/deo) and the Document Structural Patterns Ontology (http://purl.org/spar/po), and uses seven rhetorical block elements abstracted from the SALT Rhetorical Ontology and the Ontology of Rhetorical Blocks (ORB).</dc:description>
+        <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
+        <dc:title xml:lang="en">DoCO, the Document Components Ontology</dc:title>
+        <rdfs:comment xml:lang="en">The Document Components Ontology (DoCO) in an ontology that provides a structured vocabulary written of document components, both structural (e.g., block, inline, paragraph, section, chapter) and rhetorical (e.g., introduction, discussion, acknowledgements, reference list, figure, appendix).
+
+**URL:** http://purl.org/spar/doco
+
+**Creators**: [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
+
+**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+**Website:** http://www.sparontologies.net/ontologies/doco
+
+**Cite as:** Constantin, A., Peroni, S., Pettifer, S., Shotton, D., Vitali, F. (2016). The Document Components Ontology (DoCO). In Semantic Web, 7 (2): 167-181. DOI: http://dx.doi.org/10.3233/SW-150177</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology is available at http://purl.org/spar/doco, and uses the namespace prefix doco.</rdfs:comment>
+        <owl:priorVersion rdf:resource="https://svn.code.sf.net/p/sempublishing/code/DoCO/2014-05-14_doco-1_2.owl"/>
+        <owl:versionInfo>1.3</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/relation"/>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2008/12/pattern#contains">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#isContainedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2008/12/pattern#isContainedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.essepuntato.it/2008/12/pattern#isContainedByAsHeader -->
+
+    <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2008/12/pattern#isContainedByAsHeader"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/spar/deo/Caption -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Caption"/>
+    
+
+
+    <!-- http://purl.org/spar/deo/DiscourseElement -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/DiscourseElement"/>
+    
+
+
+    <!-- http://purl.org/spar/deo/Reference -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Reference"/>
+    
+
+
+    <!-- http://purl.org/spar/doco/Abstract -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Abstract">
+        <rdfs:comment>A brief summary of a book, a research article, thesis, review, conference proceeding or any in-depth analysis of a particular subject or discipline, the purpose of which is to help the reader quickly ascertain the publication&apos;s purpose.</rdfs:comment>
+        <rdfs:label>abstract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/ChapterTitle -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/ChapterTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/doco/Title"/>
+        <owl:disjointWith rdf:resource="http://purl.org/spar/doco/SectionTitle"/>
+        <rdfs:comment xml:lang="en">The title of a chapter.</rdfs:comment>
+        <rdfs:label xml:lang="en">chapter title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Figure -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Figure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:comment xml:lang="en">A communication object comprising one or more graphics, drawings, images, or other visual representations..</rdfs:comment>
+        <rdfs:label xml:lang="en">figure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/List -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/List">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:comment xml:lang="en">An enumeration of items.</rdfs:comment>
+        <rdfs:label xml:lang="en">list</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/SectionTitle -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/SectionTitle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/doco/Title"/>
+        <rdfs:comment xml:lang="en">The title of a section.</rdfs:comment>
+        <rdfs:label xml:lang="en">section title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/doco/Title -->
+
+    <owl:Class rdf:about="http://purl.org/spar/doco/Title">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:comment xml:lang="en">A word, phrase or sentence that precedes and indicates the subject of a document or a document component - e.g., a book, a report, a news article, a chapter, a section or a table.</rdfs:comment>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
