@@ -37,7 +37,7 @@
         </vann:preferredNamespaceUri>
 
         <!-- Imports (profiles) -->etherless-world.git
-        <owl:imports rdf:resource="https://thub.io/idea-ontology/ontology/imports/cso/cso-profile.owl"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/cso/cso-profile.owl"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/bibo/bibo-profile.rdf"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/amo/amo-profile.owl"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/po/po-profile.rdf"/>
