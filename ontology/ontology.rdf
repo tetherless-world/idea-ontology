@@ -33,7 +33,7 @@
         <!-- Metadata -->
         <dc:title>IDEA Ontology</dc:title>
         <dcterms:abstract>The IDEA Ontology is an ontology for representing ideas, issues, arguments, and approaches in scientific research and scholarly communication.</dcterms:abstract>
-        <dcterms:license rdf:datatype="&xsd:anyURI">https://opensource.org/licenses/MIT</dcterms:license>
+        <dcterms:license rdf:datatype="&xsd;anyURI">https://opensource.org/licenses/MIT</dcterms:license>
         <dcterms:modified rdf:datatype="&xsd;date">2025-12-22</dcterms:modified>
         <dcterms:publisher>Tetherless World Constellation | Rensselaer Polytechnic Institute</dcterms:publisher>
         <skos:changeNote>Initial release of IDEA Ontology version 1.0.0.</skos:changeNote>
