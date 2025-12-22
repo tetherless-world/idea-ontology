@@ -37,13 +37,13 @@
         </vann:preferredNamespaceUri>
 
         <!-- Imports (profiles) -->
-        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/cso/cso-profile"/>
-        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/bibo/bibo-profile"/>
-        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/amo/amo-profile"/>
-        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/po/po-profile"/>
-        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/cito/cito-profile"/>
-        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/doco/doco-profile"/>
-        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/fabio/fabio-profile"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/cso/cso-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/bibo/bibo-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/amo/amo-profile.owl"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/po/po-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/cito/cito-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/doco/doco-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/fabio/fabio-profile.rdf"/>
     </owl:Ontology>
     
 
