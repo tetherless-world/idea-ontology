@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+  <!-- IDEA ontology -->
+  <uri
+    name="https://tetherless-world.github.io/idea-ontology/ontology"
+    uri="idea.rdf"/>
+
+  <!-- Import profiles -->
+  <uri
+    name="https://tetherless-world.github.io/idea-ontology/ontology/imports/amo/amo-profile"
+    uri="imports/amo/amo-profile.ttl"/>
+
+  <uri
+    name="https://tetherless-world.github.io/idea-ontology/ontology/imports/bibo/bibo-profile"
+    uri="imports/bibo/bibo-profile.ttl"/>
+
+  <uri
+    name="https://tetherless-world.github.io/idea-ontology/ontology/imports/cito/cito-profile"
+    uri="imports/cito/cito-profile.ttl"/>
+
+  <uri 
+    name="https://tetherless-world.github.io/idea-ontology/ontology/imports/cso/cso-profile"
+    uri="imports/cso/cso-profile.ttl"/>
+
+  <uri 
+    name="https://tetherless-world.github.io/idea-ontology/ontology/imports/deo/deo-profile"
+    uri="imports/deo/deo-profile.ttl"/>
+
+  <uri 
+    name="https://tetherless-world.github.io/idea-ontology/ontology/imports/doco/doco-profile"
+    uri="imports/doco/doco-profile.ttl"/>
+
+  <uri 
+    name="https://tetherless-world.github.io/idea-ontology/ontology/imports/fabio/fabio-profile"
+    uri="imports/fabio/fabio-profile.ttl"/>
+
+  <uri 
+    name="https://tetherless-world.github.io/idea-ontology/ontology/imports/po/po-profile"
+    uri="imports/po/po-profile.ttl"/>
+
+</catalog>
