@@ -9,6 +9,7 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cmns-av="https://www.omg.org/spec/Commons/AnnotationVocabulary/"
 
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -31,12 +32,18 @@
 
         <!-- Metadata -->
         <dc:title>IDEA Ontology</dc:title>
-        <dcterms:creator>Tetherless World Constellation</dcterms:creator>
+        <dcterms:abstract>The IDEA Ontology is an ontology for representing ideas, issues, arguments, and approaches in scientific research and scholarly communication.</dcterms:abstract>
+        <dcterms:license rdf:datatype="&xsd:anyURI">https://opensource.org/licenses/MIT</dcterms:license>
+        <dcterms:modified rdf:datatype="&xsd;date">2025-12-22</dcterms:modified>
+        <dcterms:publisher>Tetherless World Constellation | Rensselaer Polytechnic Institute</dcterms:publisher>
+        <skos:changeNote>Initial release of IDEA Ontology version 1.0.0.</skos:changeNote>
+        <dcterms:creator>Nipun D. Pathirage</dcterms:creator>
+        <cmns-av:copyright>Copyright (c) 2025 TWC</cmns-av:copyright>
         <vann:preferredNamespaceUri>
         https://tetherless-world.github.io/idea-ontology/ontology#
         </vann:preferredNamespaceUri>
 
-        <!-- Imports (profiles) -->etherless-world.git
+        <!-- Imports (profiles) -->
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/cso/cso-profile.owl"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/bibo/bibo-profile.rdf"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/amo/amo-profile.owl"/>
