@@ -4,7 +4,7 @@
   <!-- IDEA ontology -->
   <uri
     name="https://tetherless-world.github.io/idea-ontology/ontology"
-    uri="idea.rdf"/>
+    uri="ontology.rdf"/>
 
   <!-- Import profiles -->
   <uri
