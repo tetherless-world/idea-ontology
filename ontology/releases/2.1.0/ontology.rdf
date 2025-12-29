@@ -40,6 +40,7 @@
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/po/po-profile.rdf"/>
         <dc:abstract>The IDEA Ontology is an ontology for representing ideas, issues, arguments, and approaches in scientific research and scholarly communication.</dc:abstract>
         <dc:creator>Nipun D. Pathirage</dc:creator>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-9313-0925"/>
         <dc:license rdf:datatype="xsd:anyURI">https://opensource.org/licenses/MIT</dc:license>
         <dc:modified>2025-12-29</dc:modified>
         <dc:publisher>Tetherless World Constellation | Rensselaer Polytechnic Institute</dc:publisher>
@@ -47,16 +48,18 @@
         <dcterms:description>Scientific literature communicates knowledge not only through data and results but also through structured scholarly discourse, including motivations, problems, proposed ideas, supporting evidence, and claims. These abstract components are distributed across documents and connected through citations, making them difficult to extract and represent automatically. Existing scholarly knowledge graphs largely focus on metadata or citation networks, offering limited support for modeling scientific intent and argumentation.
 
 The Idea Graph addresses this limitation by introducing an ontology-centered framework that captures both concrete document structure and abstract scholarly discourse in a unified knowledge graph. The framework integrates layout-aware document parsing, ontology-guided extraction with large language models, and structured RDF instantiation. In addition, it models provenance information for all knowledge graph construction operations and adopts the PAV ontology to manage versioning and lineage of extracted instances. This design enables interpretable, evolvable, and semantically grounded scholarly knowledge graphs suitable for advanced querying, reasoning, and machine-assisted knowledge discovery.</dcterms:description>
-        <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
+        <dcterms:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
         <vann:preferredNamespaceUri>
         https://tetherless-world.github.io/idea-ontology/ontology#
         </vann:preferredNamespaceUri>
         <rdfs:comment>The Idea Graph is a framework for constructing ontology-driven scholarly knowledge graphs from scientific literature. It models scientific publications across three interconnected layers: document structure, extracted information, and abstract scholarly discourse such as research problems, ideas, evidence, and claims. The framework employs a discourse-aware ontology inspired by argumentation theory to align textual grounding, rhetorical intent, and citation attribution. An end-to-end pipeline transforms scientific PDFs into RDF graphs using layout-preserving parsing and ontology-guided large language model extraction. To ensure transparency and reproducibility, the system explicitly represents knowledge graph construction provenance and integrates the PAV ontology for instance-level versioning and lineage tracking. The resulting graphs support semantic querying, retrieval-augmented generation, and interactive visualization of discourse structures and citation roles.</rdfs:comment>
         <owl:versionInfo>2.1.0</owl:versionInfo>
-        <skos:changeNote>Provenance feature introduced release of IDEA Ontology version 2.0.0.</skos:changeNote>
+        <owl:versionIRI rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/2.1.0"/>
+        <owl:priorVersion rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/2.0.0"/>
+        <owl:backwardCompatibleWith rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/2.0.0"/>
+        <skos:changeNote>Provenance feature introduced release of IDEA Ontology version 2.1.0.</skos:changeNote>
         <cmns-av:copyright>Copyright (c) 2025 TWC</cmns-av:copyright>
     </owl:Ontology>
-    
 
 
     <!-- 
