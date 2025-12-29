@@ -39,4 +39,7 @@
     name="https://tetherless-world.github.io/idea-ontology/ontology/imports/po/po-profile"
     uri="imports/po/po-profile.rdf"/>
 
+  <uri 
+    name="https://tetherless-world.github.io/idea-ontology/ontology/imports/pav/pav-profile"
+    uri="imports/pav/pav-profile.rdf"/>
 </catalog>

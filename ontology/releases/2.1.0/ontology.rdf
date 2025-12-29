@@ -1,0 +1,1359 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://tetherless-world.github.io/idea-ontology/ontology#"
+     xml:base="https://tetherless-world.github.io/idea-ontology/ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:po="http://purl.org/spar/po/"
+     xmlns:cso="http://cso.kmi.open.ac.uk/schema/cso#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pav="http://purl.org/pav/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:doco="http://purl.org/spar/doco/"
+     xmlns:expo="http://www.hozo.jp/owl/EXPOApr19.xml/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:schema="http://schema.org/"
+     xmlns:semsur="http://purl.org/semsur/"
+     xmlns:cmns-av="https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://tetherless-world.github.io/idea-ontology/ontology">
+        <owl:versionIRI rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/2.0.0"/>
+        <owl:imports rdf:resource="http://purl.org/pav/2.3"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/amo/amo-profile.owl"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/bibo/bibo-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/cito/cito-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/deo/deo-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/doco/doco-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/fabio/fabio-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/pav/pav-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/po/po-profile.rdf"/>
+        <dc:abstract>The IDEA Ontology is an ontology for representing ideas, issues, arguments, and approaches in scientific research and scholarly communication.</dc:abstract>
+        <dc:creator>Nipun D. Pathirage</dc:creator>
+        <dc:license rdf:datatype="xsd:anyURI">https://opensource.org/licenses/MIT</dc:license>
+        <dc:modified>2025-12-29</dc:modified>
+        <dc:publisher>Tetherless World Constellation | Rensselaer Polytechnic Institute</dc:publisher>
+        <dc:title>IDEA Ontology</dc:title>
+        <dcterms:description>Scientific literature communicates knowledge not only through data and results but also through structured scholarly discourse, including motivations, problems, proposed ideas, supporting evidence, and claims. These abstract components are distributed across documents and connected through citations, making them difficult to extract and represent automatically. Existing scholarly knowledge graphs largely focus on metadata or citation networks, offering limited support for modeling scientific intent and argumentation.
+
+The Idea Graph addresses this limitation by introducing an ontology-centered framework that captures both concrete document structure and abstract scholarly discourse in a unified knowledge graph. The framework integrates layout-aware document parsing, ontology-guided extraction with large language models, and structured RDF instantiation. In addition, it models provenance information for all knowledge graph construction operations and adopts the PAV ontology to manage versioning and lineage of extracted instances. This design enables interpretable, evolvable, and semantically grounded scholarly knowledge graphs suitable for advanced querying, reasoning, and machine-assisted knowledge discovery.</dcterms:description>
+        <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
+        <vann:preferredNamespaceUri>
+        https://tetherless-world.github.io/idea-ontology/ontology#
+        </vann:preferredNamespaceUri>
+        <rdfs:comment>The Idea Graph is a framework for constructing ontology-driven scholarly knowledge graphs from scientific literature. It models scientific publications across three interconnected layers: document structure, extracted information, and abstract scholarly discourse such as research problems, ideas, evidence, and claims. The framework employs a discourse-aware ontology inspired by argumentation theory to align textual grounding, rhetorical intent, and citation attribution. An end-to-end pipeline transforms scientific PDFs into RDF graphs using layout-preserving parsing and ontology-guided large language model extraction. To ensure transparency and reproducibility, the system explicitly represents knowledge graph construction provenance and integrates the PAV ontology for instance-level versioning and lineage tracking. The resulting graphs support semantic querying, retrieval-augmented generation, and interactive visualization of discourse structures and citation roles.</rdfs:comment>
+        <owl:versionInfo>2.1.0</owl:versionInfo>
+        <skos:changeNote>Provenance feature introduced release of IDEA Ontology version 2.0.0.</skos:changeNote>
+        <cmns-av:copyright>Copyright (c) 2025 TWC</cmns-av:copyright>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cso.kmi.open.ac.uk/schema/cso#contributesTo -->
+
+    <owl:AnnotationProperty rdf:about="http://cso.kmi.open.ac.uk/schema/cso#contributesTo"/>
+    
+
+
+    <!-- http://cso.kmi.open.ac.uk/schema/cso#preferentialEquivalent -->
+
+    <owl:AnnotationProperty rdf:about="http://cso.kmi.open.ac.uk/schema/cso#preferentialEquivalent"/>
+    
+
+
+    <!-- http://cso.kmi.open.ac.uk/schema/cso#relatedEquivalent -->
+
+    <owl:AnnotationProperty rdf:about="http://cso.kmi.open.ac.uk/schema/cso#relatedEquivalent"/>
+    
+
+
+    <!-- http://cso.kmi.open.ac.uk/schema/cso#superTopicOf -->
+
+    <owl:AnnotationProperty rdf:about="http://cso.kmi.open.ac.uk/schema/cso#superTopicOf"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
+    
+
+
+    <!-- http://schema.org/relatedLink -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/relatedLink"/>
+    
+
+
+    <!-- https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright -->
+
+    <owl:AnnotationProperty rdf:about="https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#algorithm -->
+
+    <rdfs:Datatype rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#algorithm">
+        <dc:description>a step-by-step procedure for solving a problem or accomplishing some end</dc:description>
+        <rdfs:label>algorithm</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#equation -->
+
+    <rdfs:Datatype rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#equation">
+        <dc:description>a usually formal statement of the equality or equivalence of mathematical or logical expressions</dc:description>
+        <rdfs:label>equation</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#figure -->
+
+    <rdfs:Datatype rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#figure">
+        <dc:description>a diagram or pictorial illustration of textual matter</dc:description>
+        <rdfs:label>figure</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#list -->
+
+    <rdfs:Datatype rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#list">
+        <dc:description>a simple series of words or numerals (such as the names of persons or objects)</dc:description>
+        <rdfs:label>list</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#paragraph -->
+
+    <rdfs:Datatype rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#paragraph">
+        <dc:description>a subdivision of a written composition that consists of one or more sentences, deals with one point or gives the words of one speaker, and begins on a new usually indented line</dc:description>
+        <rdfs:label>paragraph</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#table -->
+
+    <rdfs:Datatype rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#table">
+        <dc:description>a systematic arrangement of data usually in rows and columns for ready reference</dc:description>
+        <rdfs:label>label</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- xsd:anyURI -->
+
+    <rdfs:Datatype rdf:about="xsd:anyURI"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.com/spar/fabio/isDisciplineOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.com/spar/fabio/isDisciplineOf"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/relation"/>
+    
+
+
+    <!-- http://purl.org/spar/cito/agreesWith -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/agreesWith">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/cites -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/cites"/>
+    
+
+
+    <!-- http://purl.org/spar/cito/compiles -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/compiles">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/confirms -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/confirms">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/corrects -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/corrects">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/credits -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/credits">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/critiques -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/critiques">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/derides -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/derides">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/describes -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/describes">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/disagreesWith -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/disagreesWith">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/discusses -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/discusses">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/disputes -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/disputes">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/documents -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/documents">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/extends -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/extends">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/qualifies -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/qualifies">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/refutes -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/refutes">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/retracts -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/retracts">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/reviews -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/reviews">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/supports -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/supports">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/cito/updates -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/updates">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/spar/po/contains -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/spar/po/contains"/>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/has_experimental_design -->
+
+    <owl:ObjectProperty rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/has_experimental_design">
+        <rdfs:domain rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ScientificInvestigation"/>
+        <rdfs:range rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalDesign"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/has_hypothesis_formation -->
+
+    <owl:ObjectProperty rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/has_hypothesis_formation">
+        <rdfs:domain rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ScientificInvestigation"/>
+        <rdfs:range rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/HypothesisFormation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/has_result_evaluation -->
+
+    <owl:ObjectProperty rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/has_result_evaluation">
+        <rdfs:domain rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ScientificInvestigation"/>
+        <rdfs:range rdf:resource="http://www.hozo.jp/owl/EXPOApr19.xml/ResultEvaluating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#concernsIssue -->
+
+    <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#concernsIssue">
+        <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+        <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Issue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#generates -->
+
+    <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#generates">
+        <rdfs:domain rdf:resource="http://purl.org/semsur/Approach"/>
+        <rdfs:range rdf:resource="http://purl.org/spar/amo/Evidence"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#hasAssumption -->
+
+    <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#hasAssumption">
+        <rdfs:domain rdf:resource="http://purl.org/semsur/Approach"/>
+        <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Assumption"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#introduces -->
+
+    <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#introduces">
+        <rdfs:domain rdf:resource="http://purl.org/semsur/Approach"/>
+        <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#proposeIdea -->
+
+    <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#proposeIdea">
+        <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+        <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Idea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#realizes -->
+
+    <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#realizes">
+        <rdfs:domain rdf:resource="http://purl.org/spar/amo/Argument"/>
+        <rdfs:range rdf:resource="http://purl.org/semsur/Approach"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#responseTo -->
+
+    <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#responseTo">
+        <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Idea"/>
+        <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Issue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#uses -->
+
+    <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#uses">
+        <rdfs:domain rdf:resource="http://purl.org/semsur/Approach"/>
+        <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/spar/c4o/hasContent -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/spar/c4o/hasContent"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#example -->
+
+    <owl:DatatypeProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#example"/>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#hasLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#hasLabel">
+        <dc:description>this is manifestation of rdfs:label data annotation property as a data property to make it easy to develop class axiom and completeness of the ontology to guide prompting.</dc:description>
+        <rdfs:label>has label</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cso.kmi.open.ac.uk/schema/cso#Topic -->
+
+    <owl:Class rdf:about="http://cso.kmi.open.ac.uk/schema/cso#Topic"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/Conference -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/bibo/Conference">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/Event -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/bibo/Event">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Conference"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/bibo/Workshop"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Journal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/date"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/Workshop -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/bibo/Workshop">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/semsur/Approach -->
+
+    <owl:Class rdf:about="http://purl.org/semsur/Approach">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#hasAssumption"/>
+                <owl:someValuesFrom rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#introduces"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#uses"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>to take preliminary steps toward accomplishment or full knowledge or experience of</dc:description>
+        <rdfs:label>approach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/amo/Argument -->
+
+    <rdf:Description rdf:about="http://purl.org/spar/amo/Argument">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/spar/amo/ArgumentationEntity -->
+
+    <rdf:Description rdf:about="http://purl.org/spar/amo/ArgumentationEntity">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/spar/amo/Qualifier -->
+
+    <rdf:Description rdf:about="http://purl.org/spar/amo/Qualifier">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/spar/amo/Warrant -->
+
+    <rdf:Description rdf:about="http://purl.org/spar/amo/Warrant">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByAnalogy"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByComparison"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByEmpiricalEvidence"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByExample"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByPrecedent"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByTheoriticalProof"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/spar/deo/Background -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Background">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/Conclusion -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Conclusion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/Contribution -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Contribution">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/DiscourseElement -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/DiscourseElement">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/Background"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/Conclusion"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/Contribution"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/Data"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/Discussion"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/Evaluation"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/Introduction"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/Methods"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/deo/Motivation"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Model"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/c4o/hasContent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/c4o/hasContent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#equation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/c4o/hasContent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#figure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/c4o/hasContent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#list"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/c4o/hasContent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#paragraph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/c4o/hasContent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#table"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/Discussion -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Discussion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/Evaluation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Evaluation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/FutureWork -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/FutureWork">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/Introduction -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Introduction">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/Methods -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Methods">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/Mortivation -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Mortivation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/ProblemStatement -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/ProblemStatement">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/RelatedWork -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/RelatedWork">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/deo/Results -->
+
+    <owl:Class rdf:about="http://purl.org/spar/deo/Results">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/Work -->
+
+    <rdf:Description rdf:about="http://purl.org/spar/fabio/Work">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/spar/fabio/MethodsPaper"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/fabio/ResearchPaper"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/fabio/ResourcePaper"/>
+                    <rdf:Description rdf:about="http://purl.org/spar/fabio/ReviewPaper"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ontology/bibo/Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/cito/cites"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/Work"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/Work"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/fabio/hasDiscipline"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://cso.kmi.open.ac.uk/schema/cso#Topic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/po/contains"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/spar/amo/Argument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/po/contains"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://prismstandard.org/namespaces/1.2/basic/doi"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/abstract"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#paragraph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#hasLabel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalDesign -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/ExperimentalDesign">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+        <rdfs:comment>An experimental design is a structured, organized method for determining the relationship between factors affecting  cause-effect relations between known and unknown variables. Reference: Sigma:http://www.isixsigma.com/dictionary/Design_of_Experiments_-_DOE-41.htm</rdfs:comment>
+        <rdfs:label>ExperimentalDesign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/HypothesisFormation -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/HypothesisFormation">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+        <rdfs:comment>Hypothesis formation is the scientific task �to frame a hypothesis or supposition*? on the basis of preliminary information gathering and problem analysis. Reference: The Oxford English Dictionary. Oxford University Press, 2 Ed., 1989</rdfs:comment>
+        <rdfs:label>HypothesisFormation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/ResultEvaluating -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/ResultEvaluating">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+        <rdfs:comment>Result evaluating is the act of determining the value of experimental results. Reference: Based on The Oxford English Dictionary. Oxford University Press, 2 Ed., 1989</rdfs:comment>
+        <rdfs:label>ResultEvaluating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hozo.jp/owl/EXPOApr19.xml/ScientificInvestigation -->
+
+    <owl:Class rdf:about="http://www.hozo.jp/owl/EXPOApr19.xml/ScientificInvestigation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Evidence"/>
+        <rdfs:comment>Scientific investigation is a systematic examination; careful and detailed research. Reference: The Oxford English Dictionary. Oxford University Press, 2 Ed., 1989</rdfs:comment>
+        <rdfs:label>ScientificInvestigation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/cito/cites"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/spar/fabio/Work"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#example"/>
+                <owl:someValuesFrom rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#paragraph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>these are abstract element derived from the paper</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Access -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Access">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Resource"/>
+        <dc:description>This includes the belief that the necessary data, documents, equipment, or participant populations will be accessible to the researcher.</dc:description>
+        <rdfs:label>access</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Algorithm -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Algorithm">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
+        <dc:description>A formal, abstract, step-by-step description of a computational process or set of rules used to solve a specific problem. It is the conceptual &quot;recipe&quot; itself, distinct from its implementation in code.</dc:description>
+        <rdfs:label>algorithm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#AlgorithmAgent -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#AlgorithmAgent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Analytical -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Analytical">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Methodological"/>
+        <dc:description>These are assumptions required by the data analysis techniques themselves. For example, many statistical tests assume that the data follows a normal distribution.</dc:description>
+        <rdfs:label>analytical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Artifact -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Artifact">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Algorithm"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Dataset"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Design"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Framework"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Model"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+        <dc:description>A general class for any human-made object, conceptual or physical, that is part of the research process.</dc:description>
+        <rdfs:label>artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Assumption -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Assumption">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Access"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Analytical"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#DataCollection"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Negligence"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Restriction"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Stability"/>
+                    <rdf:Description rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Theoritical"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+        <dc:description>In science, an auxiliary hypothesis that is taken as true for the purposes of interpreting a particular test. All tests involve making assumptions. If an assumption of a test turns out to be inaccurate, it can cause the test results to be incorrectly interpreted. However, assumptions can be independently tested to help establish their accuracy</dc:description>
+        <rdfs:label>assumption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#ByAnalogy -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByAnalogy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Warrant"/>
+        <dc:description>The argument suggests that because two domains share a similar structure or set of properties, a principle that works in one domain is likely to work in the other.</dc:description>
+        <skos:example>Just as deep learning revolutionized image recognition by learning hierarchical features, we argue that a similar approach can be applied to financial time-series data to detect complex, multi-scale patterns.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#ByComparison -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByComparison">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Warrant"/>
+        <dc:description>The argument establishes the value of a proposed method, model, or theory by benchmarking it against the current state-of-the-art or other known solutions.</dc:description>
+        <skos:example>While existing methods for this task rely on computationally expensive transformers, our proposed lightweight CNN model achieves comparable performance with a 90% reduction in inference time and memory usage.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#ByEmpiricalEvidence -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByEmpiricalEvidence">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Warrant"/>
+        <dc:description>The argument rests on the presentation of data, measurements, or observations that confirm the claim. This can be qualitative or quantitative.</dc:description>
+        <skos:example>Our proposed algorithm achieved an accuracy of 92% on the test dataset, outperforming the baseline by 8% (see Table 4).</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#ByExample -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByExample">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Warrant"/>
+        <dc:description>The argument uses a case study, a specific example, or an illustrative scenario to demonstrate the validity or utility of a claim.</dc:description>
+        <skos:example>To illustrate the effectiveness of our new user interface design, consider the following use case where a novice user is able to complete the target task 50% faster than with the previous design.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#ByPrecedent -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByPrecedent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Warrant"/>
+        <dc:description>The argument&apos;s strength comes from leveraging the findings of previously published and peer-reviewed research.</dc:description>
+        <skos:example>As demonstrated by Smith et al. (2019), this cellular pathway is critical for protein synthesis. Therefore, our claim that the observed mutation affects this pathway is a plausible mechanism for the disease.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#ByTheoriticalProof -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#ByTheoriticalProof">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Warrant"/>
+        <dc:description>The argument uses formal logic or mathematical derivation to demonstrate that the claim must be true if a set of underlying axioms is accepted.</dc:description>
+        <skos:example>We prove the completeness of our proposed logic by demonstrating that for any valid formula, a corresponding proof can be constructed within our axiomatic system (see Appendix A for the full proof).</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#DataCollection -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#DataCollection">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Methodological"/>
+        <dc:description>These relate to the integrity of the data gathering process. A common example is the assumption that participants in a survey or interview are providing honest and accurate responses.</dc:description>
+        <rdfs:label>data_collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Dataset -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Dataset">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
+        <dc:description>A structured collection of data. It is often the primary input for a Model or the primary output (prov:wasGeneratedBy) of an Experiment.</dc:description>
+        <rdfs:label>dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Design -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Design">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
+        <dc:description>A conceptual model, specification, or blueprint that details how an artifact is to be constructed or how an activity is to be performed. In the context of our EXPO discussion, this maps to the expo:ExperimentalDesign, which specifies the plan, objects, and actions required to achieve an experimental goal.</dc:description>
+        <rdfs:label>design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Framework -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Framework">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
+        <dc:description>A set of reusable software components, libraries, and conceptual guidelines that provide a structure for building applications. It is more concrete than a Design but more general than a final Model. In the SemSur ontology, this can be considered a type of semsur:Implementation or semsur:Approach. The &quot;Semantic Web&quot; itself was proposed as a new Framework built from RDF and Ontologies.</dc:description>
+        <rdfs:label>framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#HumanAgent -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#HumanAgent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#HumanEvaluation -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#HumanEvaluation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Idea -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Idea">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#InformationExtraction -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#InformationExtraction">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Issue -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Issue">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#AbstractElement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Journal -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Journal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#LLMAgent -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#LLMAgent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#LLMGeneration -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#LLMGeneration">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Methodological -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Methodological">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Assumption"/>
+        <dc:description>These are assumptions about the validity and appropriateness of the methods and procedures used in the study. They are the foundational premises that allow the researcher to trust their own process.</dc:description>
+        <rdfs:label>methodological</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Model -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Model">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
+        <dc:description>A representation of a system, object, or phenomenon used to explain, predict, or test a hypothesis. This can be a mathematical, physical, or computational model (like a simulation).</dc:description>
+        <rdfs:label>model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Negligence -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Negligence">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Scoping"/>
+        <dc:description>This is the intentional exclusion of certain variables or factors to simplify the model and isolate the phenomena of interest. A classic example in physics is assuming a frictionless surface or neglecting air resistance.</dc:description>
+        <rdfs:label>negligence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Parsing -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Parsing">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Resource -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Resource">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Assumption"/>
+        <dc:description>This category directly addresses your point about &quot;availability.&quot; These are practical assumptions about the resources required to conduct the research. While often unstated, they are critical to the project&apos;s feasibility.</dc:description>
+        <rdfs:label>resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Restriction -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Restriction">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Scoping"/>
+        <dc:description>This involves limiting the study to a specific context. Examples include focusing on a particular demographic, a specific geographic region, or a defined time period. This is a deliberate act to ensure the research question can be answered within practical constraints.</dc:description>
+        <rdfs:label>restriction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Scoping -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Scoping">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Assumption"/>
+        <dc:description>These are the conscious, intentional choices a researcher makes to define the boundaries of their study. They are not weaknesses, but necessary decisions to make the research feasible and focused</dc:description>
+        <rdfs:label>scoping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Stability -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Stability">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Resource"/>
+        <dc:description>This is the assumption that the resources and environment will remain stable enough for the duration of the study. For example, a long-term study assumes that the software, hardware, or data formats it relies on will not become obsolete or unavailable midway through the project.</dc:description>
+        <rdfs:label>stability</rdfs:label>
+    </owl:Class>
+    
+
+
+
+    <!-- https://tetherless-world.github.io/idea-ontology/ontology#Theoritical -->
+
+    <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Theoritical">
+        <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Assumption"/>
+        <dc:description>These are the assumptions that link a researcher&apos;s evidence to their claims. In the context of the Argument Model Ontology (AMO) we&apos;ve discussed, these are formally known as warrants. They are the logical principles or beliefs that justify the research approach.</dc:description>
+        <rdfs:label>theoritical</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
