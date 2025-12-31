@@ -32,7 +32,7 @@
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/amo/amo-profile.owl"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/bibo/bibo-profile.rdf"/>
-        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/cito/cito-profile.rdf"/>
+        <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/cito/cito-profile.owl"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/deo/deo-profile.rdf"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/doco/doco-profile.rdf"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/fabio/fabio-profile.rdf"/>
