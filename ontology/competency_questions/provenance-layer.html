@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Process & Provenance Competency Questions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="cq-style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Process & Provenance Competency Questions</h1>
+  <p class="subtitle">
+    Competency questions for tracing creation, provenance, derivation, and versioning
+    of scholarly knowledge graph entities using PROV-O and PAV.
+  </p>
+</header>
+
+<main>
+
+  <!-- CQ-PROC-01 -->
+  <section id="cq-proc-01" class="cq">
+    <h2>CQ-PROC-01: Who created this entity?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Identify the agent responsible for creating a given entity.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Who created this entity?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?pType ?pName
+WHERE {
+  idea:semsur-para-eval-1 prov:wasAttributedTo ?person .
+  ?person a ?pType ;
+          rdfs:label ?pName .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+AlgorithmAgent | "Algorithmic Agent"
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-PROC-02 -->
+  <section id="cq-proc-02" class="cq">
+    <h2>CQ-PROC-02: Which process created this entity?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Determine the process responsible for generating a given entity.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Which process created this entity?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?process ?type
+WHERE {
+  idea:semsur-para-eval-1 prov:wasGeneratedBy ?process .
+  ?process rdf:type ?type .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+activity-parsing-1 | Parsing
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-PROC-04 -->
+  <section id="cq-proc-04" class="cq">
+    <h2>CQ-PROC-04: From which document element was this entity derived?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Trace an entity back to its originating document element.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>From which document element was this entity derived?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?elem
+WHERE {
+  idea:semsur-argument-main prov:wasDerivedFrom ?elem .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+"We evaluated ..."
+"The results indicates ..."
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-PROC-05 -->
+  <section id="cq-proc-05" class="cq">
+    <h2>CQ-PROC-05: What is the version of this entity?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Retrieve the current version identifier of an entity.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>What is the current version of this entity?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX pav: <http://purl.org/pav/>
+
+SELECT DISTINCT ?version
+WHERE {
+  idea:semsur-argument-main-v1.1 pav:version ?version .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+"1.1"
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-PROC-06 -->
+  <section id="cq-proc-06" class="cq">
+    <h2>CQ-PROC-06: What was the previous version of this entity?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Retrieve the immediate previous version of an entity.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>What was the previous version of this entity?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX pav: <http://purl.org/pav/>
+
+SELECT DISTINCT ?prevVersion
+WHERE {
+  idea:semsur-argument-main-v1.1 pav:previousVersion ?prevVersion .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+"Semantic modeling of research findings ..."
+</code></pre>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    IDEA Ontology – Process & Provenance Competency Questions<br />
+    © 2026 Tetherless World Constellation
+  </p>
+</footer>
+
+</body>
+</html>

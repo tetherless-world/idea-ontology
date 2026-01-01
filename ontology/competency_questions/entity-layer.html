@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Named Entity Competency Questions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Shared styling -->
+  <link rel="stylesheet" href="cq-style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Named Entity Competency Questions</h1>
+  <p class="subtitle">
+    Competency questions for identifying, classifying, introducing, and reusing
+    named entities in a scholarly knowledge graph.
+  </p>
+</header>
+
+<main>
+
+  <!-- CQ-ENT-01 -->
+  <section id="cq-ent-01" class="cq">
+    <h2>CQ-ENT-01: What named entities are mentioned in this document?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Retrieve all named entities that are mentioned within a scholarly document.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>What named entities are mentioned in this document?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?entity ?entityClass
+WHERE {
+  ?entity rdf:type ?entityClass .
+  ?entityClass rdfs:subClassOf* prov:Entity .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+work-semsur-2018 | Work
+Evaluation of SemSur ontology | ScholarlyDocument
+...
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-ENT-02 -->
+  <section id="cq-ent-02" class="cq">
+    <h2>CQ-ENT-02: Which entities are datasets, algorithms, models, or frameworks?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Classify named entities by their scholarly artifact type.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Which entities are datasets, algorithms, models, or frameworks?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX po:   <http://purl.org/spar/po/>
+
+SELECT DISTINCT ?artifact
+WHERE {
+  idea:work-semsur-2018 po:contains ?arg .
+  ?arg idea:realizes ?app .
+
+  { ?app idea:uses ?artifact }
+  UNION
+  { ?app idea:introduces ?artifact }
+
+  ?artifact a ?type .
+  FILTER (?type IN (idea:Dataset, idea:Algorithm, idea:Model, idea:Framework))
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+FaBiO and CiTO ontologies ... | Model
+Document Components Ontology ... | Model
+SemSur ontology for ... | Model
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-ENT-03 -->
+  <section id="cq-ent-03" class="cq">
+    <h2>CQ-ENT-03: Which entities are newly introduced by this work?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Identify entities whose first introduction occurs in the given document.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Which entities are newly introduced by this work?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX po:   <http://purl.org/spar/po/>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?artifact ?type
+WHERE {
+  idea:work-semsur-2018 po:contains ?arg .
+  ?arg idea:realizes ?app .
+  ?app idea:introduces ?artifact .
+  ?artifact a ?type .
+
+  FILTER NOT EXISTS {
+    ?artifact rdf:type ?moreSpecificType .
+    ?moreSpecificType rdfs:subClassOf+ ?type .
+    FILTER (?moreSpecificType != ?type)
+  }
+  FILTER (?type != owl:NamedIndividual)
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+SemSur ontology for representing research findings | Model
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-ENT-04 -->
+  <section id="cq-ent-04" class="cq">
+    <h2>CQ-ENT-04: Which entities are reused from prior work?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>
+        Identify entities that were introduced in prior scholarly works but reused
+        in this document.
+      </p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Which entities are reused from prior work?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX po:   <http://purl.org/spar/po/>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?artifact ?type
+WHERE {
+  idea:work-semsur-2018 po:contains ?arg .
+  ?arg idea:realizes ?app .
+  ?app idea:uses ?artifact .
+  ?artifact a ?type .
+
+  FILTER NOT EXISTS {
+    ?artifact rdf:type ?moreSpecificType .
+    ?moreSpecificType rdfs:subClassOf+ ?type .
+    FILTER (?moreSpecificType != ?type)
+  }
+  FILTER (?type != owl:NamedIndividual)
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+FaBiO and CiTO ontologies for ... | Model
+Document Components Ontology ... | Model
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-ENT-05 -->
+  <section id="cq-ent-05" class="cq">
+    <h2>CQ-ENT-05: Which paper first introduced a used artifact?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>
+        Identify the original scholarly work in which a reused entity was first introduced.
+      </p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Which paper first introduced the used artifact?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX po:   <http://purl.org/spar/po/>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT DISTINCT ?paper ?title
+WHERE {
+  ?art rdfs:label "SemSur ontology for representing research findings" ;
+       a idea:Artifact .
+
+  ?app idea:introduces ?art .
+  ?arg idea:realizes ?app .
+  ?paper po:contains ?arg ;
+         dc:title ?title .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+work-semsur-2018 |
+"Semsur: An Ontology for Representing Semantic Textual Similarity Evaluation Studies"
+</code></pre>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    IDEA Ontology – Named Entity Competency Questions<br />
+    © 2026 Tetherless World Constellation
+  </p>
+</footer>
+
+</body>
+</html>
