@@ -1,0 +1,498 @@
+@prefix amo: <http://purl.org/spar/amo/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix cso: <https://cso.kmi.open.ac.uk/topics/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix deo: <http://purl.org/spar/deo/> .
+@prefix doco: <http://purl.org/spar/doco/> .
+@prefix expo: <http://www.hozo.jp/owl/EXPOApr19.xml/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix idea: <https://tetherless-world.github.io/idea-ontology/ontology#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix po: <http://purl.org/spar/po/> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix semsur: <http://purl.org/semsur/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+idea:activity-human-eval-1 a prov:Activity,
+        idea:HumanEvaluation ;
+    prov:wasAssociatedWith idea:agent-human-1 .
+
+idea:activity-ie-1 a prov:Activity,
+        idea:InformationExtraction ;
+    prov:wasAssociatedWith idea:agent-llm-1 .
+
+idea:semsur-cite-12 a cito:Citation ;
+    cito:hasCitationContext idea:semsur-para-eval-3 ;
+    cito:hasCitedEntity idea:work-doco-2016 ;
+    cito:hasCitingEntity idea:work-semsur-2018 .
+
+idea:semsur-cite-13 a cito:Citation ;
+    cito:hasCitationContext idea:semsur-para-eval-4 ;
+    cito:hasCitedEntity idea:work-skg-review-2022 ;
+    cito:hasCitingEntity idea:work-semsur-2018 .
+
+idea:semsur-cite-9 a cito:Citation ;
+    cito:hasCitationContext idea:semsur-para-eval-4 ;
+    cito:hasCitedEntity idea:work-fabio-cito-2012 ;
+    cito:hasCitingEntity idea:work-semsur-2018 .
+
+idea:semsur-cite-artifact-1 a cito:Citation ;
+    cito:credits idea:work-semsur-2018 ;
+    cito:hasCitedEntity idea:semsur-para-eval-4 ;
+    cito:hasCitingEntity idea:semsur-artifact-doco .
+
+idea:semsur-cite-artifact-2 a cito:Citation ;
+    cito:hasCitedEntity idea:semsur-para-eval-4 ;
+    cito:hasCitingEntity idea:semsur-artifact-fabio-cito ;
+    cito:usesMethodIn idea:semsur-para-eval-4 .
+
+idea:semsur-cite-artifact-3 a cito:Citation ;
+    cito:describes idea:semsur-para-eval-1 ;
+    cito:hasCitedEntity idea:semsur-para-eval-1 ;
+    cito:hasCitingEntity idea:semsur-artifact-semsur-ontology .
+
+idea:agent-human-1 a prov:Agent,
+        idea:HumanAgent ;
+    rdfs:label "Human curator" .
+
+idea:doco-approach a semsur:Approach ;
+    rdfs:label "OWL-based modeling of document components using DoCO" ;
+    idea:generates idea:doco-evidence-annotation .
+
+idea:doco-backing-semantic-publishing a amo:Evidence ;
+    rdfs:label "Prior work in semantic publishing demonstrates the need for standardized document structure vocabularies." ;
+    prov:wasDerivedFrom idea:work-doco-2016 .
+
+idea:doco-claim-central a amo:Claim ;
+    rdfs:label "Representing document components and discourse elements in RDF enables semantic publishing and automated document understanding." .
+
+idea:doco-idea-component-vocabulary a idea:Idea ;
+    rdfs:label "Define an OWL ontology for document components such as sections, paragraphs, tables, and figures" ;
+    idea:responseTo idea:doco-issue-structure .
+
+idea:doco-idea-discourse-alignment a idea:Idea ;
+    rdfs:label "Align document components with discourse ontologies to capture rhetorical roles" ;
+    idea:responseTo idea:doco-issue-discourse .
+
+idea:doco-issue-discourse a idea:Issue ;
+    rdfs:label "Scholarly discourse elements are not machine-interpretable" ;
+    idea:concernsIssue idea:doco-argument-main .
+
+idea:doco-issue-structure a idea:Issue ;
+    rdfs:label "Document structure is inconsistently represented across publishers" ;
+    idea:concernsIssue idea:doco-argument-main .
+
+idea:doco-warrant-interoperability a amo:Warrant ;
+    rdfs:label "Shared document vocabularies improve interoperability across publishers and tools." .
+
+idea:doco-warrant-structure a amo:Warrant ;
+    rdfs:label "If document components are explicitly typed, machines can navigate and analyze documents structurally." .
+
+idea:event-complex-intell-systems-2023 a bibo:Event ;
+    rdfs:label "Complex & Intelligent Systems" ;
+    dc:date "2023"^^xsd:gYear .
+
+idea:event-procedia-cs-vol137-2018 a bibo:Event ;
+    rdfs:label "Procedia Computer Science" ;
+    dc:date "2018"^^xsd:gYear .
+
+idea:event-semantic-web-journal-2016-7-2 a bibo:Event ;
+    rdfs:label "Semantic Web Journal" ;
+    dc:date "2016"^^xsd:gYear .
+
+idea:event-web-semantics-2012-vol17 a bibo:Event ;
+    rdfs:label "Journal of Web Semantics" ;
+    dc:date "2012"^^xsd:gYear .
+
+idea:fabio-backing-bibliometrics a amo:Backing ;
+    rdfs:label "Bibliometric analyses demonstrate that citation intent influences interpretation and impact." .
+
+idea:fabio-cito-approach a semsur:Approach ;
+    rdfs:label "Ontology-based modeling of bibliographic entities and citation intent" ;
+    idea:generates idea:fabio-evidence-adoption .
+
+idea:fabio-cito-claim-central a amo:Claim ;
+    rdf:value "Modeling bibliographic entities and citation roles as ontologies enables richer scholarly communication." .
+
+idea:fabio-evidence-adoption a amo:Evidence ;
+    rdfs:label "FaBiO and CiTO have been adopted by multiple semantic publishing platforms and datasets." ;
+    prov:wasDerivedFrom idea:work-fabio-cito-2012 .
+
+idea:fabio-idea-biblio-ontology a idea:Idea ;
+    rdfs:label "Define a FRBR-aligned ontology for bibliographic resources" ;
+    idea:responseTo idea:fabio-issue-biblio .
+
+idea:fabio-idea-citation-typing a idea:Idea ;
+    rdfs:label "Introduce a vocabulary to type citations by rhetorical and factual role" ;
+    idea:responseTo idea:fabio-issue-citation .
+
+idea:fabio-issue-biblio a idea:Issue ;
+    rdfs:label "Bibliographic entities lack formal semantic structure" ;
+    idea:concernsIssue idea:fabio-cito-argument-main .
+
+idea:fabio-issue-citation a idea:Issue ;
+    rdfs:label "Citations are treated as untyped links without semantic intent" ;
+    idea:concernsIssue idea:fabio-cito-argument-main .
+
+idea:fabio-warrant-frbr a amo:Warrant ;
+    rdfs:label "FRBR-aligned bibliographic modeling improves consistency across scholarly metadata." .
+
+idea:fabio-warrant-typed-citation a amo:Warrant ;
+    rdfs:label "If citations are typed, their semantic role can be interpreted computationally." .
+
+idea:person-alexandru-constantin a foaf:Person ;
+    foaf:name "Alexandru Constantin" .
+
+idea:person-christoph-lange a foaf:Person ;
+    foaf:name "Christoph Lange" .
+
+idea:person-fabio-vitali a foaf:Person ;
+    foaf:name "Fabio Vitali" .
+
+idea:person-rajesh-bhatia a foaf:Person ;
+    foaf:name "Rajesh Bhatia" .
+
+idea:person-sahar-vahdati a foaf:Person ;
+    foaf:name "Sahar Vahdati" .
+
+idea:person-said-fathalla a foaf:Person ;
+    foaf:name "Said Fathalla" .
+
+idea:person-sandeep-harit a foaf:Person ;
+    foaf:name "Sandeep Harit" .
+
+idea:person-sanjay-batish a foaf:Person ;
+    foaf:name "Sanjay Batish" .
+
+idea:person-shilpa-verma a foaf:Person ;
+    foaf:name "Shilpa Verma" .
+
+idea:person-soeren-auer a foaf:Person ;
+    foaf:name "Sören Auer" .
+
+idea:person-steve-pettifer a foaf:Person ;
+    foaf:name "Steve Pettifer" .
+
+idea:semsur-approach a semsur:Approach ;
+    rdfs:label "SemSur ontology–based semantic representation pipeline" ;
+    idea:generates idea:semsur-evidence-querying ;
+    idea:introduces idea:semsur-artifact-semsur-ontology ;
+    idea:uses idea:semsur-artifact-doco,
+        idea:semsur-artifact-fabio-cito .
+
+idea:semsur-argument-main-v1.1 a amo:Argument ;
+    rdfs:label "Semantic modeling of research findings improves transparency and comparison with structured representations." ;
+    pav:previousVersion idea:semsur-argument-main ;
+    pav:version "1.1" ;
+    prov:wasAttributedTo idea:agent-llm-1 ;
+    prov:wasDerivedFrom idea:semsur-para-eval-2 ;
+    prov:wasGeneratedBy idea:activity-llmgen-1 .
+
+idea:semsur-assumption-machine a idea:Assumption,
+        idea:Theoretical ;
+    rdfs:label "Machine-readable formats enable automated analysis beyond human reading." .
+
+idea:semsur-assumption-structured a idea:Access,
+        idea:Assumption ;
+    rdfs:label "Structured representations facilitate better accessibility and comparability of research findings." ;
+    prov:wasDerivedFrom idea:semsur-para-eval-3 .
+
+idea:semsur-backing-semantic-publishing a amo:Backing ;
+    rdfs:label "Prior semantic publishing efforts (e.g., DoCO, FaBiO, CiTO) demonstrate feasibility of structured scholarly representation." ;
+    prov:wasDerivedFrom idea:work-semsur-2018 .
+
+idea:semsur-claim-central a amo:Claim ;
+    rdfs:label "Explicit semantic representations of research findings enable transparent comparison and reuse." .
+
+idea:semsur-deo-evaluation-1 a deo:DiscourseElement,
+        deo:Evaluation ;
+    rdfs:label "Evaluation of SemSur ontology" ;
+    po:contains idea:semsur-para-eval-1,
+        idea:semsur-para-eval-2,
+        idea:semsur-para-eval-3,
+        idea:semsur-para-eval-4 ;
+    prov:wasAttributedTo idea:agent-algo-1 ;
+    prov:wasGeneratedBy idea:activity-parsing-1 .
+
+idea:semsur-experiment-design a expo:Design ;
+    rdfs:label "Create semantic representations of research findings using SemSur; evaluate via cross-paper queries." .
+
+idea:semsur-experiment-hypothesis a expo:Hypothesis ;
+    rdfs:label "Semantic representations improve research finding accessibility and comparability." .
+
+idea:semsur-experiment-results a expo:Result ;
+    rdfs:label "Semantic representations enabled complex queries not feasible with traditional documents." .
+
+idea:semsur-idea-core-ontology a idea:Idea ;
+    rdfs:label "Model research problems, approaches, and results using a core ontology" ;
+    idea:responseTo idea:semsur-issue-compare,
+        idea:semsur-issue-interop .
+
+idea:semsur-issue-compare a idea:Issue ;
+    rdfs:label "Lack of structured representations hinders comparison across studies" ;
+    idea:concernsIssue idea:semsur-argument-main .
+
+idea:semsur-issue-interop a idea:Issue ;
+    rdfs:label "Research findings are locked in narrative text and PDFs" ;
+    idea:concernsIssue idea:semsur-argument-main .
+
+idea:semsur-warrant-machine a amo:Warrant ;
+    rdfs:label "Machine-readable representations enable automated analysis beyond human reading." .
+
+idea:semsur-warrant-structure a amo:Warrant ;
+    rdfs:label "If research contributions are represented as linked entities, they become comparable across publications." .
+
+idea:skg-approach a semsur:Approach ;
+    rdfs:label "Systematic review of SKG construction techniques" ;
+    idea:generates idea:skg-evidence-analysis ;
+    idea:uses idea:skg-artifact-semsur-ontology .
+
+idea:skg-approach-review a semsur:Approach ;
+    rdfs:label "Systematic literature review methodology for SKGs" .
+
+idea:skg-argument-main a amo:Argument ;
+    rdfs:label "Systematic structuring of SKG research enables clearer comparison of methods" ;
+    amo:hasBacking idea:skg-backing-prior-reviews ;
+    amo:hasClaim idea:skg-claim-central ;
+    amo:hasEvidence idea:skg-evidence-analysis ;
+    amo:hasWarrant idea:skg-warrant-structure ;
+    po:contains idea:work-skg-review-2022 ;
+    prov:wasAttributedTo idea:agent-llm-1 ;
+    prov:wasDerivedFrom idea:work-skg-review-2022 ;
+    prov:wasGeneratedBy idea:activity-llmgen-1 ;
+    idea:hasAssumption idea:skg-assumption-structured ;
+    idea:proposeIdea idea:skg-idea-survey ;
+    idea:realizes idea:skg-approach,
+        idea:skg-approach-review .
+
+idea:skg-artifact-semsur-ontology a idea:Artifact,
+        idea:Model ;
+    rdfs:label "SemSur ontology for structuring scholarly survey information" ;
+    cito:credits idea:work-semsur-2018 ;
+    prov:wasDerivedFrom idea:work-semsur-2018 .
+
+idea:skg-assumption-structured a idea:Assumption,
+        idea:Theoretical ;
+    rdfs:label "A structured survey can reveal insights not apparent in narrative reviews." .
+
+idea:skg-backing-prior-reviews a amo:Backing ;
+    rdfs:label "Prior reviews highlight the need for structured analysis of SKG methods." ;
+    prov:wasDerivedFrom idea:work-skg-review-2022 .
+
+idea:skg-claim-central a amo:Claim ;
+    rdfs:label "A structured survey of SKG approaches reveals research gaps and trends." .
+
+idea:skg-experiment-design a expo:Design ;
+    rdfs:label "Systematic literature review of SKG construction methods." .
+
+idea:skg-experiment-hypothesis a expo:Hypothesis ;
+    rdfs:label "A structured survey will reveal research gaps and trends in SKG construction." .
+
+idea:skg-experiment-results a expo:Result ;
+    rdfs:label "Identified key research gaps and trends in SKG construction techniques." .
+
+idea:skg-idea-survey a idea:Idea ;
+    rdfs:label "Systematically survey and categorize SKG construction approaches" ;
+    idea:responseTo idea:skg-issue-fragmentation .
+
+idea:skg-issue-fragmentation a idea:Issue ;
+    rdfs:label "SKG research is fragmented across tools, datasets, and evaluation criteria" ;
+    idea:concernsIssue idea:skg-argument-main .
+
+idea:skg-warrant-structure a amo:Warrant ;
+    rdfs:label "Structured analysis provides clearer insights than unstructured reviews." .
+
+cso:knowledge_graphs a skos:Concept ;
+    rdfs:label "Knowledge graphs" .
+
+cso:scholarly_communication a skos:Concept ;
+    rdfs:label "Scholarly communication" .
+
+cso:semantic_web a skos:Concept ;
+    rdfs:label "Semantic Web" .
+
+idea:doco-argument-main a amo:Argument ;
+    rdfs:label "Explicit modeling of document components enables machine-readable scholarly discourse" ;
+    amo:hasBacking idea:doco-backing-semantic-publishing ;
+    amo:hasClaim idea:doco-claim-central ;
+    amo:hasEvidence idea:doco-evidence-annotation ;
+    amo:hasWarrant idea:doco-warrant-interoperability,
+        idea:doco-warrant-structure ;
+    po:contains idea:work-doco-2016 ;
+    prov:wasAttributedTo idea:agent-llm-1 ;
+    prov:wasDerivedFrom idea:work-doco-2016 ;
+    prov:wasGeneratedBy idea:activity-llmgen-1 ;
+    idea:proposeIdea idea:doco-idea-component-vocabulary,
+        idea:doco-idea-discourse-alignment ;
+    idea:realizes idea:doco-approach .
+
+idea:doco-evidence-annotation a amo:Evidence,
+        expo:ScientificInvestigation ;
+    rdfs:label "DoCO has been successfully applied to annotate scholarly articles with fine-grained structural components." ;
+    prov:wasDerivedFrom idea:work-doco-2016 .
+
+idea:fabio-cito-argument-main a amo:Argument ;
+    dc:label "Bibliographic resources and citations require explicit semantic modeling" ;
+    amo:hasBacking idea:fabio-backing-bibliometrics ;
+    amo:hasClaim idea:fabio-cito-claim-central ;
+    amo:hasWarrant idea:fabio-warrant-frbr,
+        idea:fabio-warrant-typed-citation ;
+    po:contains idea:work-fabio-cito-2012 ;
+    prov:wasAttributedTo idea:agent-llm-1 ;
+    prov:wasDerivedFrom idea:work-fabio-cito-2012 ;
+    prov:wasGeneratedBy idea:activity-llmgen-1 ;
+    idea:proposeIdea idea:fabio-idea-biblio-ontology,
+        idea:fabio-idea-citation-typing ;
+    idea:realizes idea:fabio-cito-approach .
+
+idea:person-david-shotton a foaf:Person ;
+    foaf:name "David Shotton" .
+
+idea:person-silvio-peroni a foaf:Person ;
+    foaf:name "Silvio Peroni" .
+
+idea:semsur-artifact-doco a idea:Artifact,
+        idea:Model ;
+    rdfs:label "Document Components Ontology (DoCO) for structuring document elements" .
+
+idea:semsur-artifact-fabio-cito a idea:Artifact,
+        idea:Model ;
+    rdfs:label "FaBiO and CiTO ontologies for bibliographic and citation representation" .
+
+idea:semsur-artifact-semsur-ontology a idea:Artifact,
+        idea:Model ;
+    rdfs:label "SemSur ontology for representing research findings" .
+
+idea:semsur-evidence-querying a amo:Evidence,
+        expo:ScientificInvestigation ;
+    rdfs:label "Semantic representations enabled cross-paper queries over problems and approaches not possible with PDFs." ;
+    expo:hasExperimentDesign idea:semsur-experiment-design ;
+    expo:hasHypothesis idea:semsur-experiment-hypothesis ;
+    expo:hasResult idea:semsur-experiment-results ;
+    prov:wasDerivedFrom idea:semsur-para-eval-1 .
+
+idea:skg-evidence-analysis a amo:Evidence,
+        expo:ScientificInvestigation ;
+    rdfs:label "Structured survey enabled identification of research gaps and trends in SKG construction." ;
+    expo:hasExperimentDesign idea:skg-experiment-design ;
+    expo:hasHypothesis idea:skg-experiment-hypothesis ;
+    expo:hasResult idea:skg-experiment-results ;
+    prov:wasGeneratedBy idea:agent-llm-1 .
+
+cso:semantic_publishing a skos:Concept ;
+    rdfs:label "Semantic publishing" .
+
+idea:semsur-para-eval-2 a doco:Paragraph ;
+    rdfs:label "The results indicate that traditional tools such as digital libraries and keyword-based search engines often fail to provide precise answers to complex scholarly queries. In contrast, SemSur enables structured querying over research problems, approaches, implementations, and evaluations, thereby significantly reducing the effort required to gain an overview of a research field." ;
+    prov:wasAttributedTo idea:agent-algo-1 ;
+    prov:wasGeneratedBy idea:activity-parsing-1 .
+
+idea:semsur-para-eval-3 a doco:Paragraph ;
+    rdfs:label "Expert assessment followed the evaluation framework proposed in prior work<cite ref_id=\"12\" />, covering metrics such as accuracy, clarity, consistency, and completeness.The highest score was achieved for clarity (83%), followed by consistency (81%), indicating thatthe ontology effectively communicates the intended semantics and avoids contradictions." ;
+    prov:wasAttributedTo idea:agent-algo-1 ;
+    prov:wasGeneratedBy idea:activity-parsing-1 .
+
+idea:semsur-argument-main a amo:Argument ;
+    rdfs:label "Semantic modeling of research findings improves transparency and comparison" ;
+    amo:hasBacking idea:semsur-backing-semantic-publishing ;
+    amo:hasClaim idea:semsur-claim-central ;
+    amo:hasEvidence idea:semsur-evidence-querying ;
+    amo:hasWarrant idea:semsur-warrant-machine,
+        idea:semsur-warrant-structure ;
+    prov:wasAttributedTo idea:agent-llm-1 ;
+    prov:wasDerivedFrom idea:semsur-para-eval-1,
+        idea:semsur-para-eval-2 ;
+    prov:wasGeneratedBy idea:activity-llmgen-1 ;
+    idea:hasAssumption idea:semsur-assumption-machine,
+        idea:semsur-assumption-structured ;
+    idea:proposeIdea idea:semsur-idea-core-ontology ;
+    idea:realizes idea:semsur-approach .
+
+idea:work-skg-review-2022 a fabio:ResearchPaper,
+        fabio:Work ;
+    prism:doi "10.1007/s40747-022-00806-6" ;
+    dc:abstract "The necessity for scholarly knowledge mining and management has grown significantly as academic literature and its linkages to authors produce enormously. Information extraction, ontology matching, and accessing academic components with relations have become more critical than ever. Therefore, with the advancement of scientific literature, scholarly knowledge graphs have become critical to various applications where semantics can impart meanings to concepts. This review paper investigates the field of applying machine learning, rule-based learning, and natural language processing tools and approaches to construct SKG." ;
+    dc:creator idea:person-rajesh-bhatia,
+        idea:person-sandeep-harit,
+        idea:person-sanjay-batish,
+        idea:person-shilpa-verma ;
+    dc:publisher idea:event-complex-intell-systems-2023 ;
+    dc:title "Scholarly knowledge graphs through structuring scholarly communication: a review" ;
+    fabio:isDisciplineOf cso:knowledge_graphs,
+        cso:scholarly_communication .
+
+idea:activity-llmgen-1 a prov:Activity,
+        idea:LLMGeneration ;
+    prov:wasAssociatedWith idea:agent-llm-1 .
+
+idea:activity-parsing-1 a prov:Activity,
+        idea:Parsing ;
+    prov:wasAssociatedWith idea:agent-algo-1 .
+
+idea:semsur-para-eval-1 a doco:Paragraph ;
+    rdfs:label "We evaluated the SemSur ontology using both a satisfaction questionnaire and an expert assessment.  The questionnaire involved 18 researchers with backgrounds in semantic web technologies. Participants were asked to assess whether SemSur could answer a predefined set of competency questions related to scholarly communication." ;
+    prov:wasAttributedTo idea:agent-algo-1 ;
+    prov:wasGeneratedBy idea:activity-parsing-1 .
+
+idea:work-doco-2016 a fabio:ResearchPaper,
+        fabio:Work ;
+    prism:doi "10.3233/SW-150177" ;
+    dc:abstract "The description of document layers, as well as of the document discourse (e.g. the scientific discourse in scholarly articles) in machine-readable forms is crucial in facilitating semantic publishing and overall comprehension of documents by both users and machines. In this paper we introduce DoCO, the Document Components Ontology, i.e., an OWL 2 DL ontology that provides a general-purpose structured vocabulary of document elements to describe document parts in RDF." ;
+    dc:creator idea:person-alexandru-constantin,
+        idea:person-david-shotton,
+        idea:person-fabio-vitali,
+        idea:person-silvio-peroni,
+        idea:person-steve-pettifer ;
+    dc:publisher idea:event-semantic-web-journal-2016-7-2 ;
+    dc:title "The Document Components Ontology (DoCO)" ;
+    cito:cites idea:work-fabio-cito-2012 ;
+    fabio:isDisciplineOf cso:semantic_publishing,
+        cso:semantic_web .
+
+idea:work-fabio-cito-2012 a fabio:ResearchPaper,
+        fabio:Work ;
+    prism:doi "10.1016/j.websem.2012.08.001" ;
+    dc:abstract "This article introduces the principles and architectures of two ontologies central to semantic publishing: FaBiO, the FRBR-aligned Bibliographic Ontology for bibliographic records, and CiTO, the Citation Typing Ontology for characterizing citations factually and rhetorically." ;
+    dc:creator idea:person-david-shotton,
+        idea:person-silvio-peroni ;
+    dc:publisher idea:event-web-semantics-2012-vol17 ;
+    dc:title "FaBiO and CiTO: Ontologies for describing bibliographic resources and citations" ;
+    fabio:isDisciplineOf cso:semantic_publishing,
+        cso:semantic_web .
+
+idea:agent-algo-1 a prov:Agent,
+        idea:AlgorithmicAgent ;
+    rdfs:label "Algorithmic agent" .
+
+idea:semsur-para-eval-4 a doco:Paragraph ;
+    rdfs:label "These findings are consistent with earlier studies on ontology evaluation<cite ref_id=\"9\" /><cite ref_id=\"13\" />, which emphasize the importance of reuse, alignment,and clear conceptualization when building domain ontologies." ;
+    prov:wasAttributedTo idea:agent-algo-1 ;
+    prov:wasGeneratedBy idea:activity-parsing-1 .
+
+idea:work-semsur-2018 a fabio:ResearchPaper,
+        fabio:Work ;
+    prism:doi "10.1016/j.procs.2018.09.015" ;
+    dc:abstract "The way how research is communicated using text publications has not changed much over the past decades. We have the vision that ultimately researchers will work on a common structured knowledge base comprising comprehensive semantic and machine-comprehensible descriptions of their research, thus making research contributions more transparent and comparable. We present the SemSur ontology for semantically capturing the information commonly found in survey and review articles. SemSur is able to represent scientific results and to publish them in a comprehensive knowledge graph, which provides an efficient overview of a research field, and to compare research findings with related works in a structured way, thus saving researchers a significant amount of time and effort." ;
+    dc:creator idea:person-christoph-lange,
+        idea:person-sahar-vahdati,
+        idea:person-said-fathalla,
+        idea:person-soeren-auer ;
+    dc:publisher idea:event-procedia-cs-vol137-2018 ;
+    dc:title "SemSur: A Core Ontology for the Semantic Representation of Research Findings" ;
+    fabio:isDisciplineOf cso:knowledge_graphs,
+        cso:scholarly_communication,
+        cso:semantic_publishing ;
+    po:contains idea:semsur-argument-main,
+        idea:semsur-argument-main-v1.1,
+        idea:semsur-deo-evaluation-1 .
+
+idea:agent-llm-1 a prov:Agent,
+        idea:LLMAgent ;
+    rdfs:label "LLM extraction agent (GPT-style)" .
+
