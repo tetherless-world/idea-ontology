@@ -1,10 +1,15 @@
+<img src="./ontology/index/icon.png" width="96" align="left" />
+
 # IDEA Ontology
 ## Ontology Documentation
 
 - **Latest version (LODE)**  
   https://tetherless-world.github.io/idea-ontology/ontology
 
-- **Version 1.0.0**  
+- **Version 2.2.0**  
+  https://tetherless-world.github.io/idea-ontology/ontology/releases/2.2.0
+
+- **Version 2.0.0**  
   https://tetherless-world.github.io/idea-ontology/ontology/releases/2.0.0
 
 - **Version 1.0.0**  
