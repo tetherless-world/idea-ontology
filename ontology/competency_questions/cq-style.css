@@ -1,98 +1,142 @@
-/* Base reset */
+/* ================================
+   Base document styling (LODE-like)
+   ================================ */
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background: #f7f9fb;
-  color: #222;
+  line-height: 1.5;
+  background: #ffffff;
+  color: #000000;
 }
 
-/* Header */
+/* ================================
+   Header (match LODE tone)
+   ================================ */
+
 header {
-  background: #1f2933;
-  color: #ffffff;
-  padding: 2.5rem 2rem;
+  background: #F9F9F9;
+  border-bottom: 1px dashed #2F6FAB;
+  padding: 1.5em 2em;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.8em;
+  color: #2F6FAB;
 }
 
 header .subtitle {
-  margin-top: 0.75rem;
+  margin-top: 0.5em;
   max-width: 900px;
-  color: #d1d5db;
+  color: #333333;
+  font-size: 0.95em;
 }
 
-/* Main content */
+/* ================================
+   Main content
+   ================================ */
+
 main {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2em;
 }
 
-/* Competency question sections */
+/* ================================
+   Competency Question sections
+   ================================ */
+
 .cq {
-  background: #ffffff;
-  border-left: 6px solid #2563eb;
-  padding: 1.75rem;
-  margin-bottom: 2.5rem;
-  border-radius: 4px;
+  margin-bottom: 3em;
+  padding-bottom: 2em;
+  border-bottom: 1px dashed #2F6FAB;
 }
 
 .cq h2 {
   margin-top: 0;
-  color: #1e40af;
+  color: #2F6FAB;
+  font-size: 1.4em;
 }
 
-/* Blocks inside CQ */
+/* ================================
+   CQ blocks
+   ================================ */
+
 .cq-block {
-  margin-top: 1.25rem;
+  margin-top: 1.2em;
 }
 
 .cq-block h3 {
-  margin-bottom: 0.4rem;
-  font-size: 1rem;
-  color: #374151;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  margin-bottom: 0.3em;
+  font-size: 0.95em;
+  font-weight: bold;
+  color: #2F6FAB;
 }
 
 .cq-block p {
-  margin: 0.2rem 0 0;
+  margin: 0.2em 0 0;
 }
 
-/* Expected result highlight */
+/* ================================
+   Expected results
+   ================================ */
+
 .cq-block.expected {
-  border-left: 4px solid #16a34a;
-  padding-left: 1rem;
+  margin-top: 1.5em;
+  padding-left: 1em;
+  border-left: 3px solid #2F6FAB;
 }
 
-/* Code blocks */
+/* ================================
+   Code blocks (MediaWiki / LODE)
+   ================================ */
+
 pre {
-  background: #0f172a;
-  color: #e5e7eb;
-  padding: 1rem;
+  background-color: #F9F9F9;
+  border: 1px dashed #2F6FAB;
+  color: #000000;
+  line-height: 1.4em;
+  padding: 1em;
   overflow-x: auto;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 code {
-  font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+  font-family: Consolas, "Courier New", monospace;
 }
 
-/* Footer */
+/* ================================
+   Footer
+   ================================ */
+
 footer {
+  margin-top: 3em;
   text-align: center;
-  padding: 1.5rem;
-  font-size: 0.85rem;
-  color: #6b7280;
+  padding: 1.5em;
+  font-size: 0.85em;
+  color: #333333;
+  border-top: 1px dashed #2F6FAB;
+  background: #F9F9F9;
+}
+
+/* ================================
+   Print-friendly (match LODE)
+   ================================ */
+
+@media print {
+  header,
+  footer {
+    background: none;
+    border: none;
+  }
+
+  pre {
+    page-break-inside: avoid;
+  }
 }
