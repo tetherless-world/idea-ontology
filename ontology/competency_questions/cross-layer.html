@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cross-Layer Traceability Competency Questions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Shared CQ styling -->
+  <link rel="stylesheet" href="cq-style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Cross-Layer Traceability Competency Questions</h1>
+  <p class="subtitle">
+    Competency questions for tracing relationships across document text,
+    extracted entities, and abstract argument structures in the IDEA Knowledge Graph.
+  </p>
+</header>
+
+<main>
+
+  <!-- CQ-X-TRACE-01 -->
+  <section id="cq-x-trace-01" class="cq">
+    <h2>CQ-X-TRACE-01: Which sentences give rise to this argument?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>
+        Trace a claim or argument back to the sentences from which it was
+        extracted or grounded.
+      </p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Which sentences give rise to this claim?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX po:   <http://purl.org/spar/po/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?arg ?para
+WHERE {
+  idea:work-semsur-2018 po:contains ?arg .
+  ?arg prov:wasDerivedFrom ?para .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+Semantic modeling of scholarly documents |
+"We evaluated the SemSur ontology ..."
+
+Semantic modeling of scholarly documents |
+"The results indicates that ..."
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-X-TRACE-02 -->
+  <section id="cq-x-trace-02" class="cq">
+    <h2>CQ-X-TRACE-02: Which extracted entities are used in constructing this argument?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>
+        Identify extracted entities that participate in or are referenced
+        during the construction of an argument.
+      </p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Which extracted entities are used in constructing this argument?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX cito: <http://purl.org/spar/cito/>
+
+SELECT DISTINCT ?para
+WHERE {
+  ?cite cito:hasCitingEntity idea:work-semsur-2018 .
+  ?cite cito:hasCitationContext ?para .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+"These findings are consistent with earlier studies ..."
+"Expert assessment followed the evaluation framework ..."
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-X-TRACE-03 -->
+  <section id="cq-x-trace-03" class="cq">
+    <h2>CQ-X-TRACE-03: What document sections contribute to the used artifacts?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>
+        Identify document sections that provide primary textual support
+        for artifacts used in constructing an argument.
+      </p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>What document sections contribute most to the final claim?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX po:   <http://purl.org/spar/po/>
+PREFIX cito: <http://purl.org/spar/cito/>
+
+SELECT DISTINCT ?para ?citationType
+WHERE {
+  idea:work-semsur-2018 po:contains ?arg .
+  ?arg idea:realizes ?app .
+  ?app idea:uses ?art .
+
+  ?cite cito:hasCitingEntity ?art ;
+        cito:hasCitedEntity ?para ;
+        ?citationType ?para .
+
+  ?citationType rdfs:subPropertyOf cito:cites .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+"These findings are consistent with earlier studies ..." | usesMethodIn
+</code></pre>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    IDEA Ontology – Cross-Layer Traceability Competency Questions<br />
+    © 2026 Tetherless World Constellation
+  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document Structure & Metadata Competency Questions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Shared CQ styling -->
+  <link rel="stylesheet" href="cq-style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Document Structure & Metadata Competency Questions</h1>
+  <p class="subtitle">
+    Competency questions for querying document structure, discourse elements,
+    authorship, publication metadata, and citations in scholarly works.
+  </p>
+</header>
+
+<main>
+
+  <!-- CQ-DOC-01 -->
+  <section id="cq-doc-01" class="cq">
+    <h2>CQ-DOC-01: What paragraphs does a given scholarly work contain?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Retrieve all structural paragraphs that are part of a scholarly document.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>What paragraphs does this scholarly work contain?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX doco: <http://purl.org/spar/doco/>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX po:   <http://purl.org/spar/po/>
+
+SELECT ?sec ?para
+WHERE {
+  idea:work-semsur-2018 po:contains ?sec .
+  ?sec po:contains ?para .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+Evaluation | The results indicates that ...
+Evaluation | We evaluated the SemSur ontology ...
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-DOC-02 -->
+  <section id="cq-doc-02" class="cq">
+    <h2>CQ-DOC-02: What discourse elements appear in this document?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Identify the discourse roles instantiated within a scholarly document.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>
+        What discourse elements (Introduction, Methods, Results, etc.)
+        appear in this document?
+      </p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX po:   <http://purl.org/spar/po/>
+PREFIX deo:  <http://purl.org/spar/deo/>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+
+SELECT ?sec ?secType
+WHERE {
+  idea:work-semsur-2018 po:contains ?sec .
+  ?sec rdf:type deo:DiscourseElement ;
+       rdf:type ?secType .
+  ?secType rdfs:subClassOf* deo:DiscourseElement .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+Evaluation of SemSur ontology | deo:Evaluation
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-DOC-03 -->
+  <section id="cq-doc-03" class="cq">
+    <h2>CQ-DOC-03: Which sentences belong to a discourse element?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Retrieve all sentences that are contained within a specific discourse section.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Which sentences belong to the Methods discourse element?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX po:   <http://purl.org/spar/po/>
+PREFIX deo:  <http://purl.org/spar/deo/>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+
+SELECT ?sec ?para
+WHERE {
+  idea:work-semsur-2018 po:contains ?sec .
+  ?sec rdf:type deo:DiscourseElement ;
+       po:contains ?para .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+Evaluation | The results indicates that ...
+Evaluation | We evaluated the SemSur ontology ...
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-DOC-04 -->
+  <section id="cq-doc-04" class="cq">
+    <h2>CQ-DOC-04: Who are the authors of this work?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Retrieve the agents responsible for authoring a scholarly document.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Who are the authors of this work?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+
+SELECT ?name
+WHERE {
+  idea:work-semsur-2018 dc:creator ?per .
+  ?per foaf:name ?name .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+Sören Auer
+Sadia Fathalla
+Sahar Vahdati
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-DOC-05 -->
+  <section id="cq-doc-05" class="cq">
+    <h2>CQ-DOC-05: Where and when was this work published?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Retrieve the publication venue and publication date of a scholarly document.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>Where and when was this work published?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
+PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+
+SELECT ?venue ?date
+WHERE {
+  idea:work-semsur-2018 dc:publisher ?venue .
+  ?venue dc:date ?date .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+Procedia Computer Science | "2018"
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-DOC-06 -->
+  <section id="cq-doc-06" class="cq">
+    <h2>CQ-DOC-06: What type of scholarly work is this?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Identify the scholarly genre or document type of a work.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>
+        What type of scholarly work is this
+        (research paper, review, position paper)?
+      </p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX idea:  <https://tetherless-world.github.io/idea-ontology/ontology#>
+
+SELECT ?paperType
+WHERE {
+  idea:work-semsur-2018 rdf:type ?paperType .
+  ?paperType rdfs:subClassOf* fabio:Work .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+Research Paper
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-DOC-07 -->
+  <section id="cq-doc-07" class="cq">
+    <h2>CQ-DOC-07: What topics or disciplines does this work belong to?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>
+        Retrieve the topical or disciplinary classifications associated with
+        a scholarly document.
+      </p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>What topics or disciplines does this work belong to?</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>SPARQL Query</h3>
+<pre><code>
+PREFIX fabio: <http://purl.org/spar/fabio/>
+PREFIX idea:  <https://tetherless-world.github.io/idea-ontology/ontology#>
+
+SELECT ?key
+WHERE {
+  idea:work-semsur-2018 fabio:isDisciplineOf ?key .
+}
+</code></pre>
+    </div>
+
+    <div class="cq-block expected">
+      <h3>Expected Result</h3>
+<pre><code>
+Scholarly Communication
+Knowledge Graph
+Semantic Publishing
+</code></pre>
+    </div>
+  </section>
+
+  <!-- CQ-DOC-08 -->
+  <section id="cq-doc-08" class="cq">
+    <h2>CQ-DOC-08: What other works does this paper cite?</h2>
+
+    <div class="cq-block">
+      <h3>Intent</h3>
+      <p>Retrieve the scholarly works referenced by a given document.</p>
+    </div>
+
+    <div class="cq-block">
+      <h3>Natural Language Question</h3>
+      <p>What other works does this paper cite?</p>
+    </div>
+
+    <div class
