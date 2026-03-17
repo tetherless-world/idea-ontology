@@ -1,0 +1,419 @@
+<https://tetherless-world.github.io/idea-ontology/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://tetherless-world.github.io/idea-ontology/ontology> <http://www.w3.org/2002/07/owl#versionIRI> <https://tetherless-world.github.io/idea-ontology/ontology/releases/3.1.0> .
+<https://tetherless-world.github.io/idea-ontology/ontology> <http://www.w3.org/2002/07/owl#versionInfo> "" .
+<https://tetherless-world.github.io/idea-ontology/ontology> <http://www.w3.org/2002/07/owl#versionInfo> "3.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+# 
+# http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#FeatureOf
+<https://tetherless-world.github.io/idea-ontology/ontology#FeatureOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#FeatureOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#FeatureOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#FeatureOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#HyponymOf
+<https://tetherless-world.github.io/idea-ontology/ontology#HyponymOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#HyponymOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#HyponymOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#HyponymOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#PartOf
+<https://tetherless-world.github.io/idea-ontology/ontology#PartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#PartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#PartOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#PartOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#backs
+<https://tetherless-world.github.io/idea-ontology/ontology#backs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#backs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Backing> .
+<https://tetherless-world.github.io/idea-ontology/ontology#backs> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Warrant> .
+<https://tetherless-world.github.io/idea-ontology/ontology#backs> <http://www.w3.org/2000/01/rdf-schema#comment> "A backing that attests the warrant of an argument." .
+<https://tetherless-world.github.io/idea-ontology/ontology#backs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/backs" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#causes
+<https://tetherless-world.github.io/idea-ontology/ontology#causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#causes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Cause> .
+<https://tetherless-world.github.io/idea-ontology/ontology#causes> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#causes> <http://www.w3.org/2000/01/rdf-schema#comment> "the situation presented in the proposition as a cause for the volitional or non-violation action presented in the artifact" .
+<https://tetherless-world.github.io/idea-ontology/ontology#causes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#concede
+<https://tetherless-world.github.io/idea-ontology/ontology#concede> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#concede> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#concede> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#concede> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#condition
+<https://tetherless-world.github.io/idea-ontology/ontology#condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#condition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Condition> .
+<https://tetherless-world.github.io/idea-ontology/ontology#condition> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#condition> <http://www.w3.org/2000/01/rdf-schema#comment> "recognizes how the realization of the situation presented in artifact depends on the realization of the situation presented in the proposition." .
+<https://tetherless-world.github.io/idea-ontology/ontology#condition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#contextualizes
+<https://tetherless-world.github.io/idea-ontology/ontology#contextualizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Circumstance> .
+<https://tetherless-world.github.io/idea-ontology/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#comment> "the proposition provides the framework for interpreting the reference artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#contrast
+<https://tetherless-world.github.io/idea-ontology/ontology#contrast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#contrast> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#contrast> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#contrast> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#elaborates
+<https://tetherless-world.github.io/idea-ontology/ontology#elaborates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#elaborates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Elaboration> .
+<https://tetherless-world.github.io/idea-ontology/ontology#elaborates> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#elaborates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "The proposition presents additiona detail about the situation or some element of subject mattern which is presentes in the artifact or inferentially accessible in N in one or more of the way listed below;\nset: member\nabstract : instance \nwhole : part\nprocess : step\nobject : attribute\ngeneralization : specific" .
+<https://tetherless-world.github.io/idea-ontology/ontology#elaborates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#enables
+<https://tetherless-world.github.io/idea-ontology/ontology#enables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#enables> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#enables> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#enables> <http://www.w3.org/2000/01/rdf-schema#comment> "potential ability to perform the action presented in artifact increases" .
+<https://tetherless-world.github.io/idea-ontology/ontology#enables> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#evaluates
+<https://tetherless-world.github.io/idea-ontology/ontology#evaluates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#evaluates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Evaluation> .
+<https://tetherless-world.github.io/idea-ontology/ontology#evaluates> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#evaluates> <http://www.w3.org/2000/01/rdf-schema#comment> "situation presented in the proposition assess the sutiation presented in the artifact and recognizes the value it assigns." .
+<https://tetherless-world.github.io/idea-ontology/ontology#evaluates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#evidence
+<https://tetherless-world.github.io/idea-ontology/ontology#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#evidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Approach> .
+<https://tetherless-world.github.io/idea-ontology/ontology#evidence> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Evidence> .
+<https://tetherless-world.github.io/idea-ontology/ontology#evidence> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#forces
+<https://tetherless-world.github.io/idea-ontology/ontology#forces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#forces> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Qualifier> .
+<https://tetherless-world.github.io/idea-ontology/ontology#forces> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Claim> .
+<https://tetherless-world.github.io/idea-ontology/ontology#forces> <http://www.w3.org/2000/01/rdf-schema#comment> "A qualifier that expresses as degree of force concerning a claim of an argument." .
+<https://tetherless-world.github.io/idea-ontology/ontology#forces> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/forces" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#interprets
+<https://tetherless-world.github.io/idea-ontology/ontology#interprets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#interprets> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Interpretation> .
+<https://tetherless-world.github.io/idea-ontology/ontology#interprets> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#interprets> <http://www.w3.org/2000/01/rdf-schema#comment> "the situation presented in the artifact to a framework of ideas not involved in the knowledge presented in the artifact itself." .
+<https://tetherless-world.github.io/idea-ontology/ontology#interprets> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#isValidUnless
+<https://tetherless-world.github.io/idea-ontology/ontology#isValidUnless> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#isValidUnless> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Claim> .
+<https://tetherless-world.github.io/idea-ontology/ontology#isValidUnless> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Rebuttal> .
+<https://tetherless-world.github.io/idea-ontology/ontology#isValidUnless> <http://www.w3.org/2000/01/rdf-schema#comment> "A claim that is restricted by a rebuttal of an argument." .
+<https://tetherless-world.github.io/idea-ontology/ontology#isValidUnless> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/isValidUnless" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#justify
+<https://tetherless-world.github.io/idea-ontology/ontology#justify> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#justify> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#justify> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#justify> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#leadsTo
+<https://tetherless-world.github.io/idea-ontology/ontology#leadsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#leadsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Warrant> .
+<https://tetherless-world.github.io/idea-ontology/ontology#leadsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Claim> .
+<https://tetherless-world.github.io/idea-ontology/ontology#leadsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A warrant that points to a claim from the related evidence within an argument." .
+<https://tetherless-world.github.io/idea-ontology/ontology#leadsTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/leadsTo" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#mentions
+<https://tetherless-world.github.io/idea-ontology/ontology#mentions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#motivates
+<https://tetherless-world.github.io/idea-ontology/ontology#motivates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Idea> .
+<https://tetherless-world.github.io/idea-ontology/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Approach> .
+<https://tetherless-world.github.io/idea-ontology/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#comment> "desire to perform action presented in the artifact is increased" .
+<https://tetherless-world.github.io/idea-ontology/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#proves
+<https://tetherless-world.github.io/idea-ontology/ontology#proves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#proves> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Evidence> .
+<https://tetherless-world.github.io/idea-ontology/ontology#proves> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Claim> .
+<https://tetherless-world.github.io/idea-ontology/ontology#proves> <http://www.w3.org/2000/01/rdf-schema#comment> "An evidence that founds a claim of an argument." .
+<https://tetherless-world.github.io/idea-ontology/ontology#proves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/proves" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#purposes
+<https://tetherless-world.github.io/idea-ontology/ontology#purposes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#purposes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Purpose> .
+<https://tetherless-world.github.io/idea-ontology/ontology#purposes> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#purposes> <http://www.w3.org/2000/01/rdf-schema#comment> "the activity in the artifact is initiated in order to realize the proposition." .
+<https://tetherless-world.github.io/idea-ontology/ontology#purposes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#responsesTo
+<https://tetherless-world.github.io/idea-ontology/ontology#responsesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#responsesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Approach> .
+<https://tetherless-world.github.io/idea-ontology/ontology#responsesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Idea> .
+<https://tetherless-world.github.io/idea-ontology/ontology#responsesTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Issue> .
+<https://tetherless-world.github.io/idea-ontology/ontology#responsesTo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#restates
+<https://tetherless-world.github.io/idea-ontology/ontology#restates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#restates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Restatement> .
+<https://tetherless-world.github.io/idea-ontology/ontology#restates> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#restates> <http://www.w3.org/2000/01/rdf-schema#comment> "a proposition as a restatement of the artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#restates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#result
+<https://tetherless-world.github.io/idea-ontology/ontology#result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#result> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Result> .
+<https://tetherless-world.github.io/idea-ontology/ontology#result> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#result> <http://www.w3.org/2000/01/rdf-schema#comment> "recognizes that the situation presented in the artifact, could be a cuase for the action or situation presented in the proposition." .
+<https://tetherless-world.github.io/idea-ontology/ontology#result> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#solves
+<https://tetherless-world.github.io/idea-ontology/ontology#solves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#solves> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Solutionhood> .
+<https://tetherless-world.github.io/idea-ontology/ontology#solves> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#solves> <http://www.w3.org/2000/01/rdf-schema#comment> "The artifact is a solution to the problem stated in the proposition." .
+<https://tetherless-world.github.io/idea-ontology/ontology#solves> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#summarizes
+<https://tetherless-world.github.io/idea-ontology/ontology#summarizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#summarizes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Summary> .
+<https://tetherless-world.github.io/idea-ontology/ontology#summarizes> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#summarizes> <http://www.w3.org/2000/01/rdf-schema#comment> "a proposition as a shorter restatement of the artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#summarizes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#supports
+<https://tetherless-world.github.io/idea-ontology/ontology#supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Evidence> .
+<https://tetherless-world.github.io/idea-ontology/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Warrant> .
+<https://tetherless-world.github.io/idea-ontology/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#comment> "An evidence that supports a warrant of an argument." .
+<https://tetherless-world.github.io/idea-ontology/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/supports" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#usedFor
+<https://tetherless-world.github.io/idea-ontology/ontology#usedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://tetherless-world.github.io/idea-ontology/ontology#usedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#usedFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#usedFor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#label
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/prov#derivedFrom
+<http://www.w3.org/ns/prov#derivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/prov#value
+<http://www.w3.org/ns/prov#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/prov#wasGeneratedBy
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Approach
+<https://tetherless-world.github.io/idea-ontology/ontology#Approach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Approach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Argument
+<https://tetherless-world.github.io/idea-ontology/ontology#Argument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Artifact
+<https://tetherless-world.github.io/idea-ontology/ontology#Artifact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Backing
+<https://tetherless-world.github.io/idea-ontology/ontology#Backing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Backing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Backing> <http://www.w3.org/2000/01/rdf-schema#comment> "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Backing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Backing" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Cause
+<https://tetherless-world.github.io/idea-ontology/ontology#Cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Cause> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Cause> <http://www.w3.org/2000/01/rdf-schema#comment> "A situation that, by means other than motivating a violational or non-violational action caused the situation presented in the artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Cause> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Circumstance
+<https://tetherless-world.github.io/idea-ontology/ontology#Circumstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Circumstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Circumstance> <http://www.w3.org/2000/01/rdf-schema#comment> "The proposition providing the situation presents the framework for interpreting the artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Circumstance> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Claim
+<https://tetherless-world.github.io/idea-ontology/ontology#Claim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Claim> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Claim> <http://www.w3.org/2000/01/rdf-schema#comment> "A fact that must be established - e.g., 'This is a consistent OWL ontology'." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Claim> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Claim" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Condition
+<https://tetherless-world.github.io/idea-ontology/ontology#Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Condition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "A realization of the situation presented in the proposition enables the realization of the situation presented in the artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Condition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Descriptor
+<https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Elaboration
+<https://tetherless-world.github.io/idea-ontology/ontology#Elaboration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Elaboration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Elaboration> <http://www.w3.org/2000/01/rdf-schema#comment> "Additional details about the situation or some element of subject matter related to the artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Elaboration> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Evaluation
+<https://tetherless-world.github.io/idea-ontology/ontology#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Evaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Evaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "a proposition related the situation in the artifact to degree of context's positive regards toward the situation presented in the artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Evaluation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Evidence
+<https://tetherless-world.github.io/idea-ontology/ontology#Evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Evidence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Evidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Evidence" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Idea
+<https://tetherless-world.github.io/idea-ontology/ontology#Idea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Idea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Interpretation
+<https://tetherless-world.github.io/idea-ontology/ontology#Interpretation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Interpretation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Interpretation> <http://www.w3.org/2000/01/rdf-schema#comment> "a proposition relates the situation presented in the artifact to a framework of ideas not involved in the artifact itself." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Interpretation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Issue
+<https://tetherless-world.github.io/idea-ontology/ontology#Issue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Issue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Material
+<https://tetherless-world.github.io/idea-ontology/ontology#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "Data, datasets, resources, Corpus, Knowledge base. - e.g. image data, speech data, stereo images, bilingual dictionary, paraphrased questions, CoNLL, Panntreebank, WordNet, Wikipedia, etc." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Material> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Method
+<https://tetherless-world.github.io/idea-ontology/ontology#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Method> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Method> <http://www.w3.org/2000/01/rdf-schema#comment> "Methods , models, systems to use, or tools, components of a system, frameworks. - e.g. language model, CORENLP, POS parser, kernel method, etc." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Method> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Metric
+<https://tetherless-world.github.io/idea-ontology/ontology#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "Metrics, measures, or entities that can express quality of a system/method. - e.g. F1, BLEU, Precision, Recall, ROC curve, mean reciprocal rank, mean-squared error, robustness, time complexity, etc." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Metric> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Purpose
+<https://tetherless-world.github.io/idea-ontology/ontology#Purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Purpose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Purpose> <http://www.w3.org/2000/01/rdf-schema#comment> "A situation to be realized through the activity in the artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Purpose> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Qualifier
+<https://tetherless-world.github.io/idea-ontology/ontology#Qualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Qualifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Qualifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Qualifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Qualifier" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Rebuttal
+<https://tetherless-world.github.io/idea-ontology/ontology#Rebuttal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Rebuttal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Rebuttal> <http://www.w3.org/2000/01/rdf-schema#comment> "Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Rebuttal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Rebuttal" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Restatement
+<https://tetherless-world.github.io/idea-ontology/ontology#Restatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Restatement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Restatement> <http://www.w3.org/2000/01/rdf-schema#comment> "a proposition restates the artifact, where the proposition and the artifact are of comparable bulk." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Restatement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Result
+<https://tetherless-world.github.io/idea-ontology/ontology#Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Result> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Result> <http://www.w3.org/2000/01/rdf-schema#comment> "A Proposition presets a situation that could ahve been caused by the situation presented in the artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Result> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Solutionhood
+<https://tetherless-world.github.io/idea-ontology/ontology#Solutionhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Solutionhood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Solutionhood> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "The proposition representing the situation that solves by the artifact." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Solutionhood> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Summary
+<https://tetherless-world.github.io/idea-ontology/ontology#Summary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Summary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Descriptor> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Summary> <http://www.w3.org/2000/01/rdf-schema#comment> "A restatement of the content of the artifact, that is shorter in bulk." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Summary> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Task
+<https://tetherless-world.github.io/idea-ontology/ontology#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "Applications, problems to solve, systems to construct. - e.g. information extraction, machine reading system, image segmentation, etc." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Task> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Term
+<https://tetherless-world.github.io/idea-ontology/ontology#Term> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Term> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Artifact> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Term> <http://www.w3.org/2000/01/rdf-schema#comment> "General terms or pronouns that may refer to a entity but are not themselves informative, often used as connection words." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Term> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://tetherless-world.github.io/idea-ontology/ontology#Warrant
+<https://tetherless-world.github.io/idea-ontology/ontology#Warrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Warrant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://tetherless-world.github.io/idea-ontology/ontology#Argument> .
+<https://tetherless-world.github.io/idea-ontology/ontology#Warrant> <http://www.w3.org/2000/01/rdf-schema#comment> "A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'." .
+<https://tetherless-world.github.io/idea-ontology/ontology#Warrant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Warrant" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
