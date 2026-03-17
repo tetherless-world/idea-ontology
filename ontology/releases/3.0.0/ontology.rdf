@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://tetherless-world.github.io/idea-ontology/ontology#"
+     xml:base="https://tetherless-world.github.io/idea-ontology/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+    <owl:Ontology rdf:about="https://tetherless-world.github.io/idea-ontology/ontology">
+        <owl:versionIRI rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/3.0.0"/>
+        <owl:versionInfo>3.0.0</owl:versionInfo>
+    </owl:Ontology>
+
+
+    <!-- Classes -->
+
+    <owl:Class rdf:about="#Argument"/>
+    <owl:Class rdf:about="#Issue">
+        <rdfs:subClassOf rdf:resource="#Argument"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Idea">
+        <rdfs:subClassOf rdf:resource="#Argument"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Approach">
+        <rdfs:subClassOf rdf:resource="#Argument"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Evidence">
+        <rdfs:subClassOf rdf:resource="#Argument"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Claim">
+        <rdfs:subClassOf rdf:resource="#Argument"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Warrant">
+        <rdfs:subClassOf rdf:resource="#Argument"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Qualifier">
+        <rdfs:subClassOf rdf:resource="#Argument"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Backing">
+        <rdfs:subClassOf rdf:resource="#Argument"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Rebuttal">
+        <rdfs:subClassOf rdf:resource="#Argument"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Descriptor"/>
+    <owl:Class rdf:about="#Elaboration">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Circumstance">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Solutionhood">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Cause">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Result">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Purpose">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Condition">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Interpretation">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Evaluation">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Restatement">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Summary">
+        <rdfs:subClassOf rdf:resource="#Descriptor"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Artifact"/>
+    <owl:Class rdf:about="#Task">
+        <rdfs:subClassOf rdf:resource="#Artifact"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Method">
+        <rdfs:subClassOf rdf:resource="#Artifact"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Metric">
+        <rdfs:subClassOf rdf:resource="#Artifact"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Material">
+        <rdfs:subClassOf rdf:resource="#Artifact"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Term">
+        <rdfs:subClassOf rdf:resource="#Artifact"/>
+    </owl:Class>
+
+
+    <!-- Object properties -->
+
+    <owl:ObjectProperty rdf:about="#usedFor">
+        <rdfs:domain rdf:resource="#Artifact"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#FeatureOf">
+        <rdfs:domain rdf:resource="#Artifact"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#HyponymOf">
+        <rdfs:domain rdf:resource="#Artifact"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#PartOf">
+        <rdfs:domain rdf:resource="#Artifact"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="#Artifact"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="#Artifact"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#responsesTo">
+        <rdfs:domain rdf:resource="#Idea"/>
+        <rdfs:range rdf:resource="#Issue"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#motivates">
+        <rdfs:domain rdf:resource="#Idea"/>
+        <rdfs:domain rdf:resource="#Argument"/>
+        <rdfs:range rdf:resource="#Approach"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#evidence">
+        <rdfs:domain rdf:resource="#Idea"/>
+        <rdfs:range rdf:resource="#Evidence"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#proves">
+        <rdfs:domain rdf:resource="#Evidence"/>
+        <rdfs:range rdf:resource="#Claim"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#supports">
+        <rdfs:domain rdf:resource="#Warrant"/>
+        <rdfs:domain rdf:resource="#Argument"/>
+        <rdfs:range rdf:resource="#Warrant"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#leadsTo">
+        <rdfs:domain rdf:resource="#Warrant"/>
+        <rdfs:range rdf:resource="#Claim"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#backs">
+        <rdfs:domain rdf:resource="#Backing"/>
+        <rdfs:range rdf:resource="#Warrant"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#forces">
+        <rdfs:domain rdf:resource="#Qualifier"/>
+        <rdfs:range rdf:resource="#Claim"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#isValidUnless">
+        <rdfs:domain rdf:resource="#Claim"/>
+        <rdfs:range rdf:resource="#Rebuttal"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#elaborates">
+        <rdfs:domain rdf:resource="#Elaboration"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#contextualizes">
+        <rdfs:domain rdf:resource="#Circumstance"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#solves">
+        <rdfs:domain rdf:resource="#Solutionhood"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#causes">
+        <rdfs:domain rdf:resource="#Cause"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#result">
+        <rdfs:domain rdf:resource="#Result"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#purposes">
+        <rdfs:domain rdf:resource="#Purpose"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#condition">
+        <rdfs:domain rdf:resource="#Condition"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#interprets">
+        <rdfs:domain rdf:resource="#Interpretation"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#evaluates">
+        <rdfs:domain rdf:resource="#Evaluation"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#restates">
+        <rdfs:domain rdf:resource="#Restatement"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#summarizes">
+        <rdfs:domain rdf:resource="#Summary"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#contrast">
+        <rdfs:domain rdf:resource="#Argument"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#contextualize">
+        <rdfs:domain rdf:resource="#Argument"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#enables">
+        <rdfs:domain rdf:resource="#Argument"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#justify">
+        <rdfs:domain rdf:resource="#Argument"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#concede">
+        <rdfs:domain rdf:resource="#Argument"/>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#mentions">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Argument"/>
+                    <rdf:Description rdf:about="#Descriptor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="#Artifact"/>
+    </owl:ObjectProperty>
+
+
+    <!-- Data properties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#value"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#derivedFrom"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+
+</rdf:RDF>
