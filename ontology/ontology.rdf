@@ -38,27 +38,27 @@
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/fabio/fabio-profile.rdf"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/pav/pav-profile.rdf"/>
         <owl:imports rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/imports/po/po-profile.rdf"/>
-        <dc:abstract>The IDEA Ontology is an ontology for representing ideas, issues, arguments, and approaches in scientific research and scholarly communication.</dc:abstract>
+        <dc:abstract>SUDO (Scholarly Upper Discourse Ontology) provides a primitive discourse representation for scholarly texts by modeling elemental discourse units (EDUs) as machine-operable semantic structures that remain human-interpretable.</dc:abstract>
         <dc:creator>Nipun D. Pathirage</dc:creator>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0002-9313-0925"/>
         <dc:license rdf:datatype="xsd:anyURI">https://opensource.org/licenses/MIT</dc:license>
         <dc:modified>2025-12-29</dc:modified>
         <dc:publisher>Tetherless World Constellation | Rensselaer Polytechnic Institute</dc:publisher>
-        <dc:title>IDEA Ontology</dc:title>
-        <dc:description>Scientific literature communicates knowledge not only through data and results but also through structured scholarly discourse, including motivations, problems, proposed ideas, supporting evidence, and claims. These abstract components are distributed across documents and connected through citations, making them difficult to extract and represent automatically. Existing scholarly knowledge graphs largely focus on metadata or citation networks, offering limited support for modeling scientific intent and argumentation.
+        <dc:title>SUDO - Scholarly Upper Discourse Ontology</dc:title>
+        <dc:description>SUDO models scholarly discourse with two primary entity kinds: named entities (concepts and artifacts) and propositions (arguments and semantic discourse). It supports three core relation modes between these entities: entity-to-entity, proposition-to-proposition, and entity-to-proposition.
 
-The Idea Graph addresses this limitation by introducing an ontology-centered framework that captures both concrete document structure and abstract scholarly discourse in a unified knowledge graph. The framework integrates layout-aware document parsing, ontology-guided extraction with large language models, and structured RDF instantiation. In addition, it models provenance information for all knowledge graph construction operations and adopts the PAV ontology to manage versioning and lineage of extracted instances. This design enables interpretable, evolvable, and semantically grounded scholarly knowledge graphs suitable for advanced querying, reasoning, and machine-assisted knowledge discovery.</dc:description>
+The ontology introduces Proposition as the central discourse unit and grounds its structure in argument modeling, Rhetorical Structure Theory (RST), and Speech Act Theory (SAT). This enables explicit representation of core research arguments, supporting and satellite descriptive statements, and proposition intent through illocutionary and commitment-oriented interpretation, forming a machine-operable and human-perceivable discourse scaffold.</dc:description>
         <dc:description rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/idea_graph_figure.svg"/>
         <vann:preferredNamespaceUri>
         https://tetherless-world.github.io/idea-ontology/ontology#
         </vann:preferredNamespaceUri>
-        <rdfs:comment>The Idea Graph is a framework for constructing ontology-driven scholarly knowledge graphs from scientific literature. It models scientific publications across three interconnected layers: document structure, extracted information, and abstract scholarly discourse such as research problems, ideas, evidence, and claims. The framework employs a discourse-aware ontology inspired by argumentation theory to align textual grounding, rhetorical intent, and citation attribution. An end-to-end pipeline transforms scientific PDFs into RDF graphs using layout-preserving parsing and ontology-guided large language model extraction. To ensure transparency and reproducibility, the system explicitly represents knowledge graph construction provenance and integrates the PAV ontology for instance-level versioning and lineage tracking. The resulting graphs support semantic querying, retrieval-augmented generation, and interactive visualization of discourse structures and citation roles.</rdfs:comment>
+        <rdfs:comment>SUDO is an upper discourse ontology for scholarly communication that represents arguments, descriptors, and artifacts as linked discourse units to support structured argument modeling, semantic interpretation, and interoperable knowledge graph construction.</rdfs:comment>
         <owl:versionInfo>2.2.0</owl:versionInfo>
         <owl:versionIRI rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/2.2.0"/>
         <owl:priorVersion rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/2.1.0"/>
         <owl:backwardCompatibleWith rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/2.0.0"/>
         <owl:backwardCompatibleWith rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/2.1.0"/>
-        <skos:changeNote>Provenance feature introduced release of IDEA Ontology version 2.2.0.</skos:changeNote>
+        <skos:changeNote>Ontology metadata updated to the SUDO (Scholarly Upper Discourse Ontology) profile.</skos:changeNote>
         <cmns-av:copyright>Copyright (c) 2025 TWC</cmns-av:copyright>
     </owl:Ontology>
 
