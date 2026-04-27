@@ -5,9 +5,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://tetherless-world.github.io/idea-ontology/ontology">
         <owl:versionIRI rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/3.1.0"/>
         <owl:versionInfo></owl:versionInfo>
@@ -24,10 +22,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
@@ -40,6 +40,7 @@
 
     <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
@@ -51,6 +52,7 @@
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#FeatureOf -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#FeatureOf">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -60,6 +62,7 @@
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#HyponymOf -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#HyponymOf">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -71,6 +74,7 @@
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#PartOf -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#PartOf">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -80,6 +84,7 @@
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#backs -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#backs">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Backing"/>
@@ -92,6 +97,7 @@
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#causes -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#causes">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Cause"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -103,6 +109,7 @@
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#concede -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#concede">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
@@ -112,6 +119,7 @@
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#condition -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#condition">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Condition"/>
@@ -123,6 +131,7 @@
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#contextualizes -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#contextualizes">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -137,6 +146,7 @@
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#contrast -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#contrast">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
@@ -146,6 +156,7 @@
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#elaborates -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#elaborates">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Elaboration"/>
@@ -164,6 +175,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#enables -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#enables">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
@@ -174,6 +186,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#evaluates -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#evaluates">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Evaluation"/>
@@ -186,6 +199,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#evidence -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#evidence">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Approach"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Evidence"/>
@@ -195,6 +209,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#forces -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#forces">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Qualifier"/>
@@ -207,6 +222,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#interprets -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#interprets">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Interpretation"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -217,6 +233,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#isValidUnless -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#isValidUnless">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Claim"/>
@@ -229,6 +246,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#justify -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#justify">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
@@ -238,6 +256,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#leadsTo -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#leadsTo">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Warrant"/>
@@ -249,6 +268,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#mentions -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#mentions">
         <rdfs:domain>
@@ -267,6 +287,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#motivates -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#motivates">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Idea"/>
@@ -280,6 +301,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#proves -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#proves">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Evidence"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Claim"/>
@@ -290,6 +312,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#purposes -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#purposes">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Purpose"/>
@@ -302,6 +325,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#responsesTo -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#responsesTo">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Approach"/>
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Idea"/>
@@ -312,6 +336,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#restates -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#restates">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Restatement"/>
@@ -324,6 +349,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#result -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#result">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Result"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -334,6 +360,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#solves -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#solves">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Solutionhood"/>
@@ -346,6 +373,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#summarizes -->
 
+
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#summarizes">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Summary"/>
         <rdfs:range rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -356,6 +384,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#supports -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#supports">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -369,6 +398,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#usedFor -->
+
 
     <owl:ObjectProperty rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#usedFor">
         <rdfs:domain rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -386,10 +416,12 @@ generalization : specific</rdfs:seeAlso>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
     
@@ -397,17 +429,20 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- http://www.w3.org/ns/prov#derivedFrom -->
 
+
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#derivedFrom"/>
     
 
 
     <!-- http://www.w3.org/ns/prov#value -->
 
+
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#value"/>
     
 
 
     <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy"/>
     
@@ -421,10 +456,12 @@ generalization : specific</rdfs:seeAlso>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Approach -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Approach">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
@@ -434,17 +471,20 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Argument -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
     
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Artifact -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
     
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Backing -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Backing">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
@@ -456,6 +496,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Cause -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Cause">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
         <rdfs:comment>A situation that, by means other than motivating a violational or non-violational action caused the situation presented in the artifact.</rdfs:comment>
@@ -465,6 +506,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Circumstance -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Circumstance">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
@@ -476,6 +518,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Claim -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Claim">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
         <rdfs:comment>A fact that must be established - e.g., &apos;This is a consistent OWL ontology&apos;.</rdfs:comment>
@@ -485,6 +528,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Condition -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Condition">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
@@ -496,11 +540,13 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Descriptor -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
     
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Elaboration -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Elaboration">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
@@ -512,6 +558,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Evaluation -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Evaluation">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
         <rdfs:comment>a proposition related the situation in the artifact to degree of context&apos;s positive regards toward the situation presented in the artifact.</rdfs:comment>
@@ -521,6 +568,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Evidence -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Evidence">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
@@ -532,6 +580,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Idea -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Idea">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
     </owl:Class>
@@ -539,6 +588,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Interpretation -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Interpretation">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
@@ -550,6 +600,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Issue -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Issue">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
     </owl:Class>
@@ -557,6 +608,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Material -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Material">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -568,6 +620,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Method -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Method">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
         <rdfs:comment>Methods , models, systems to use, or tools, components of a system, frameworks. - e.g. language model, CORENLP, POS parser, kernel method, etc.</rdfs:comment>
@@ -577,6 +630,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Metric -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Metric">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -588,6 +642,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Purpose -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Purpose">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
         <rdfs:comment>A situation to be realized through the activity in the artifact.</rdfs:comment>
@@ -597,6 +652,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Qualifier -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Qualifier">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
@@ -608,6 +664,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Rebuttal -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Rebuttal">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
         <rdfs:comment>Restrictions that may be applied to the claim - &apos;Unless a reasoner for OWL 2 proves that it is not consistent&apos;.</rdfs:comment>
@@ -617,6 +674,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Restatement -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Restatement">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
@@ -628,6 +686,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Result -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Result">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
         <rdfs:comment>A Proposition presets a situation that could ahve been caused by the situation presented in the artifact.</rdfs:comment>
@@ -637,6 +696,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Solutionhood -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Solutionhood">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
@@ -648,6 +708,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Summary -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Summary">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Descriptor"/>
         <rdfs:comment>A restatement of the content of the artifact, that is shorter in bulk.</rdfs:comment>
@@ -657,6 +718,7 @@ generalization : specific</rdfs:seeAlso>
 
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Task -->
+
 
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Task">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
@@ -668,6 +730,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Term -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Term">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Artifact"/>
         <rdfs:comment>General terms or pronouns that may refer to a entity but are not themselves informative, often used as connection words.</rdfs:comment>
@@ -678,6 +741,7 @@ generalization : specific</rdfs:seeAlso>
 
     <!-- https://tetherless-world.github.io/idea-ontology/ontology#Warrant -->
 
+
     <owl:Class rdf:about="https://tetherless-world.github.io/idea-ontology/ontology#Warrant">
         <rdfs:subClassOf rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology#Argument"/>
         <rdfs:comment>A statement bridging from the evidence to the claim - e.g., &apos;An ontology developed in OWL is a consistent OWL ontology&apos;.</rdfs:comment>
@@ -687,4 +751,6 @@ generalization : specific</rdfs:seeAlso>
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
