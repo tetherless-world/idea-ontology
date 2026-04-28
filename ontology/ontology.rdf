@@ -9,9 +9,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="https://tetherless-world.github.io/idea-ontology/ontology">
-        <owl:versionIRI rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/3.1.0"/>
+        <owl:versionIRI rdf:resource="https://tetherless-world.github.io/idea-ontology/ontology/releases/3.2.0"/>
         <owl:versionInfo></owl:versionInfo>
-        <owl:versionInfo>3.1.0</owl:versionInfo>
+        <owl:versionInfo>3.2.0</owl:versionInfo>
     </owl:Ontology>
     
 
