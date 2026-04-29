@@ -1,6 +1,6 @@
-<img src="./ontology/index/icon.png" width="96" align="left" />
+<img src="./ontology/index/favicon-32x32.png" width="32" align="left" />
 
-# IDEA Ontology
+# SUDO Ontology
 ## Ontology Documentation
 
 - **Latest version (LODE)**  
