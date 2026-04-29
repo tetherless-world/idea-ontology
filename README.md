@@ -3,8 +3,8 @@
 # SUDO Ontology
 ## Ontology Documentation
 
-- **Latest version (LODE)**  
-  https://tetherless-world.github.io/idea-ontology/ontology/releases/3.3.0/docs/index-en.html
+- **Latest version documentation (Widoco)**  
+  [https://tetherless-world.github.io/idea-ontology/ontology/releases/3.3.0/docs/index-en.html](https://tetherless-world.github.io/sudo-ontology/)
 
 - **Ontology IRI**  
   https://w3id.org/twc/sudo/ontology
