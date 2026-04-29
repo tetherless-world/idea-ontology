@@ -1,0 +1,959 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+    }, {
+      "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#changeNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#derivedFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/abstract" : [ {
+    "@value" : "The SUDO Ontology is an ontology for representing ideas, issues, arguments, and approaches in scientific research and scholarly communication."
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Nipun D. Pathirage"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@id" : "https://tetherless-world.github.io/idea-ontology/ontology/idea_graph_figure.svg"
+  }, {
+    "@value" : "Scientific literature communicates knowledge not only through data and results but also through structured scholarly discourse, including motivations, problems, proposed ideas, supporting evidence, and claims. These abstract components are distributed across documents and connected through citations, making them difficult to extract and represent automatically. Existing scholarly knowledge graphs largely focus on metadata or citation networks, offering limited support for modeling scientific intent and argumentation.\n\nThe SUDO Graph addresses this limitation by introducing an ontology-centered framework that captures both concrete document structure and abstract scholarly discourse in a unified knowledge graph. The framework integrates layout-aware document parsing, ontology-guided extraction with large language models, and structured RDF instantiation. In addition, it models provenance information for all knowledge graph construction operations and adopts the PAV ontology to manage versioning and lineage of extracted instances. This design enables interpretable, evolvable, and semantically grounded scholarly knowledge graphs suitable for advanced querying, reasoning, and machine-assisted knowledge discovery."
+  } ],
+  "http://purl.org/dc/elements/1.1/license" : [ {
+    "@type" : "xsd:anyURI",
+    "@value" : "https://opensource.org/licenses/MIT"
+  } ],
+  "http://purl.org/dc/elements/1.1/modified" : [ {
+    "@value" : "2025-12-29"
+  } ],
+  "http://purl.org/dc/elements/1.1/publisher" : [ {
+    "@value" : "Tetherless World Constellation | Rensselaer Polytechnic Institute"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "SUDO Ontology"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://orcid.org/0000-0002-9313-0925"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "\n        https://w3id.org/twc/sudo/ontology#\n        "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Idea Graph is a framework for constructing ontology-driven scholarly knowledge graphs from scientific literature. It models scientific publications across three interconnected layers: document structure, extracted information, and abstract scholarly discourse such as research problems, ideas, evidence, and claims. The framework employs a discourse-aware ontology inspired by argumentation theory to align textual grounding, rhetorical intent, and citation attribution. An end-to-end pipeline transforms scientific PDFs into RDF graphs using layout-preserving parsing and ontology-guided large language model extraction. To ensure transparency and reproducibility, the system explicitly represents knowledge graph construction provenance and integrates the PAV ontology for instance-level versioning and lineage tracking. The resulting graphs support semantic querying, retrieval-augmented generation, and interactive visualization of discourse structures and citation roles."
+  } ],
+  "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology/releases/3.2.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology/releases/3.2.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology/releases/3.3.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "3.3.0"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
+    "@value" : "Formatting and URI update of SUDO Ontology version 3.2.0."
+  } ],
+  "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright" : [ {
+    "@value" : "Copyright (c) 2026 TWC"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Approach",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Argument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Argument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Proposition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Artifact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Concept"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Backing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/Backing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Cause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A situation that, by means other than motivating a violational or non-violational action caused the situation presented in the artifact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Circumstance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The proposition providing the situation presents the framework for interpreting the artifact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Claim",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A fact that must be established - e.g., 'This is a consistent OWL ontology'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/Claim"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Concept"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Condition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A realization of the situation presented in the proposition enables the realization of the situation presented in the artifact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Descriptor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Proposition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Elaboration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Additional details about the situation or some element of subject matter related to the artifact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Evaluation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a proposition related the situation in the artifact to degree of context's positive regards toward the situation presented in the artifact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Evidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/Evidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#FeatureOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "feature of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://arxiv.org/abs/1808.09602"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#HyponymOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hyponym of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://arxiv.org/abs/1808.09602"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Idea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Interpretation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a proposition relates the situation presented in the artifact to a framework of ideas not involved in the artifact itself."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Issue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Data, datasets, resources, Corpus, Knowledge base. - e.g. image data, speech data, stereo images, bilingual dictionary, paraphrased questions, CoNLL, Panntreebank, WordNet, Wikipedia, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://arxiv.org/abs/1808.09602"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Method",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Methods , models, systems to use, or tools, components of a system, frameworks. - e.g. language model, CORENLP, POS parser, kernel method, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://arxiv.org/abs/1808.09602"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Metric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Metrics, measures, or entities that can express quality of a system/method. - e.g. F1, BLEU, Precision, Recall, ROC curve, mean reciprocal rank, mean-squared error, robustness, time complexity, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://arxiv.org/abs/1808.09602"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#PartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "part of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://arxiv.org/abs/1808.09602"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Proposition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Proposition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Purpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A situation to be realized through the activity in the artifact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Qualifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/Qualifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Rebuttal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/Rebuttal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Restatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a proposition restates the artifact, where the proposition and the artifact are of comparable bulk."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Result",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Proposition presets a situation that could ahve been caused by the situation presented in the artifact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Solutionhood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "The proposition representing the situation that solves by the artifact."
+  }, {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Summary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A restatement of the content of the artifact, that is shorter in bulk."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Descriptor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Task",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Applications, problems to solve, systems to construct. - e.g. information extraction, machine reading system, image segmentation, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://arxiv.org/abs/1808.09602"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Term",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "General terms or pronouns that may refer to a entity but are not themselves informative, often used as connection words."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://arxiv.org/abs/1808.09602"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#Warrant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/Warrant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#backs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A backing that attests the warrant of an argument."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Backing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/backs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "backs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Warrant"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#causes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the situation presented in the proposition as a cause for the volitional or non-violation action presented in the artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Cause"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "causes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#concede",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "concede"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#condition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "recognizes how the realization of the situation presented in artifact depends on the realization of the situation presented in the proposition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Condition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "condition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#contextualizes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the proposition provides the framework for interpreting the reference artifact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  }, {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Circumstance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contextualizes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  }, {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#contrast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contrast"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#elaborates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Elaboration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "elaborates"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "The proposition presents additiona detail about the situation or some element of subject mattern which is presentes in the artifact or inferentially accessible in N in one or more of the way listed below;\nset: member\nabstract : instance \nwhole : part\nprocess : step\nobject : attribute\ngeneralization : specific"
+  }, {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#enables",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "potential ability to perform the action presented in artifact increases"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "enables"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#evaluates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "situation presented in the proposition assess the sutiation presented in the artifact and recognizes the value it assigns."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Evaluation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "evaluates"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#evidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Approach"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "evidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Evidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#forces",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A qualifier that expresses as degree of force concerning a claim of an argument."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Qualifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/forces"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "forces"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Claim"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#interprets",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the situation presented in the artifact to a framework of ideas not involved in the knowledge presented in the artifact itself."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Interpretation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "interprets"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#isValidUnless",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A claim that is restricted by a rebuttal of an argument."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Claim"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/isValidUnless"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is valid unless"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Rebuttal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#justify",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "justify"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#leadsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A warrant that points to a claim from the related evidence within an argument."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Warrant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/leadsTo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "leads to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Claim"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#mentions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mentions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#motivates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "desire to perform action presented in the artifact is increased"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  }, {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Idea"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "motivates"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Approach"
+  }, {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#proves",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An evidence that founds a claim of an argument."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Evidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/proves"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "proves"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Claim"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#purposes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "the activity in the artifact is initiated in order to realize the proposition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Purpose"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "purposes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#responsesTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Approach"
+  }, {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Idea"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "response to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Issue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#restates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a proposition as a restatement of the artifact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Restatement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "restates"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#result",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "recognizes that the situation presented in the artifact, could be a cuase for the action or situation presented in the proposition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Result"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "result"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#restates"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#solves",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The artifact is a solution to the problem stated in the proposition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Solutionhood"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "solves"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#summarizes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a proposition as a shorter restatement of the artifact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Summary"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "summarizes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#supports",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An evidence that supports a warrant of an argument."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  }, {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Evidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://purl.org/spar/amo/supports"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "supports"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Argument"
+  }, {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Warrant"
+  } ]
+}, {
+  "@id" : "https://w3id.org/twc/sudo/ontology#usedFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "used for"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/twc/sudo/ontology#Artifact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://arxiv.org/abs/1808.09602"
+  } ]
+}, {
+  "@id" : "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "xsd:anyURI",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+} ]

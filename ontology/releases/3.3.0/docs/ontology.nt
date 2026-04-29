@@ -1,0 +1,680 @@
+<https://w3id.org/twc/sudo/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/twc/sudo/ontology> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/twc/sudo/ontology/releases/3.3.0> .
+<https://w3id.org/twc/sudo/ontology> <http://purl.org/dc/elements/1.1/abstract> "The SUDO Ontology is an ontology for representing ideas, issues, arguments, and approaches in scientific research and scholarly communication." .
+<https://w3id.org/twc/sudo/ontology> <http://purl.org/dc/elements/1.1/creator> "Nipun D. Pathirage" .
+<https://w3id.org/twc/sudo/ontology> <http://purl.org/dc/elements/1.1/description> <https://tetherless-world.github.io/idea-ontology/ontology/idea_graph_figure.svg> .
+<https://w3id.org/twc/sudo/ontology> <http://purl.org/dc/elements/1.1/description> "Scientific literature communicates knowledge not only through data and results but also through structured scholarly discourse, including motivations, problems, proposed ideas, supporting evidence, and claims. These abstract components are distributed across documents and connected through citations, making them difficult to extract and represent automatically. Existing scholarly knowledge graphs largely focus on metadata or citation networks, offering limited support for modeling scientific intent and argumentation.\n\nThe SUDO Graph addresses this limitation by introducing an ontology-centered framework that captures both concrete document structure and abstract scholarly discourse in a unified knowledge graph. The framework integrates layout-aware document parsing, ontology-guided extraction with large language models, and structured RDF instantiation. In addition, it models provenance information for all knowledge graph construction operations and adopts the PAV ontology to manage versioning and lineage of extracted instances. This design enables interpretable, evolvable, and semantically grounded scholarly knowledge graphs suitable for advanced querying, reasoning, and machine-assisted knowledge discovery." .
+<https://w3id.org/twc/sudo/ontology> <http://purl.org/dc/elements/1.1/license> "https://opensource.org/licenses/MIT"^^<xsd:anyURI> .
+<https://w3id.org/twc/sudo/ontology> <http://purl.org/dc/elements/1.1/modified> "2025-12-29" .
+<https://w3id.org/twc/sudo/ontology> <http://purl.org/dc/elements/1.1/publisher> "Tetherless World Constellation | Rensselaer Polytechnic Institute" .
+<https://w3id.org/twc/sudo/ontology> <http://purl.org/dc/elements/1.1/title> "SUDO Ontology" .
+<https://w3id.org/twc/sudo/ontology> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-9313-0925> .
+<https://w3id.org/twc/sudo/ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "\n        https://w3id.org/twc/sudo/ontology#\n        " .
+<https://w3id.org/twc/sudo/ontology> <http://www.w3.org/2000/01/rdf-schema#comment> "The Idea Graph is a framework for constructing ontology-driven scholarly knowledge graphs from scientific literature. It models scientific publications across three interconnected layers: document structure, extracted information, and abstract scholarly discourse such as research problems, ideas, evidence, and claims. The framework employs a discourse-aware ontology inspired by argumentation theory to align textual grounding, rhetorical intent, and citation attribution. An end-to-end pipeline transforms scientific PDFs into RDF graphs using layout-preserving parsing and ontology-guided large language model extraction. To ensure transparency and reproducibility, the system explicitly represents knowledge graph construction provenance and integrates the PAV ontology for instance-level versioning and lineage tracking. The resulting graphs support semantic querying, retrieval-augmented generation, and interactive visualization of discourse structures and citation roles." .
+<https://w3id.org/twc/sudo/ontology> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/twc/sudo/ontology/releases/3.2.0> .
+<https://w3id.org/twc/sudo/ontology> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/twc/sudo/ontology/releases/3.2.0> .
+<https://w3id.org/twc/sudo/ontology> <http://www.w3.org/2002/07/owl#versionInfo> "3.3.0" .
+<https://w3id.org/twc/sudo/ontology> <http://www.w3.org/2004/02/skos/core#changeNote> "Formatting and URI update of SUDO Ontology version 3.2.0." .
+<https://w3id.org/twc/sudo/ontology> <https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright> "Copyright (c) 2026 TWC" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/modified
+<http://purl.org/dc/elements/1.1/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# xsd:anyURI
+<xsd:anyURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#FeatureOf
+<https://w3id.org/twc/sudo/ontology#FeatureOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#FeatureOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#FeatureOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#HyponymOf
+<https://w3id.org/twc/sudo/ontology#HyponymOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#HyponymOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#HyponymOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#PartOf
+<https://w3id.org/twc/sudo/ontology#PartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#PartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#PartOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#backs
+<https://w3id.org/twc/sudo/ontology#backs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#backs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Backing> .
+<https://w3id.org/twc/sudo/ontology#backs> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Warrant> .
+# 
+# https://w3id.org/twc/sudo/ontology#causes
+<https://w3id.org/twc/sudo/ontology#causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#causes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Cause> .
+<https://w3id.org/twc/sudo/ontology#causes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#concede
+<https://w3id.org/twc/sudo/ontology#concede> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#concede> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#concede> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Argument> .
+# 
+# https://w3id.org/twc/sudo/ontology#condition
+<https://w3id.org/twc/sudo/ontology#condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#condition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Condition> .
+<https://w3id.org/twc/sudo/ontology#condition> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#contextualizes
+<https://w3id.org/twc/sudo/ontology#contextualizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Circumstance> .
+<https://w3id.org/twc/sudo/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Argument> .
+<https://w3id.org/twc/sudo/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#contrast
+<https://w3id.org/twc/sudo/ontology#contrast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#contrast> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#contrast> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Argument> .
+# 
+# https://w3id.org/twc/sudo/ontology#elaborates
+<https://w3id.org/twc/sudo/ontology#elaborates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#elaborates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Elaboration> .
+<https://w3id.org/twc/sudo/ontology#elaborates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#enables
+<https://w3id.org/twc/sudo/ontology#enables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#enables> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#enables> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Argument> .
+# 
+# https://w3id.org/twc/sudo/ontology#evaluates
+<https://w3id.org/twc/sudo/ontology#evaluates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#evaluates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Evaluation> .
+<https://w3id.org/twc/sudo/ontology#evaluates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#evidence
+<https://w3id.org/twc/sudo/ontology#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#evidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Approach> .
+<https://w3id.org/twc/sudo/ontology#evidence> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Evidence> .
+# 
+# https://w3id.org/twc/sudo/ontology#forces
+<https://w3id.org/twc/sudo/ontology#forces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#forces> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Qualifier> .
+<https://w3id.org/twc/sudo/ontology#forces> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Claim> .
+# 
+# https://w3id.org/twc/sudo/ontology#interprets
+<https://w3id.org/twc/sudo/ontology#interprets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#interprets> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Interpretation> .
+<https://w3id.org/twc/sudo/ontology#interprets> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#isValidUnless
+<https://w3id.org/twc/sudo/ontology#isValidUnless> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#isValidUnless> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Claim> .
+<https://w3id.org/twc/sudo/ontology#isValidUnless> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Rebuttal> .
+# 
+# https://w3id.org/twc/sudo/ontology#justify
+<https://w3id.org/twc/sudo/ontology#justify> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#justify> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#justify> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Argument> .
+# 
+# https://w3id.org/twc/sudo/ontology#leadsTo
+<https://w3id.org/twc/sudo/ontology#leadsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#leadsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Warrant> .
+<https://w3id.org/twc/sudo/ontology#leadsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Claim> .
+# 
+# https://w3id.org/twc/sudo/ontology#mentions
+<https://w3id.org/twc/sudo/ontology#mentions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/twc/sudo/ontology#Argument> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#motivates
+<https://w3id.org/twc/sudo/ontology#motivates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Idea> .
+<https://w3id.org/twc/sudo/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Approach> .
+<https://w3id.org/twc/sudo/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Argument> .
+# 
+# https://w3id.org/twc/sudo/ontology#proves
+<https://w3id.org/twc/sudo/ontology#proves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#proves> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Evidence> .
+<https://w3id.org/twc/sudo/ontology#proves> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Claim> .
+# 
+# https://w3id.org/twc/sudo/ontology#purposes
+<https://w3id.org/twc/sudo/ontology#purposes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#purposes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Purpose> .
+<https://w3id.org/twc/sudo/ontology#purposes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#responsesTo
+<https://w3id.org/twc/sudo/ontology#responsesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#responsesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Approach> .
+<https://w3id.org/twc/sudo/ontology#responsesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Idea> .
+<https://w3id.org/twc/sudo/ontology#responsesTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Issue> .
+# 
+# https://w3id.org/twc/sudo/ontology#restates
+<https://w3id.org/twc/sudo/ontology#restates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#restates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Restatement> .
+<https://w3id.org/twc/sudo/ontology#restates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#result
+<https://w3id.org/twc/sudo/ontology#result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#result> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/twc/sudo/ontology#restates> .
+<https://w3id.org/twc/sudo/ontology#result> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Result> .
+<https://w3id.org/twc/sudo/ontology#result> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#solves
+<https://w3id.org/twc/sudo/ontology#solves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#solves> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Solutionhood> .
+<https://w3id.org/twc/sudo/ontology#solves> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#summarizes
+<https://w3id.org/twc/sudo/ontology#summarizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#summarizes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Summary> .
+<https://w3id.org/twc/sudo/ontology#summarizes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# https://w3id.org/twc/sudo/ontology#supports
+<https://w3id.org/twc/sudo/ontology#supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Evidence> .
+<https://w3id.org/twc/sudo/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Argument> .
+<https://w3id.org/twc/sudo/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Warrant> .
+# 
+# https://w3id.org/twc/sudo/ontology#usedFor
+<https://w3id.org/twc/sudo/ontology#usedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/twc/sudo/ontology#usedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#usedFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/twc/sudo/ontology#Artifact> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#label
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/prov#derivedFrom
+<http://www.w3.org/ns/prov#derivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/prov#value
+<http://www.w3.org/ns/prov#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/ns/prov#wasGeneratedBy
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/twc/sudo/ontology#Approach
+<https://w3id.org/twc/sudo/ontology#Approach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Approach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Argument> .
+# 
+# https://w3id.org/twc/sudo/ontology#Argument
+<https://w3id.org/twc/sudo/ontology#Argument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Argument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Proposition> .
+# 
+# https://w3id.org/twc/sudo/ontology#Artifact
+<https://w3id.org/twc/sudo/ontology#Artifact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Artifact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Concept> .
+# 
+# https://w3id.org/twc/sudo/ontology#Backing
+<https://w3id.org/twc/sudo/ontology#Backing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Backing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Argument> .
+<https://w3id.org/twc/sudo/ontology#Backing> <http://www.w3.org/2000/01/rdf-schema#comment> "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications." .
+<https://w3id.org/twc/sudo/ontology#Backing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Backing" .
+# 
+# https://w3id.org/twc/sudo/ontology#Cause
+<https://w3id.org/twc/sudo/ontology#Cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Cause> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Cause> <http://www.w3.org/2000/01/rdf-schema#comment> "A situation that, by means other than motivating a violational or non-violational action caused the situation presented in the artifact." .
+<https://w3id.org/twc/sudo/ontology#Cause> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Circumstance
+<https://w3id.org/twc/sudo/ontology#Circumstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Circumstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Circumstance> <http://www.w3.org/2000/01/rdf-schema#comment> "The proposition providing the situation presents the framework for interpreting the artifact." .
+<https://w3id.org/twc/sudo/ontology#Circumstance> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Claim
+<https://w3id.org/twc/sudo/ontology#Claim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Claim> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Argument> .
+<https://w3id.org/twc/sudo/ontology#Claim> <http://www.w3.org/2000/01/rdf-schema#comment> "A fact that must be established - e.g., 'This is a consistent OWL ontology'." .
+<https://w3id.org/twc/sudo/ontology#Claim> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Claim" .
+# 
+# https://w3id.org/twc/sudo/ontology#Concept
+<https://w3id.org/twc/sudo/ontology#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/twc/sudo/ontology#Condition
+<https://w3id.org/twc/sudo/ontology#Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Condition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Condition> <http://www.w3.org/2000/01/rdf-schema#comment> "A realization of the situation presented in the proposition enables the realization of the situation presented in the artifact." .
+<https://w3id.org/twc/sudo/ontology#Condition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Descriptor
+<https://w3id.org/twc/sudo/ontology#Descriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Descriptor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Proposition> .
+# 
+# https://w3id.org/twc/sudo/ontology#Elaboration
+<https://w3id.org/twc/sudo/ontology#Elaboration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Elaboration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Elaboration> <http://www.w3.org/2000/01/rdf-schema#comment> "Additional details about the situation or some element of subject matter related to the artifact." .
+<https://w3id.org/twc/sudo/ontology#Elaboration> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Evaluation
+<https://w3id.org/twc/sudo/ontology#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Evaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Evaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "a proposition related the situation in the artifact to degree of context's positive regards toward the situation presented in the artifact." .
+<https://w3id.org/twc/sudo/ontology#Evaluation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Evidence
+<https://w3id.org/twc/sudo/ontology#Evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Evidence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Argument> .
+<https://w3id.org/twc/sudo/ontology#Evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'." .
+<https://w3id.org/twc/sudo/ontology#Evidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Evidence" .
+# 
+# https://w3id.org/twc/sudo/ontology#Idea
+<https://w3id.org/twc/sudo/ontology#Idea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Idea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Argument> .
+# 
+# https://w3id.org/twc/sudo/ontology#Interpretation
+<https://w3id.org/twc/sudo/ontology#Interpretation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Interpretation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Interpretation> <http://www.w3.org/2000/01/rdf-schema#comment> "a proposition relates the situation presented in the artifact to a framework of ideas not involved in the artifact itself." .
+<https://w3id.org/twc/sudo/ontology#Interpretation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Issue
+<https://w3id.org/twc/sudo/ontology#Issue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Issue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Argument> .
+# 
+# https://w3id.org/twc/sudo/ontology#Material
+<https://w3id.org/twc/sudo/ontology#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "Data, datasets, resources, Corpus, Knowledge base. - e.g. image data, speech data, stereo images, bilingual dictionary, paraphrased questions, CoNLL, Panntreebank, WordNet, Wikipedia, etc." .
+<https://w3id.org/twc/sudo/ontology#Material> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://w3id.org/twc/sudo/ontology#Method
+<https://w3id.org/twc/sudo/ontology#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Method> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#Method> <http://www.w3.org/2000/01/rdf-schema#comment> "Methods , models, systems to use, or tools, components of a system, frameworks. - e.g. language model, CORENLP, POS parser, kernel method, etc." .
+<https://w3id.org/twc/sudo/ontology#Method> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://w3id.org/twc/sudo/ontology#Metric
+<https://w3id.org/twc/sudo/ontology#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "Metrics, measures, or entities that can express quality of a system/method. - e.g. F1, BLEU, Precision, Recall, ROC curve, mean reciprocal rank, mean-squared error, robustness, time complexity, etc." .
+<https://w3id.org/twc/sudo/ontology#Metric> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://w3id.org/twc/sudo/ontology#Proposition
+<https://w3id.org/twc/sudo/ontology#Proposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/twc/sudo/ontology#Purpose
+<https://w3id.org/twc/sudo/ontology#Purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Purpose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Purpose> <http://www.w3.org/2000/01/rdf-schema#comment> "A situation to be realized through the activity in the artifact." .
+<https://w3id.org/twc/sudo/ontology#Purpose> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Qualifier
+<https://w3id.org/twc/sudo/ontology#Qualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Qualifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Argument> .
+<https://w3id.org/twc/sudo/ontology#Qualifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc." .
+<https://w3id.org/twc/sudo/ontology#Qualifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Qualifier" .
+# 
+# https://w3id.org/twc/sudo/ontology#Rebuttal
+<https://w3id.org/twc/sudo/ontology#Rebuttal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Rebuttal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Argument> .
+<https://w3id.org/twc/sudo/ontology#Rebuttal> <http://www.w3.org/2000/01/rdf-schema#comment> "Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'." .
+<https://w3id.org/twc/sudo/ontology#Rebuttal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Rebuttal" .
+# 
+# https://w3id.org/twc/sudo/ontology#Restatement
+<https://w3id.org/twc/sudo/ontology#Restatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Restatement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Restatement> <http://www.w3.org/2000/01/rdf-schema#comment> "a proposition restates the artifact, where the proposition and the artifact are of comparable bulk." .
+<https://w3id.org/twc/sudo/ontology#Restatement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Result
+<https://w3id.org/twc/sudo/ontology#Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Result> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Result> <http://www.w3.org/2000/01/rdf-schema#comment> "A Proposition presets a situation that could ahve been caused by the situation presented in the artifact." .
+<https://w3id.org/twc/sudo/ontology#Result> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Solutionhood
+<https://w3id.org/twc/sudo/ontology#Solutionhood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Solutionhood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Solutionhood> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "The proposition representing the situation that solves by the artifact." .
+<https://w3id.org/twc/sudo/ontology#Solutionhood> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Summary
+<https://w3id.org/twc/sudo/ontology#Summary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Summary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Descriptor> .
+<https://w3id.org/twc/sudo/ontology#Summary> <http://www.w3.org/2000/01/rdf-schema#comment> "A restatement of the content of the artifact, that is shorter in bulk." .
+<https://w3id.org/twc/sudo/ontology#Summary> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+# https://w3id.org/twc/sudo/ontology#Task
+<https://w3id.org/twc/sudo/ontology#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "Applications, problems to solve, systems to construct. - e.g. information extraction, machine reading system, image segmentation, etc." .
+<https://w3id.org/twc/sudo/ontology#Task> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://w3id.org/twc/sudo/ontology#Term
+<https://w3id.org/twc/sudo/ontology#Term> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Term> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Artifact> .
+<https://w3id.org/twc/sudo/ontology#Term> <http://www.w3.org/2000/01/rdf-schema#comment> "General terms or pronouns that may refer to a entity but are not themselves informative, often used as connection words." .
+<https://w3id.org/twc/sudo/ontology#Term> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# https://w3id.org/twc/sudo/ontology#Warrant
+<https://w3id.org/twc/sudo/ontology#Warrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/twc/sudo/ontology#Warrant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/twc/sudo/ontology#Argument> .
+<https://w3id.org/twc/sudo/ontology#Warrant> <http://www.w3.org/2000/01/rdf-schema#comment> "A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'." .
+<https://w3id.org/twc/sudo/ontology#Warrant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/Warrant" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/twc/sudo/ontology#Argument
+<https://w3id.org/twc/sudo/ontology#Argument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#Argument> <http://www.w3.org/2000/01/rdf-schema#label> "Argument" .
+# 
+# https://w3id.org/twc/sudo/ontology#Artifact
+<https://w3id.org/twc/sudo/ontology#Artifact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#Artifact> <http://www.w3.org/2000/01/rdf-schema#label> "Artifact" .
+# 
+# https://w3id.org/twc/sudo/ontology#Concept
+<https://w3id.org/twc/sudo/ontology#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Concept" .
+# 
+# https://w3id.org/twc/sudo/ontology#Descriptor
+<https://w3id.org/twc/sudo/ontology#Descriptor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#Descriptor> <http://www.w3.org/2000/01/rdf-schema#label> "Descriptor" .
+# 
+# https://w3id.org/twc/sudo/ontology#FeatureOf
+<https://w3id.org/twc/sudo/ontology#FeatureOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#FeatureOf> <http://www.w3.org/2000/01/rdf-schema#label> "feature of" .
+# 
+# https://w3id.org/twc/sudo/ontology#HyponymOf
+<https://w3id.org/twc/sudo/ontology#HyponymOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#HyponymOf> <http://www.w3.org/2000/01/rdf-schema#label> "hyponym of" .
+# 
+# https://w3id.org/twc/sudo/ontology#PartOf
+<https://w3id.org/twc/sudo/ontology#PartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#PartOf> <http://www.w3.org/2000/01/rdf-schema#label> "part of" .
+# 
+# https://w3id.org/twc/sudo/ontology#Proposition
+<https://w3id.org/twc/sudo/ontology#Proposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#Proposition> <http://www.w3.org/2000/01/rdf-schema#label> "Proposition" .
+# 
+# https://w3id.org/twc/sudo/ontology#backs
+<https://w3id.org/twc/sudo/ontology#backs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#backs> <http://www.w3.org/2000/01/rdf-schema#label> "backs" .
+# 
+# https://w3id.org/twc/sudo/ontology#causes
+<https://w3id.org/twc/sudo/ontology#causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#causes> <http://www.w3.org/2000/01/rdf-schema#label> "causes" .
+# 
+# https://w3id.org/twc/sudo/ontology#concede
+<https://w3id.org/twc/sudo/ontology#concede> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#concede> <http://www.w3.org/2000/01/rdf-schema#label> "concede" .
+# 
+# https://w3id.org/twc/sudo/ontology#condition
+<https://w3id.org/twc/sudo/ontology#condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#condition> <http://www.w3.org/2000/01/rdf-schema#label> "condition" .
+# 
+# https://w3id.org/twc/sudo/ontology#contextualizes
+<https://w3id.org/twc/sudo/ontology#contextualizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#label> "contextualizes" .
+# 
+# https://w3id.org/twc/sudo/ontology#contrast
+<https://w3id.org/twc/sudo/ontology#contrast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#contrast> <http://www.w3.org/2000/01/rdf-schema#label> "contrast" .
+# 
+# https://w3id.org/twc/sudo/ontology#elaborates
+<https://w3id.org/twc/sudo/ontology#elaborates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#elaborates> <http://www.w3.org/2000/01/rdf-schema#label> "elaborates" .
+# 
+# https://w3id.org/twc/sudo/ontology#enables
+<https://w3id.org/twc/sudo/ontology#enables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#enables> <http://www.w3.org/2000/01/rdf-schema#label> "enables" .
+# 
+# https://w3id.org/twc/sudo/ontology#evaluates
+<https://w3id.org/twc/sudo/ontology#evaluates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#evaluates> <http://www.w3.org/2000/01/rdf-schema#label> "evaluates" .
+# 
+# https://w3id.org/twc/sudo/ontology#evidence
+<https://w3id.org/twc/sudo/ontology#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#evidence> <http://www.w3.org/2000/01/rdf-schema#label> "evidence" .
+# 
+# https://w3id.org/twc/sudo/ontology#forces
+<https://w3id.org/twc/sudo/ontology#forces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#forces> <http://www.w3.org/2000/01/rdf-schema#label> "forces" .
+# 
+# https://w3id.org/twc/sudo/ontology#interprets
+<https://w3id.org/twc/sudo/ontology#interprets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#interprets> <http://www.w3.org/2000/01/rdf-schema#label> "interprets" .
+# 
+# https://w3id.org/twc/sudo/ontology#isValidUnless
+<https://w3id.org/twc/sudo/ontology#isValidUnless> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#isValidUnless> <http://www.w3.org/2000/01/rdf-schema#label> "is valid unless" .
+# 
+# https://w3id.org/twc/sudo/ontology#justify
+<https://w3id.org/twc/sudo/ontology#justify> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#justify> <http://www.w3.org/2000/01/rdf-schema#label> "justify" .
+# 
+# https://w3id.org/twc/sudo/ontology#leadsTo
+<https://w3id.org/twc/sudo/ontology#leadsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#leadsTo> <http://www.w3.org/2000/01/rdf-schema#label> "leads to" .
+# 
+# https://w3id.org/twc/sudo/ontology#mentions
+<https://w3id.org/twc/sudo/ontology#mentions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#label> "mentions" .
+# 
+# https://w3id.org/twc/sudo/ontology#motivates
+<https://w3id.org/twc/sudo/ontology#motivates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#label> "motivates" .
+# 
+# https://w3id.org/twc/sudo/ontology#proves
+<https://w3id.org/twc/sudo/ontology#proves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#proves> <http://www.w3.org/2000/01/rdf-schema#label> "proves" .
+# 
+# https://w3id.org/twc/sudo/ontology#purposes
+<https://w3id.org/twc/sudo/ontology#purposes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#purposes> <http://www.w3.org/2000/01/rdf-schema#label> "purposes" .
+# 
+# https://w3id.org/twc/sudo/ontology#responsesTo
+<https://w3id.org/twc/sudo/ontology#responsesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#responsesTo> <http://www.w3.org/2000/01/rdf-schema#label> "response to" .
+# 
+# https://w3id.org/twc/sudo/ontology#restates
+<https://w3id.org/twc/sudo/ontology#restates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#restates> <http://www.w3.org/2000/01/rdf-schema#label> "restates" .
+# 
+# https://w3id.org/twc/sudo/ontology#result
+<https://w3id.org/twc/sudo/ontology#result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#result> <http://www.w3.org/2000/01/rdf-schema#label> "result" .
+# 
+# https://w3id.org/twc/sudo/ontology#solves
+<https://w3id.org/twc/sudo/ontology#solves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#solves> <http://www.w3.org/2000/01/rdf-schema#label> "solves" .
+# 
+# https://w3id.org/twc/sudo/ontology#summarizes
+<https://w3id.org/twc/sudo/ontology#summarizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#summarizes> <http://www.w3.org/2000/01/rdf-schema#label> "summarizes" .
+# 
+# https://w3id.org/twc/sudo/ontology#supports
+<https://w3id.org/twc/sudo/ontology#supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports" .
+# 
+# https://w3id.org/twc/sudo/ontology#usedFor
+<https://w3id.org/twc/sudo/ontology#usedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/twc/sudo/ontology#usedFor> <http://www.w3.org/2000/01/rdf-schema#label> "used for" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/twc/sudo/ontology#FeatureOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+<https://w3id.org/twc/sudo/ontology#HyponymOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+<https://w3id.org/twc/sudo/ontology#PartOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+<https://w3id.org/twc/sudo/ontology#backs> <http://www.w3.org/2000/01/rdf-schema#comment> "A backing that attests the warrant of an argument." .
+<https://w3id.org/twc/sudo/ontology#backs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/backs" .
+# 
+<https://w3id.org/twc/sudo/ontology#causes> <http://www.w3.org/2000/01/rdf-schema#comment> "the situation presented in the proposition as a cause for the volitional or non-violation action presented in the artifact" .
+<https://w3id.org/twc/sudo/ontology#causes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#concede> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#condition> <http://www.w3.org/2000/01/rdf-schema#comment> "recognizes how the realization of the situation presented in artifact depends on the realization of the situation presented in the proposition." .
+<https://w3id.org/twc/sudo/ontology#condition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#comment> "the proposition provides the framework for interpreting the reference artifact." .
+<https://w3id.org/twc/sudo/ontology#contextualizes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#contrast> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#elaborates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "The proposition presents additiona detail about the situation or some element of subject mattern which is presentes in the artifact or inferentially accessible in N in one or more of the way listed below;\nset: member\nabstract : instance \nwhole : part\nprocess : step\nobject : attribute\ngeneralization : specific" .
+<https://w3id.org/twc/sudo/ontology#elaborates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#enables> <http://www.w3.org/2000/01/rdf-schema#comment> "potential ability to perform the action presented in artifact increases" .
+<https://w3id.org/twc/sudo/ontology#enables> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#evaluates> <http://www.w3.org/2000/01/rdf-schema#comment> "situation presented in the proposition assess the sutiation presented in the artifact and recognizes the value it assigns." .
+<https://w3id.org/twc/sudo/ontology#evaluates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#evidence> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#forces> <http://www.w3.org/2000/01/rdf-schema#comment> "A qualifier that expresses as degree of force concerning a claim of an argument." .
+<https://w3id.org/twc/sudo/ontology#forces> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/forces" .
+# 
+<https://w3id.org/twc/sudo/ontology#interprets> <http://www.w3.org/2000/01/rdf-schema#comment> "the situation presented in the artifact to a framework of ideas not involved in the knowledge presented in the artifact itself." .
+<https://w3id.org/twc/sudo/ontology#interprets> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#isValidUnless> <http://www.w3.org/2000/01/rdf-schema#comment> "A claim that is restricted by a rebuttal of an argument." .
+<https://w3id.org/twc/sudo/ontology#isValidUnless> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/isValidUnless" .
+# 
+<https://w3id.org/twc/sudo/ontology#justify> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#leadsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A warrant that points to a claim from the related evidence within an argument." .
+<https://w3id.org/twc/sudo/ontology#leadsTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/leadsTo" .
+# 
+<https://w3id.org/twc/sudo/ontology#mentions> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#comment> "desire to perform action presented in the artifact is increased" .
+<https://w3id.org/twc/sudo/ontology#motivates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#proves> <http://www.w3.org/2000/01/rdf-schema#comment> "An evidence that founds a claim of an argument." .
+<https://w3id.org/twc/sudo/ontology#proves> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/proves" .
+# 
+<https://w3id.org/twc/sudo/ontology#purposes> <http://www.w3.org/2000/01/rdf-schema#comment> "the activity in the artifact is initiated in order to realize the proposition." .
+<https://w3id.org/twc/sudo/ontology#purposes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#responsesTo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#restates> <http://www.w3.org/2000/01/rdf-schema#comment> "a proposition as a restatement of the artifact." .
+<https://w3id.org/twc/sudo/ontology#restates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#result> <http://www.w3.org/2000/01/rdf-schema#comment> "recognizes that the situation presented in the artifact, could be a cuase for the action or situation presented in the proposition." .
+<https://w3id.org/twc/sudo/ontology#result> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#solves> <http://www.w3.org/2000/01/rdf-schema#comment> "The artifact is a solution to the problem stated in the proposition." .
+<https://w3id.org/twc/sudo/ontology#solves> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#summarizes> <http://www.w3.org/2000/01/rdf-schema#comment> "a proposition as a shorter restatement of the artifact." .
+<https://w3id.org/twc/sudo/ontology#summarizes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
+# 
+<https://w3id.org/twc/sudo/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#comment> "An evidence that supports a warrant of an argument." .
+<https://w3id.org/twc/sudo/ontology#supports> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/spar/amo/supports" .
+# 
+<https://w3id.org/twc/sudo/ontology#usedFor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://arxiv.org/abs/1808.09602" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://tetherless-world.github.io/idea-ontology/ontology#"
-     xml:base="https://tetherless-world.github.io/idea-ontology/ontology"
+<rdf:RDF xmlns="https://w3id.org/twc/sudo/ontology#"
+     xml:base="https://w3id.org/twc/sudo/ontology"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:cmns-av="https://www.omg.org/spec/Commons/AnnotationVocabulary/"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:AnnotationVocabulary="https://www.omg.org/spec/Commons/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://w3id.org/twc/sudo/ontology">
         <owl:versionIRI rdf:resource="https://w3id.org/twc/sudo/ontology/releases/3.3.0"/>
         <dc:abstract>The SUDO Ontology is an ontology for representing ideas, issues, arguments, and approaches in scientific research and scholarly communication.</dc:abstract>
@@ -24,7 +23,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
         <dc:modified>2025-12-29</dc:modified>
         <dc:publisher>Tetherless World Constellation | Rensselaer Polytechnic Institute</dc:publisher>
         <dc:title>SUDO Ontology</dc:title>
-        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-9313-0925"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-9313-0925"/>
         <vann:preferredNamespaceUri>
         https://w3id.org/twc/sudo/ontology#
         </vann:preferredNamespaceUri>
@@ -33,7 +32,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
         <owl:priorVersion rdf:resource="https://w3id.org/twc/sudo/ontology/releases/3.2.0"/>
         <owl:versionInfo>3.3.0</owl:versionInfo>
         <skos:changeNote>Formatting and URI update of SUDO Ontology version 3.2.0.</skos:changeNote>
-        <cmns-av:copyright>Copyright (c) 2026 TWC</cmns-av:copyright>
+        <AnnotationVocabulary:copyright>Copyright (c) 2026 TWC</AnnotationVocabulary:copyright>
     </owl:Ontology>
     
 
@@ -46,10 +45,12 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://purl.org/dc/elements/1.1/abstract -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
     
@@ -57,11 +58,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
@@ -69,11 +72,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://purl.org/dc/elements/1.1/license -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/modified -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
     
@@ -81,11 +86,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://purl.org/dc/elements/1.1/publisher -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
@@ -93,11 +100,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://purl.org/dc/terms/creator -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
@@ -105,11 +114,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
 
+
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote"/>
     
 
 
     <!-- https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright -->
+
 
     <owl:AnnotationProperty rdf:about="https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright"/>
     
@@ -123,10 +134,12 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- xsd:anyURI -->
+
 
     <rdfs:Datatype rdf:about="xsd:anyURI"/>
     
@@ -140,10 +153,12 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
@@ -156,6 +171,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
@@ -167,6 +183,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#FeatureOf -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#FeatureOf">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -175,6 +192,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#HyponymOf -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#HyponymOf">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -185,6 +203,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#PartOf -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#PartOf">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -193,6 +212,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#backs -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#backs">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Backing"/>
@@ -203,6 +223,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#causes -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#causes">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Cause"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -211,6 +232,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#concede -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#concede">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -221,6 +243,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#condition -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#condition">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Condition"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -229,6 +252,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#contextualizes -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#contextualizes">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -241,6 +265,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#contrast -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#contrast">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
@@ -249,6 +274,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#elaborates -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#elaborates">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Elaboration"/>
@@ -259,6 +285,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#enables -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#enables">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
@@ -267,6 +294,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#evaluates -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#evaluates">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Evaluation"/>
@@ -277,6 +305,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#evidence -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#evidence">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Approach"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Evidence"/>
@@ -285,6 +314,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#forces -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#forces">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Qualifier"/>
@@ -295,6 +325,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#interprets -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#interprets">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Interpretation"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -303,6 +334,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#isValidUnless -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#isValidUnless">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Claim"/>
@@ -313,6 +345,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#justify -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#justify">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
@@ -322,6 +355,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#leadsTo -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#leadsTo">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Warrant"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Claim"/>
@@ -330,6 +364,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#mentions -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#mentions">
         <rdfs:domain>
@@ -347,6 +382,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#motivates -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#motivates">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Idea"/>
@@ -358,6 +394,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#proves -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#proves">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Evidence"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Claim"/>
@@ -367,6 +404,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#purposes -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#purposes">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Purpose"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -375,6 +413,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#responsesTo -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#responsesTo">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Approach"/>
@@ -386,6 +425,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#restates -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#restates">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Restatement"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -394,6 +434,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#result -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#result">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/twc/sudo/ontology#restates"/>
@@ -405,6 +446,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#solves -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#solves">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Solutionhood"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -414,6 +456,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#summarizes -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#summarizes">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Summary"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -422,6 +465,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#supports -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#supports">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -433,6 +477,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#usedFor -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#usedFor">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -449,10 +494,12 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
     
@@ -460,17 +507,20 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://www.w3.org/ns/prov#derivedFrom -->
 
+
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#derivedFrom"/>
     
 
 
     <!-- http://www.w3.org/ns/prov#value -->
 
+
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#value"/>
     
 
 
     <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy"/>
     
@@ -484,10 +534,12 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Approach -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Approach">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
@@ -497,6 +549,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Argument -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Argument">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Proposition"/>
     </owl:Class>
@@ -505,6 +558,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Artifact -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Artifact">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Concept"/>
     </owl:Class>
@@ -512,6 +566,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Backing -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Backing">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
@@ -523,6 +578,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Cause -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Cause">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
         <rdfs:comment>A situation that, by means other than motivating a violational or non-violational action caused the situation presented in the artifact.</rdfs:comment>
@@ -532,6 +588,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Circumstance -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Circumstance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
@@ -543,6 +600,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Claim -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Claim">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
         <rdfs:comment>A fact that must be established - e.g., &apos;This is a consistent OWL ontology&apos;.</rdfs:comment>
@@ -553,11 +611,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Concept -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Concept"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Condition -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Condition">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
@@ -569,6 +629,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Descriptor -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Descriptor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Proposition"/>
     </owl:Class>
@@ -576,6 +637,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Elaboration -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Elaboration">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
@@ -587,6 +649,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Evaluation -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Evaluation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
         <rdfs:comment>a proposition related the situation in the artifact to degree of context&apos;s positive regards toward the situation presented in the artifact.</rdfs:comment>
@@ -596,6 +659,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Evidence -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Evidence">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
@@ -607,6 +671,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Idea -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Idea">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
     </owl:Class>
@@ -614,6 +679,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Interpretation -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Interpretation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
@@ -625,6 +691,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Issue -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Issue">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
     </owl:Class>
@@ -632,6 +699,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Material -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Material">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -643,6 +711,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Method -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Method">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:comment>Methods , models, systems to use, or tools, components of a system, frameworks. - e.g. language model, CORENLP, POS parser, kernel method, etc.</rdfs:comment>
@@ -652,6 +721,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Metric -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Metric">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -663,11 +733,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Proposition -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Proposition"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Purpose -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Purpose">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
@@ -679,6 +751,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Qualifier -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Qualifier">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
         <rdfs:comment>Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc.</rdfs:comment>
@@ -688,6 +761,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Rebuttal -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Rebuttal">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
@@ -699,6 +773,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Restatement -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Restatement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
         <rdfs:comment>a proposition restates the artifact, where the proposition and the artifact are of comparable bulk.</rdfs:comment>
@@ -708,6 +783,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Result -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Result">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
@@ -719,6 +795,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Solutionhood -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Solutionhood">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
         <rdfs:seeAlso>The proposition representing the situation that solves by the artifact.</rdfs:seeAlso>
@@ -728,6 +805,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Summary -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Summary">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
@@ -739,6 +817,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Task -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Task">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:comment>Applications, problems to solve, systems to construct. - e.g. information extraction, machine reading system, image segmentation, etc.</rdfs:comment>
@@ -749,6 +828,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Term -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Term">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:comment>General terms or pronouns that may refer to a entity but are not themselves informative, often used as connection words.</rdfs:comment>
@@ -758,6 +838,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Warrant -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Warrant">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Argument"/>
@@ -775,10 +856,12 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Argument -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Argument">
         <rdfs:label>Argument</rdfs:label>
@@ -788,6 +871,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Artifact -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Artifact">
         <rdfs:label>Artifact</rdfs:label>
     </owl:NamedIndividual>
@@ -795,6 +879,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Concept -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Concept">
         <rdfs:label>Concept</rdfs:label>
@@ -804,6 +889,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Descriptor -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Descriptor">
         <rdfs:label>Descriptor</rdfs:label>
     </owl:NamedIndividual>
@@ -811,6 +897,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#FeatureOf -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#FeatureOf">
         <rdfs:label>feature of</rdfs:label>
@@ -820,6 +907,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#HyponymOf -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#HyponymOf">
         <rdfs:label>hyponym of</rdfs:label>
     </owl:NamedIndividual>
@@ -827,6 +915,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#PartOf -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#PartOf">
         <rdfs:label>part of</rdfs:label>
@@ -836,6 +925,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#Proposition -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Proposition">
         <rdfs:label>Proposition</rdfs:label>
     </owl:NamedIndividual>
@@ -843,6 +933,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#backs -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#backs">
         <rdfs:label>backs</rdfs:label>
@@ -852,6 +943,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#causes -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#causes">
         <rdfs:label>causes</rdfs:label>
     </owl:NamedIndividual>
@@ -859,6 +951,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#concede -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#concede">
         <rdfs:label>concede</rdfs:label>
@@ -868,6 +961,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#condition -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#condition">
         <rdfs:label>condition</rdfs:label>
     </owl:NamedIndividual>
@@ -875,6 +969,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#contextualizes -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#contextualizes">
         <rdfs:label>contextualizes</rdfs:label>
@@ -884,6 +979,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#contrast -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#contrast">
         <rdfs:label>contrast</rdfs:label>
     </owl:NamedIndividual>
@@ -891,6 +987,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#elaborates -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#elaborates">
         <rdfs:label>elaborates</rdfs:label>
@@ -900,6 +997,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#enables -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#enables">
         <rdfs:label>enables</rdfs:label>
     </owl:NamedIndividual>
@@ -907,6 +1005,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#evaluates -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#evaluates">
         <rdfs:label>evaluates</rdfs:label>
@@ -916,6 +1015,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#evidence -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#evidence">
         <rdfs:label>evidence</rdfs:label>
     </owl:NamedIndividual>
@@ -923,6 +1023,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#forces -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#forces">
         <rdfs:label>forces</rdfs:label>
@@ -932,6 +1033,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#interprets -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#interprets">
         <rdfs:label>interprets</rdfs:label>
     </owl:NamedIndividual>
@@ -939,6 +1041,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#isValidUnless -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#isValidUnless">
         <rdfs:label>is valid unless</rdfs:label>
@@ -948,6 +1051,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#justify -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#justify">
         <rdfs:label>justify</rdfs:label>
     </owl:NamedIndividual>
@@ -955,6 +1059,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#leadsTo -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#leadsTo">
         <rdfs:label>leads to</rdfs:label>
@@ -964,6 +1069,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#mentions -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#mentions">
         <rdfs:label>mentions</rdfs:label>
     </owl:NamedIndividual>
@@ -971,6 +1077,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#motivates -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#motivates">
         <rdfs:label>motivates</rdfs:label>
@@ -980,6 +1087,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#proves -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#proves">
         <rdfs:label>proves</rdfs:label>
     </owl:NamedIndividual>
@@ -987,6 +1095,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#purposes -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#purposes">
         <rdfs:label>purposes</rdfs:label>
@@ -996,6 +1105,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#responsesTo -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#responsesTo">
         <rdfs:label>response to</rdfs:label>
     </owl:NamedIndividual>
@@ -1003,6 +1113,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#restates -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#restates">
         <rdfs:label>restates</rdfs:label>
@@ -1012,6 +1123,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#result -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#result">
         <rdfs:label>result</rdfs:label>
     </owl:NamedIndividual>
@@ -1019,6 +1131,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#solves -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#solves">
         <rdfs:label>solves</rdfs:label>
@@ -1028,6 +1141,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#summarizes -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#summarizes">
         <rdfs:label>summarizes</rdfs:label>
     </owl:NamedIndividual>
@@ -1036,6 +1150,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- https://w3id.org/twc/sudo/ontology#supports -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#supports">
         <rdfs:label>supports</rdfs:label>
     </owl:NamedIndividual>
@@ -1043,6 +1158,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- https://w3id.org/twc/sudo/ontology#usedFor -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#usedFor">
         <rdfs:label>used for</rdfs:label>
@@ -1057,6 +1173,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
 
     <rdf:Description rdf:about="https://w3id.org/twc/sudo/ontology#FeatureOf">
         <rdfs:seeAlso>http://arxiv.org/abs/1808.09602</rdfs:seeAlso>
@@ -1174,4 +1291,6 @@ generalization : specific</rdfs:seeAlso>
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
