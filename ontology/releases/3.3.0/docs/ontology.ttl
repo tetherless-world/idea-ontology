@@ -1,13 +1,13 @@
-@prefix : <https://w3id.org/twc/sudo/ontology#> .
+@prefix : <https://w3id.org/anonymous/sudo/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/twc/sudo/ontology#> .
+@base <https://w3id.org/anonymous/sudo/ontology#> .
 
-<https://w3id.org/twc/sudo/ontology> rdf:type owl:Ontology ;
-                                      owl:versionIRI <https://w3id.org/twc/sudo/ontology/releases/3.3.0> ;
+<https://w3id.org/anonymous/sudo/ontology> rdf:type owl:Ontology ;
+                                      owl:versionIRI <https://w3id.org/anonymous/sudo/ontology/releases/3.3.0> ;
                                       <http://purl.org/dc/elements/1.1/abstract> "The SUDO Ontology is an ontology for representing ideas, issues, arguments, and approaches in scientific research and scholarly communication." ;
                                       <http://purl.org/dc/elements/1.1/creator> "Nipun D. Pathirage" ;
                                       <http://purl.org/dc/elements/1.1/description> <https://tetherless-world.github.io/sudo-ontology/ontology/idea_graph_figure.svg> ,
@@ -20,11 +20,11 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
                                       <http://purl.org/dc/elements/1.1/title> "SUDO Ontology" ;
                                       <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-9313-0925> ;
                                       <http://purl.org/vocab/vann/preferredNamespaceUri> """
-        https://w3id.org/twc/sudo/ontology#
+        https://w3id.org/anonymous/sudo/ontology#
         """ ;
                                       rdfs:comment "The Idea Graph is a framework for constructing ontology-driven scholarly knowledge graphs from scientific literature. It models scientific publications across three interconnected layers: document structure, extracted information, and abstract scholarly discourse such as research problems, ideas, evidence, and claims. The framework employs a discourse-aware ontology inspired by argumentation theory to align textual grounding, rhetorical intent, and citation attribution. An end-to-end pipeline transforms scientific PDFs into RDF graphs using layout-preserving parsing and ontology-guided large language model extraction. To ensure transparency and reproducibility, the system explicitly represents knowledge graph construction provenance and integrates the PAV ontology for instance-level versioning and lineage tracking. The resulting graphs support semantic querying, retrieval-augmented generation, and interactive visualization of discourse structures and citation roles." ;
-                                      owl:backwardCompatibleWith <https://w3id.org/twc/sudo/ontology/releases/3.2.0> ;
-                                      owl:priorVersion <https://w3id.org/twc/sudo/ontology/releases/3.2.0> ;
+                                      owl:backwardCompatibleWith <https://w3id.org/anonymous/sudo/ontology/releases/3.2.0> ;
+                                      owl:priorVersion <https://w3id.org/anonymous/sudo/ontology/releases/3.2.0> ;
                                       owl:versionInfo "3.3.0" ;
                                       <http://www.w3.org/2004/02/skos/core#changeNote> "Formatting and URI update of SUDO Ontology version 3.2.0." ;
                                       <https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright> "Copyright (c) 2026 TWC" .
@@ -105,49 +105,49 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
                                                  rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#FeatureOf
+###  https://w3id.org/anonymous/sudo/ontology#FeatureOf
 :FeatureOf rdf:type owl:ObjectProperty ;
            rdfs:domain :Artifact ;
            rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#HyponymOf
+###  https://w3id.org/anonymous/sudo/ontology#HyponymOf
 :HyponymOf rdf:type owl:ObjectProperty ;
            rdfs:domain :Artifact ;
            rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#PartOf
+###  https://w3id.org/anonymous/sudo/ontology#PartOf
 :PartOf rdf:type owl:ObjectProperty ;
         rdfs:domain :Artifact ;
         rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#backs
+###  https://w3id.org/anonymous/sudo/ontology#backs
 :backs rdf:type owl:ObjectProperty ;
        rdfs:domain :Backing ;
        rdfs:range :Warrant .
 
 
-###  https://w3id.org/twc/sudo/ontology#causes
+###  https://w3id.org/anonymous/sudo/ontology#causes
 :causes rdf:type owl:ObjectProperty ;
         rdfs:domain :Cause ;
         rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#concede
+###  https://w3id.org/anonymous/sudo/ontology#concede
 :concede rdf:type owl:ObjectProperty ;
          rdfs:domain :Artifact ;
          rdfs:range :Argument .
 
 
-###  https://w3id.org/twc/sudo/ontology#condition
+###  https://w3id.org/anonymous/sudo/ontology#condition
 :condition rdf:type owl:ObjectProperty ;
            rdfs:domain :Condition ;
            rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#contextualizes
+###  https://w3id.org/anonymous/sudo/ontology#contextualizes
 :contextualizes rdf:type owl:ObjectProperty ;
                 rdfs:domain :Artifact ,
                             :Circumstance ;
@@ -155,67 +155,67 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
                            :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#contrast
+###  https://w3id.org/anonymous/sudo/ontology#contrast
 :contrast rdf:type owl:ObjectProperty ;
           rdfs:domain :Artifact ;
           rdfs:range :Argument .
 
 
-###  https://w3id.org/twc/sudo/ontology#elaborates
+###  https://w3id.org/anonymous/sudo/ontology#elaborates
 :elaborates rdf:type owl:ObjectProperty ;
             rdfs:domain :Elaboration ;
             rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#enables
+###  https://w3id.org/anonymous/sudo/ontology#enables
 :enables rdf:type owl:ObjectProperty ;
          rdfs:domain :Artifact ;
          rdfs:range :Argument .
 
 
-###  https://w3id.org/twc/sudo/ontology#evaluates
+###  https://w3id.org/anonymous/sudo/ontology#evaluates
 :evaluates rdf:type owl:ObjectProperty ;
            rdfs:domain :Evaluation ;
            rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#evidence
+###  https://w3id.org/anonymous/sudo/ontology#evidence
 :evidence rdf:type owl:ObjectProperty ;
           rdfs:domain :Approach ;
           rdfs:range :Evidence .
 
 
-###  https://w3id.org/twc/sudo/ontology#forces
+###  https://w3id.org/anonymous/sudo/ontology#forces
 :forces rdf:type owl:ObjectProperty ;
         rdfs:domain :Qualifier ;
         rdfs:range :Claim .
 
 
-###  https://w3id.org/twc/sudo/ontology#interprets
+###  https://w3id.org/anonymous/sudo/ontology#interprets
 :interprets rdf:type owl:ObjectProperty ;
             rdfs:domain :Interpretation ;
             rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#isValidUnless
+###  https://w3id.org/anonymous/sudo/ontology#isValidUnless
 :isValidUnless rdf:type owl:ObjectProperty ;
                rdfs:domain :Claim ;
                rdfs:range :Rebuttal .
 
 
-###  https://w3id.org/twc/sudo/ontology#justify
+###  https://w3id.org/anonymous/sudo/ontology#justify
 :justify rdf:type owl:ObjectProperty ;
          rdfs:domain :Artifact ;
          rdfs:range :Argument .
 
 
-###  https://w3id.org/twc/sudo/ontology#leadsTo
+###  https://w3id.org/anonymous/sudo/ontology#leadsTo
 :leadsTo rdf:type owl:ObjectProperty ;
          rdfs:domain :Warrant ;
          rdfs:range :Claim .
 
 
-###  https://w3id.org/twc/sudo/ontology#mentions
+###  https://w3id.org/anonymous/sudo/ontology#mentions
 :mentions rdf:type owl:ObjectProperty ;
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( :Argument
@@ -225,7 +225,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
           rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#motivates
+###  https://w3id.org/anonymous/sudo/ontology#motivates
 :motivates rdf:type owl:ObjectProperty ;
            rdfs:domain :Artifact ,
                        :Idea ;
@@ -233,51 +233,51 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
                       :Argument .
 
 
-###  https://w3id.org/twc/sudo/ontology#proves
+###  https://w3id.org/anonymous/sudo/ontology#proves
 :proves rdf:type owl:ObjectProperty ;
         rdfs:domain :Evidence ;
         rdfs:range :Claim .
 
 
-###  https://w3id.org/twc/sudo/ontology#purposes
+###  https://w3id.org/anonymous/sudo/ontology#purposes
 :purposes rdf:type owl:ObjectProperty ;
           rdfs:domain :Purpose ;
           rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#responsesTo
+###  https://w3id.org/anonymous/sudo/ontology#responsesTo
 :responsesTo rdf:type owl:ObjectProperty ;
              rdfs:domain :Approach ,
                          :Idea ;
              rdfs:range :Issue .
 
 
-###  https://w3id.org/twc/sudo/ontology#restates
+###  https://w3id.org/anonymous/sudo/ontology#restates
 :restates rdf:type owl:ObjectProperty ;
           rdfs:domain :Restatement ;
           rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#result
+###  https://w3id.org/anonymous/sudo/ontology#result
 :result rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf :restates ;
         rdfs:domain :Result ;
         rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#solves
+###  https://w3id.org/anonymous/sudo/ontology#solves
 :solves rdf:type owl:ObjectProperty ;
         rdfs:domain :Solutionhood ;
         rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#summarizes
+###  https://w3id.org/anonymous/sudo/ontology#summarizes
 :summarizes rdf:type owl:ObjectProperty ;
             rdfs:domain :Summary ;
             rdfs:range :Artifact .
 
 
-###  https://w3id.org/twc/sudo/ontology#supports
+###  https://w3id.org/anonymous/sudo/ontology#supports
 :supports rdf:type owl:ObjectProperty ;
           rdfs:domain :Artifact ,
                       :Evidence ;
@@ -285,7 +285,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
                      :Warrant .
 
 
-###  https://w3id.org/twc/sudo/ontology#usedFor
+###  https://w3id.org/anonymous/sudo/ontology#usedFor
 :usedFor rdf:type owl:ObjectProperty ;
          rdfs:domain :Artifact ;
          rdfs:range :Artifact .
@@ -315,192 +315,192 @@ rdfs:label rdf:type owl:DatatypeProperty .
 #    Classes
 #################################################################
 
-###  https://w3id.org/twc/sudo/ontology#Approach
+###  https://w3id.org/anonymous/sudo/ontology#Approach
 :Approach rdf:type owl:Class ;
           rdfs:subClassOf :Argument .
 
 
-###  https://w3id.org/twc/sudo/ontology#Argument
+###  https://w3id.org/anonymous/sudo/ontology#Argument
 :Argument rdf:type owl:Class ;
           rdfs:subClassOf :Proposition .
 
 
-###  https://w3id.org/twc/sudo/ontology#Artifact
+###  https://w3id.org/anonymous/sudo/ontology#Artifact
 :Artifact rdf:type owl:Class ;
           rdfs:subClassOf :Concept .
 
 
-###  https://w3id.org/twc/sudo/ontology#Backing
+###  https://w3id.org/anonymous/sudo/ontology#Backing
 :Backing rdf:type owl:Class ;
          rdfs:subClassOf :Argument ;
          rdfs:comment "Sort of credentials that certifies the warrant - e.g., the OWL 2 document specifications." ;
          rdfs:isDefinedBy "http://purl.org/spar/amo/Backing" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Cause
+###  https://w3id.org/anonymous/sudo/ontology#Cause
 :Cause rdf:type owl:Class ;
        rdfs:subClassOf :Descriptor ;
        rdfs:comment "A situation that, by means other than motivating a violational or non-violational action caused the situation presented in the artifact." ;
        rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Circumstance
+###  https://w3id.org/anonymous/sudo/ontology#Circumstance
 :Circumstance rdf:type owl:Class ;
               rdfs:subClassOf :Descriptor ;
               rdfs:comment "The proposition providing the situation presents the framework for interpreting the artifact." ;
               rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Claim
+###  https://w3id.org/anonymous/sudo/ontology#Claim
 :Claim rdf:type owl:Class ;
        rdfs:subClassOf :Argument ;
        rdfs:comment "A fact that must be established - e.g., 'This is a consistent OWL ontology'." ;
        rdfs:isDefinedBy "http://purl.org/spar/amo/Claim" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Concept
+###  https://w3id.org/anonymous/sudo/ontology#Concept
 :Concept rdf:type owl:Class .
 
 
-###  https://w3id.org/twc/sudo/ontology#Condition
+###  https://w3id.org/anonymous/sudo/ontology#Condition
 :Condition rdf:type owl:Class ;
            rdfs:subClassOf :Descriptor ;
            rdfs:comment "A realization of the situation presented in the proposition enables the realization of the situation presented in the artifact." ;
            rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Descriptor
+###  https://w3id.org/anonymous/sudo/ontology#Descriptor
 :Descriptor rdf:type owl:Class ;
             rdfs:subClassOf :Proposition .
 
 
-###  https://w3id.org/twc/sudo/ontology#Elaboration
+###  https://w3id.org/anonymous/sudo/ontology#Elaboration
 :Elaboration rdf:type owl:Class ;
              rdfs:subClassOf :Descriptor ;
              rdfs:comment "Additional details about the situation or some element of subject matter related to the artifact." ;
              rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Evaluation
+###  https://w3id.org/anonymous/sudo/ontology#Evaluation
 :Evaluation rdf:type owl:Class ;
             rdfs:subClassOf :Descriptor ;
             rdfs:comment "a proposition related the situation in the artifact to degree of context's positive regards toward the situation presented in the artifact." ;
             rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Evidence
+###  https://w3id.org/anonymous/sudo/ontology#Evidence
 :Evidence rdf:type owl:Class ;
           rdfs:subClassOf :Argument ;
           rdfs:comment "A fact that represents a foundation for the claim - e.g., 'This ontology was developed in OWL'." ;
           rdfs:isDefinedBy "http://purl.org/spar/amo/Evidence" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Idea
+###  https://w3id.org/anonymous/sudo/ontology#Idea
 :Idea rdf:type owl:Class ;
       rdfs:subClassOf :Argument .
 
 
-###  https://w3id.org/twc/sudo/ontology#Interpretation
+###  https://w3id.org/anonymous/sudo/ontology#Interpretation
 :Interpretation rdf:type owl:Class ;
                 rdfs:subClassOf :Descriptor ;
                 rdfs:comment "a proposition relates the situation presented in the artifact to a framework of ideas not involved in the artifact itself." ;
                 rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Issue
+###  https://w3id.org/anonymous/sudo/ontology#Issue
 :Issue rdf:type owl:Class ;
        rdfs:subClassOf :Argument .
 
 
-###  https://w3id.org/twc/sudo/ontology#Material
+###  https://w3id.org/anonymous/sudo/ontology#Material
 :Material rdf:type owl:Class ;
           rdfs:subClassOf :Artifact ;
           rdfs:comment "Data, datasets, resources, Corpus, Knowledge base. - e.g. image data, speech data, stereo images, bilingual dictionary, paraphrased questions, CoNLL, Panntreebank, WordNet, Wikipedia, etc." ;
           rdfs:seeAlso "http://arxiv.org/abs/1808.09602" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Method
+###  https://w3id.org/anonymous/sudo/ontology#Method
 :Method rdf:type owl:Class ;
         rdfs:subClassOf :Artifact ;
         rdfs:comment "Methods , models, systems to use, or tools, components of a system, frameworks. - e.g. language model, CORENLP, POS parser, kernel method, etc." ;
         rdfs:seeAlso "http://arxiv.org/abs/1808.09602" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Metric
+###  https://w3id.org/anonymous/sudo/ontology#Metric
 :Metric rdf:type owl:Class ;
         rdfs:subClassOf :Artifact ;
         rdfs:comment "Metrics, measures, or entities that can express quality of a system/method. - e.g. F1, BLEU, Precision, Recall, ROC curve, mean reciprocal rank, mean-squared error, robustness, time complexity, etc." ;
         rdfs:seeAlso "http://arxiv.org/abs/1808.09602" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Proposition
+###  https://w3id.org/anonymous/sudo/ontology#Proposition
 :Proposition rdf:type owl:Class .
 
 
-###  https://w3id.org/twc/sudo/ontology#Purpose
+###  https://w3id.org/anonymous/sudo/ontology#Purpose
 :Purpose rdf:type owl:Class ;
          rdfs:subClassOf :Descriptor ;
          rdfs:comment "A situation to be realized through the activity in the artifact." ;
          rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Qualifier
+###  https://w3id.org/anonymous/sudo/ontology#Qualifier
 :Qualifier rdf:type owl:Class ;
            rdfs:subClassOf :Argument ;
            rdfs:comment "Words or phrases that express the degree of certainty of the claim such as “certainly”, “possible”, “probably”, “presumably”, etc." ;
            rdfs:isDefinedBy "http://purl.org/spar/amo/Qualifier" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Rebuttal
+###  https://w3id.org/anonymous/sudo/ontology#Rebuttal
 :Rebuttal rdf:type owl:Class ;
           rdfs:subClassOf :Argument ;
           rdfs:comment "Restrictions that may be applied to the claim - 'Unless a reasoner for OWL 2 proves that it is not consistent'." ;
           rdfs:isDefinedBy "http://purl.org/spar/amo/Rebuttal" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Restatement
+###  https://w3id.org/anonymous/sudo/ontology#Restatement
 :Restatement rdf:type owl:Class ;
              rdfs:subClassOf :Descriptor ;
              rdfs:comment "a proposition restates the artifact, where the proposition and the artifact are of comparable bulk." ;
              rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Result
+###  https://w3id.org/anonymous/sudo/ontology#Result
 :Result rdf:type owl:Class ;
         rdfs:subClassOf :Descriptor ;
         rdfs:comment "A Proposition presets a situation that could ahve been caused by the situation presented in the artifact." ;
         rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Solutionhood
+###  https://w3id.org/anonymous/sudo/ontology#Solutionhood
 :Solutionhood rdf:type owl:Class ;
               rdfs:subClassOf :Descriptor ;
               rdfs:seeAlso "The proposition representing the situation that solves by the artifact." ,
                            "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Summary
+###  https://w3id.org/anonymous/sudo/ontology#Summary
 :Summary rdf:type owl:Class ;
          rdfs:subClassOf :Descriptor ;
          rdfs:comment "A restatement of the content of the artifact, that is shorter in bulk." ;
          rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Task
+###  https://w3id.org/anonymous/sudo/ontology#Task
 :Task rdf:type owl:Class ;
       rdfs:subClassOf :Artifact ;
       rdfs:comment "Applications, problems to solve, systems to construct. - e.g. information extraction, machine reading system, image segmentation, etc." ;
       rdfs:seeAlso "http://arxiv.org/abs/1808.09602" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Term
+###  https://w3id.org/anonymous/sudo/ontology#Term
 :Term rdf:type owl:Class ;
       rdfs:subClassOf :Artifact ;
       rdfs:comment "General terms or pronouns that may refer to a entity but are not themselves informative, often used as connection words." ;
       rdfs:seeAlso "http://arxiv.org/abs/1808.09602" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Warrant
+###  https://w3id.org/anonymous/sudo/ontology#Warrant
 :Warrant rdf:type owl:Class ;
          rdfs:subClassOf :Argument ;
          rdfs:comment "A statement bridging from the evidence to the claim - e.g., 'An ontology developed in OWL is a consistent OWL ontology'." ;
@@ -511,172 +511,172 @@ rdfs:label rdf:type owl:DatatypeProperty .
 #    Individuals
 #################################################################
 
-###  https://w3id.org/twc/sudo/ontology#Argument
+###  https://w3id.org/anonymous/sudo/ontology#Argument
 :Argument rdf:type owl:NamedIndividual ;
           rdfs:label "Argument" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Artifact
+###  https://w3id.org/anonymous/sudo/ontology#Artifact
 :Artifact rdf:type owl:NamedIndividual ;
           rdfs:label "Artifact" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Concept
+###  https://w3id.org/anonymous/sudo/ontology#Concept
 :Concept rdf:type owl:NamedIndividual ;
          rdfs:label "Concept" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Descriptor
+###  https://w3id.org/anonymous/sudo/ontology#Descriptor
 :Descriptor rdf:type owl:NamedIndividual ;
             rdfs:label "Descriptor" .
 
 
-###  https://w3id.org/twc/sudo/ontology#FeatureOf
+###  https://w3id.org/anonymous/sudo/ontology#FeatureOf
 :FeatureOf rdf:type owl:NamedIndividual ;
            rdfs:label "feature of" .
 
 
-###  https://w3id.org/twc/sudo/ontology#HyponymOf
+###  https://w3id.org/anonymous/sudo/ontology#HyponymOf
 :HyponymOf rdf:type owl:NamedIndividual ;
            rdfs:label "hyponym of" .
 
 
-###  https://w3id.org/twc/sudo/ontology#PartOf
+###  https://w3id.org/anonymous/sudo/ontology#PartOf
 :PartOf rdf:type owl:NamedIndividual ;
         rdfs:label "part of" .
 
 
-###  https://w3id.org/twc/sudo/ontology#Proposition
+###  https://w3id.org/anonymous/sudo/ontology#Proposition
 :Proposition rdf:type owl:NamedIndividual ;
              rdfs:label "Proposition" .
 
 
-###  https://w3id.org/twc/sudo/ontology#backs
+###  https://w3id.org/anonymous/sudo/ontology#backs
 :backs rdf:type owl:NamedIndividual ;
        rdfs:label "backs" .
 
 
-###  https://w3id.org/twc/sudo/ontology#causes
+###  https://w3id.org/anonymous/sudo/ontology#causes
 :causes rdf:type owl:NamedIndividual ;
         rdfs:label "causes" .
 
 
-###  https://w3id.org/twc/sudo/ontology#concede
+###  https://w3id.org/anonymous/sudo/ontology#concede
 :concede rdf:type owl:NamedIndividual ;
          rdfs:label "concede" .
 
 
-###  https://w3id.org/twc/sudo/ontology#condition
+###  https://w3id.org/anonymous/sudo/ontology#condition
 :condition rdf:type owl:NamedIndividual ;
            rdfs:label "condition" .
 
 
-###  https://w3id.org/twc/sudo/ontology#contextualizes
+###  https://w3id.org/anonymous/sudo/ontology#contextualizes
 :contextualizes rdf:type owl:NamedIndividual ;
                 rdfs:label "contextualizes" .
 
 
-###  https://w3id.org/twc/sudo/ontology#contrast
+###  https://w3id.org/anonymous/sudo/ontology#contrast
 :contrast rdf:type owl:NamedIndividual ;
           rdfs:label "contrast" .
 
 
-###  https://w3id.org/twc/sudo/ontology#elaborates
+###  https://w3id.org/anonymous/sudo/ontology#elaborates
 :elaborates rdf:type owl:NamedIndividual ;
             rdfs:label "elaborates" .
 
 
-###  https://w3id.org/twc/sudo/ontology#enables
+###  https://w3id.org/anonymous/sudo/ontology#enables
 :enables rdf:type owl:NamedIndividual ;
          rdfs:label "enables" .
 
 
-###  https://w3id.org/twc/sudo/ontology#evaluates
+###  https://w3id.org/anonymous/sudo/ontology#evaluates
 :evaluates rdf:type owl:NamedIndividual ;
            rdfs:label "evaluates" .
 
 
-###  https://w3id.org/twc/sudo/ontology#evidence
+###  https://w3id.org/anonymous/sudo/ontology#evidence
 :evidence rdf:type owl:NamedIndividual ;
           rdfs:label "evidence" .
 
 
-###  https://w3id.org/twc/sudo/ontology#forces
+###  https://w3id.org/anonymous/sudo/ontology#forces
 :forces rdf:type owl:NamedIndividual ;
         rdfs:label "forces" .
 
 
-###  https://w3id.org/twc/sudo/ontology#interprets
+###  https://w3id.org/anonymous/sudo/ontology#interprets
 :interprets rdf:type owl:NamedIndividual ;
             rdfs:label "interprets" .
 
 
-###  https://w3id.org/twc/sudo/ontology#isValidUnless
+###  https://w3id.org/anonymous/sudo/ontology#isValidUnless
 :isValidUnless rdf:type owl:NamedIndividual ;
                rdfs:label "is valid unless" .
 
 
-###  https://w3id.org/twc/sudo/ontology#justify
+###  https://w3id.org/anonymous/sudo/ontology#justify
 :justify rdf:type owl:NamedIndividual ;
          rdfs:label "justify" .
 
 
-###  https://w3id.org/twc/sudo/ontology#leadsTo
+###  https://w3id.org/anonymous/sudo/ontology#leadsTo
 :leadsTo rdf:type owl:NamedIndividual ;
          rdfs:label "leads to" .
 
 
-###  https://w3id.org/twc/sudo/ontology#mentions
+###  https://w3id.org/anonymous/sudo/ontology#mentions
 :mentions rdf:type owl:NamedIndividual ;
           rdfs:label "mentions" .
 
 
-###  https://w3id.org/twc/sudo/ontology#motivates
+###  https://w3id.org/anonymous/sudo/ontology#motivates
 :motivates rdf:type owl:NamedIndividual ;
            rdfs:label "motivates" .
 
 
-###  https://w3id.org/twc/sudo/ontology#proves
+###  https://w3id.org/anonymous/sudo/ontology#proves
 :proves rdf:type owl:NamedIndividual ;
         rdfs:label "proves" .
 
 
-###  https://w3id.org/twc/sudo/ontology#purposes
+###  https://w3id.org/anonymous/sudo/ontology#purposes
 :purposes rdf:type owl:NamedIndividual ;
           rdfs:label "purposes" .
 
 
-###  https://w3id.org/twc/sudo/ontology#responsesTo
+###  https://w3id.org/anonymous/sudo/ontology#responsesTo
 :responsesTo rdf:type owl:NamedIndividual ;
              rdfs:label "response to" .
 
 
-###  https://w3id.org/twc/sudo/ontology#restates
+###  https://w3id.org/anonymous/sudo/ontology#restates
 :restates rdf:type owl:NamedIndividual ;
           rdfs:label "restates" .
 
 
-###  https://w3id.org/twc/sudo/ontology#result
+###  https://w3id.org/anonymous/sudo/ontology#result
 :result rdf:type owl:NamedIndividual ;
         rdfs:label "result" .
 
 
-###  https://w3id.org/twc/sudo/ontology#solves
+###  https://w3id.org/anonymous/sudo/ontology#solves
 :solves rdf:type owl:NamedIndividual ;
         rdfs:label "solves" .
 
 
-###  https://w3id.org/twc/sudo/ontology#summarizes
+###  https://w3id.org/anonymous/sudo/ontology#summarizes
 :summarizes rdf:type owl:NamedIndividual ;
             rdfs:label "summarizes" .
 
 
-###  https://w3id.org/twc/sudo/ontology#supports
+###  https://w3id.org/anonymous/sudo/ontology#supports
 :supports rdf:type owl:NamedIndividual ;
           rdfs:label "supports" .
 
 
-###  https://w3id.org/twc/sudo/ontology#usedFor
+###  https://w3id.org/anonymous/sudo/ontology#usedFor
 :usedFor rdf:type owl:NamedIndividual ;
          rdfs:label "used for" .
 

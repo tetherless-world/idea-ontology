@@ -4,13 +4,13 @@
 ## Ontology Documentation
 
 - **Latest version documentation (Widoco)**  
-  [https://tetherless-world.github.io/idea-ontology/ontology/releases/3.3.0/docs/index-en.html](https://tetherless-world.github.io/sudo-ontology/)
+  ./ontology/ontology.rdf
 
 - **Ontology IRI**  
-  https://w3id.org/twc/sudo/ontology
+  https://w3id.org/anonymous/sudo/ontology
 
 - **Version IRI**  
-  https://w3id.org/twc/sudo/ontology/releases/3.3.0
+  https://w3id.org/anonymous/sudo/ontology/releases/3.3.0
 
 ![ontology-image](./ontology/index/idea_graph_v2_figure.svg)
 
@@ -18,27 +18,25 @@
   The SUDO Ontology represents ideas, issues, arguments, and approaches in scientific research and scholarly communication.
 
 - **Creator**  
-  Nipun D. Pathirage
-  Oliveira Santos, Henrique
-  McGuinness, Deborah 
+  Anonymous  
 
 - **Publisher**  
-  Tetherless World Constellation | Rensselaer Polytechnic Institute
+  Anonymous
 
 - **License**  
   https://opensource.org/licenses/MIT
 
 - **Preferred namespace**  
-  https://w3id.org/twc/sudo/ontology#
+  https://w3id.org/anonymous/sudo/ontology#
 
 - **Version 2.2.0**  
-  https://tetherless-world.github.io/idea-ontology/ontology/releases/2.2.0
+  https://w3id.org/anonymous/sudo/ontology/releases/2.2.0
 
 - **Version 2.0.0**  
-  https://tetherless-world.github.io/idea-ontology/ontology/releases/2.0.0
+  https://w3id.org/anonymous/sudo/ontology/releases/2.0.0
 
 - **Version 1.0.0**  
-  https://tetherless-world.github.io/idea-ontology/ontology/releases/1.0.0
+  https://w3id.org/anonymous/sudo/ontology/releases/1.0.0
 
 - **Ontology RDF (RDF/XML)**  
-  https://tetherless-world.github.io/idea-ontology/ontology/idea.rdf
+  ./ontology/idea.rdf

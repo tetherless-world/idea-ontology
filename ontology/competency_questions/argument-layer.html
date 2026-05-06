@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Argumentation Competency Questions</title>
@@ -11,35 +12,35 @@
 
 <body>
 
-<header>
-  <h1>Argumentation Competency Questions</h1>
-  <p class="subtitle">
-    Competency questions for modeling arguments, claims, assumptions, evidence,
-    and justification structures in scholarly discourse.
-  </p>
-</header>
+  <header>
+    <h1>Argumentation Competency Questions</h1>
+    <p class="subtitle">
+      Competency questions for modeling arguments, claims, assumptions, evidence,
+      and justification structures in scholarly discourse.
+    </p>
+  </header>
 
-<main>
+  <main>
 
-  <!-- CQ-ARG-01 -->
-  <section id="cq-arg-01" class="cq">
-    <h2>CQ-ARG-01: What arguments are made in a document?</h2>
+    <!-- CQ-ARG-01 -->
+    <section id="cq-arg-01" class="cq">
+      <h2>CQ-ARG-01: What arguments are made in a document?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Retrieve all argumentative structures asserted in a given document.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Retrieve all argumentative structures asserted in a given document.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>What arguments does this paper make?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>What arguments does this paper make?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
 PREFIX amo:  <http://purl.org/spar/amo/>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 
 SELECT DISTINCT ?arg
@@ -48,35 +49,35 @@ WHERE {
   ?arg a amo:Argument .
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 Semantic modeling of research findings improves transparency and comparison
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- CQ-ARG-02 -->
-  <section id="cq-arg-02" class="cq">
-    <h2>CQ-ARG-02: What claims are made with respect to an argument?</h2>
+    <!-- CQ-ARG-02 -->
+    <section id="cq-arg-02" class="cq">
+      <h2>CQ-ARG-02: What claims are made with respect to an argument?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Retrieve claims that constitute or support a given argument.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Retrieve claims that constitute or support a given argument.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>What claims are made with respect to the argument?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>What claims are made with respect to the argument?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
 PREFIX amo:  <http://purl.org/spar/amo/>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 
 SELECT DISTINCT ?claim
@@ -85,35 +86,35 @@ WHERE {
   ?arg amo:hasClaim ?claim .
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 Explicit semantic representation of research findings enhances transparency.
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- CQ-ARG-03 -->
-  <section id="cq-arg-03" class="cq">
-    <h2>CQ-ARG-03: How is an argument realized as an approach?</h2>
+    <!-- CQ-ARG-03 -->
+    <section id="cq-arg-03" class="cq">
+      <h2>CQ-ARG-03: How is an argument realized as an approach?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Identify the methodological approach that operationalizes an argument.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Identify the methodological approach that operationalizes an argument.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>How is the argument realized in the paper as an approach?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>How is the argument realized in the paper as an approach?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
 PREFIX amo:  <http://purl.org/spar/amo/>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 
 SELECT ?arg ?app
@@ -123,37 +124,37 @@ WHERE {
        idea:realizes ?app .
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 Semantic modeling of research findings improves transparency and comparison
 |
 SemSur ontology-based semantic representation pipeline
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- CQ-ARG-04 -->
-  <section id="cq-arg-04" class="cq">
-    <h2>CQ-ARG-04: What assumptions underlie the approach?</h2>
+    <!-- CQ-ARG-04 -->
+    <section id="cq-arg-04" class="cq">
+      <h2>CQ-ARG-04: What assumptions underlie the approach?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Retrieve assumptions underlying a methodological approach.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Retrieve assumptions underlying a methodological approach.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>What assumptions are made in the approach?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>What assumptions are made in the approach?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
 PREFIX amo:  <http://purl.org/spar/amo/>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
@@ -166,35 +167,35 @@ WHERE {
   FILTER (?type != owl:NamedIndividual)
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 Structured representations facilitate accessibility and comparability | Assumption
 Machine-readable semantic models enable automated reasoning | TheoreticalAssumption
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- CQ-ARG-05 -->
-  <section id="cq-arg-05" class="cq">
-    <h2>CQ-ARG-05: What artifacts are used or introduced by the approach?</h2>
+    <!-- CQ-ARG-05 -->
+    <section id="cq-arg-05" class="cq">
+      <h2>CQ-ARG-05: What artifacts are used or introduced by the approach?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Retrieve scholarly artifacts employed or introduced by an approach.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Retrieve scholarly artifacts employed or introduced by an approach.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>What artifacts are used or introduced in the approach?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>What artifacts are used or introduced in the approach?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
@@ -211,38 +212,38 @@ WHERE {
   FILTER (?type != owl:NamedIndividual)
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 FaBiO and CiTO ontologies for bibliographic and citation representation | Model
 Document Component Ontology (DoCO) | Model
 SemSur ontology for semantic representation of research findings | Model
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- CQ-ARG-06 -->
-  <section id="cq-arg-06" class="cq">
-    <h2>CQ-ARG-06: What hypotheses are evaluated during evidence generation?</h2>
+    <!-- CQ-ARG-06 -->
+    <section id="cq-arg-06" class="cq">
+      <h2>CQ-ARG-06: What hypotheses are evaluated during evidence generation?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Retrieve hypotheses evaluated during the evidence generation process.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Retrieve hypotheses evaluated during the evidence generation process.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>What experimental hypotheses are evaluated?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>What experimental hypotheses are evaluated?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
 PREFIX amo:  <http://purl.org/spar/amo/>
 PREFIX expo: <http://www.hozo.jp/owl/EXPOApr19.xml/>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 
 SELECT DISTINCT ?evidence ?hypothesis
@@ -252,36 +253,36 @@ WHERE {
   ?evidence expo:hasHypothesis ?hypothesis .
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 Semantic representations improve cross-paper querying | Hypothesis
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- CQ-ARG-07 -->
-  <section id="cq-arg-07" class="cq">
-    <h2>CQ-ARG-07: What results are produced as evidence?</h2>
+    <!-- CQ-ARG-07 -->
+    <section id="cq-arg-07" class="cq">
+      <h2>CQ-ARG-07: What results are produced as evidence?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Retrieve experimental or evaluative results produced as evidence.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Retrieve experimental or evaluative results produced as evidence.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>What experimental results are generated?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>What experimental results are generated?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
 PREFIX amo:  <http://purl.org/spar/amo/>
 PREFIX expo: <http://www.hozo.jp/owl/EXPOApr19.xml/>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 
 SELECT DISTINCT ?evidence ?result
@@ -291,36 +292,36 @@ WHERE {
   ?evidence expo:hasResult ?result .
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 Semantic representations enabled complex cross-document queries | Result
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- CQ-ARG-08 -->
-  <section id="cq-arg-08" class="cq">
-    <h2>CQ-ARG-08: What is the evidence generation design?</h2>
+    <!-- CQ-ARG-08 -->
+    <section id="cq-arg-08" class="cq">
+      <h2>CQ-ARG-08: What is the evidence generation design?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Retrieve the experimental or evaluation design used to generate evidence.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Retrieve the experimental or evaluation design used to generate evidence.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>What is the evidence generation design?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>What is the evidence generation design?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
 PREFIX amo:  <http://purl.org/spar/amo/>
 PREFIX expo: <http://www.hozo.jp/owl/EXPOApr19.xml/>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 
 SELECT DISTINCT ?evidence ?design
@@ -330,35 +331,35 @@ WHERE {
   ?evidence expo:hasExperimentDesign ?design .
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 Create semantic representations of research findings | ExperimentalDesign
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- CQ-ARG-09 -->
-  <section id="cq-arg-09" class="cq">
-    <h2>CQ-ARG-09: What evidence supports a given claim?</h2>
+    <!-- CQ-ARG-09 -->
+    <section id="cq-arg-09" class="cq">
+      <h2>CQ-ARG-09: What evidence supports a given claim?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Retrieve evidence that directly supports a specific claim.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Retrieve evidence that directly supports a specific claim.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>What evidence supports this claim?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>What evidence supports this claim?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
 PREFIX amo:  <http://purl.org/spar/amo/>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 
 SELECT DISTINCT ?claim
@@ -367,35 +368,35 @@ WHERE {
   ?arg amo:hasClaim ?claim .
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 Explicit semantic representation enables transparent comparison and reuse.
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- CQ-ARG-11 -->
-  <section id="cq-arg-11" class="cq">
-    <h2>CQ-ARG-11: Which cited works are used as backing?</h2>
+    <!-- CQ-ARG-11 -->
+    <section id="cq-arg-11" class="cq">
+      <h2>CQ-ARG-11: Which cited works are used as backing?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Retrieve cited scholarly works that provide backing for claims.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Retrieve cited scholarly works that provide backing for claims.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>Which cited works are used as backing?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>Which cited works are used as backing?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
 PREFIX amo:  <http://purl.org/spar/amo/>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 
 SELECT DISTINCT ?backing
@@ -404,35 +405,35 @@ WHERE {
   ?arg amo:hasBacking ?backing .
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 Prior semantic publishing efforts demonstrate feasibility of structured scholarly representation.
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- CQ-ARG-12 -->
-  <section id="cq-arg-12" class="cq">
-    <h2>CQ-ARG-12: What warrants connect evidence to claims?</h2>
+    <!-- CQ-ARG-12 -->
+    <section id="cq-arg-12" class="cq">
+      <h2>CQ-ARG-12: What warrants connect evidence to claims?</h2>
 
-    <div class="cq-block">
-      <h3>Intent</h3>
-      <p>Retrieve warrants that justify the connection between evidence and claims.</p>
-    </div>
+      <div class="cq-block">
+        <h3>Intent</h3>
+        <p>Retrieve warrants that justify the connection between evidence and claims.</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>Natural Language Question</h3>
-      <p>What warrants connect evidence to claims?</p>
-    </div>
+      <div class="cq-block">
+        <h3>Natural Language Question</h3>
+        <p>What warrants connect evidence to claims?</p>
+      </div>
 
-    <div class="cq-block">
-      <h3>SPARQL Query</h3>
-<pre><code>
+      <div class="cq-block">
+        <h3>SPARQL Query</h3>
+        <pre><code>
 PREFIX amo:  <http://purl.org/spar/amo/>
-PREFIX idea: <https://tetherless-world.github.io/idea-ontology/ontology#>
+PREFIX sudo:<https://w3id.org/anonymous/sudo/ontology#>
 PREFIX po:   <http://purl.org/spar/po/>
 
 SELECT DISTINCT ?warrant
@@ -441,25 +442,26 @@ WHERE {
   ?arg amo:hasWarrant ?warrant .
 }
 </code></pre>
-    </div>
+      </div>
 
-    <div class="cq-block expected">
-      <h3>Expected Result</h3>
-<pre><code>
+      <div class="cq-block expected">
+        <h3>Expected Result</h3>
+        <pre><code>
 If research contributions are represented as linked entities, they become comparable across publications.
 Machine-readable representations enable automated analysis beyond human reading.
 </code></pre>
-    </div>
-  </section>
+      </div>
+    </section>
 
-</main>
+  </main>
 
-<footer>
-  <p>
-    IDEA Ontology – Argumentation Competency Questions<br />
-    © 2026 Tetherless World Constellation
-  </p>
-</footer>
+  <footer>
+    <p>
+      IDEA Ontology – Argumentation Competency Questions<br />
+      © 2026 Tetherless World Constellation
+    </p>
+  </footer>
 
 </body>
+
 </html>
