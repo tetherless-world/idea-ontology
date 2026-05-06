@@ -26,17 +26,5 @@
 - **License**  
   https://opensource.org/licenses/MIT
 
-- **Preferred namespace**  
-  https://w3id.org/anonymous/sudo/ontology#
-
-- **Version 2.2.0**  
-  https://w3id.org/anonymous/sudo/ontology/releases/2.2.0
-
-- **Version 2.0.0**  
-  https://w3id.org/anonymous/sudo/ontology/releases/2.0.0
-
-- **Version 1.0.0**  
-  https://w3id.org/anonymous/sudo/ontology/releases/1.0.0
-
 - **Ontology RDF (RDF/XML)**  
   ./ontology/idea.rdf
