@@ -2,26 +2,23 @@
 <rdf:RDF xmlns="https://w3id.org/twc/sudo/ontology#"
      xml:base="https://w3id.org/twc/sudo/ontology"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:po="http://www.essepuntato.it/2008/12/pattern#"
-     xmlns:cso="https://cso.kmi.open.ac.uk/topics/"
-     xmlns:deo="http://purl.org/spar/deo/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:mod="https://w3id.org/mod#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
-     xmlns:cito="http://purl.org/spar/cito/"
-     xmlns:doco="http://purl.org/spar/doco/"
-     xmlns:foaf="http://purl.org/spar/foaf"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vocab="https://w3id.org/widoco/vocab#"
      xmlns:schema="https://schema.org/"
-     xmlns:cmns-av="https://www.omg.org/spec/Commons/AnnotationVocabulary/"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:AnnotationVocabulary="https://www.omg.org/spec/Commons/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://w3id.org/twc/sudo/ontology">
         <owl:versionIRI rdf:resource="https://w3id.org/twc/sudo/ontology/releases/3.5.0"/>
         <owl:imports rdf:resource="http://purl.org/spar/amo"/>
@@ -36,6 +33,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
         <dc:modified>2025-12-29</dc:modified>
         <dc:publisher>Tetherless World Constellation | Rensselaer Polytechnic Institute</dc:publisher>
         <dc:title>SUDO Ontology</dc:title>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-9313-0925"/>
         <vann:preferredNamespaceUri>
         https://w3id.org/twc/sudo/ontology#
         </vann:preferredNamespaceUri>
@@ -44,7 +42,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
         <owl:priorVersion rdf:resource="https://w3id.org/twc/sudo/ontology/releases/3.2.0"/>
         <owl:versionInfo>3.4.0</owl:versionInfo>
         <skos:changeNote>Formatting and URI update of SUDO Ontology version 3.2.0.</skos:changeNote>
-        <cmns-av:copyright>Copyright (c) 2026 TWC</cmns-av:copyright>
+        <AnnotationVocabulary:copyright>Copyright (c) 2026 TWC</AnnotationVocabulary:copyright>
     </owl:Ontology>
     
 
@@ -57,10 +55,12 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://purl.org/dc/elements/1.1/abstract -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
     
@@ -68,11 +68,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
@@ -80,11 +82,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://purl.org/dc/elements/1.1/license -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/modified -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
     
@@ -92,11 +96,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://purl.org/dc/elements/1.1/publisher -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
@@ -104,19 +110,40 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://purl.org/dc/terms/creator -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </owl:AnnotationProperty>
     
 
 
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/doi -->
+
+
+    <rdf:Description rdf:about="http://purl.org/ontology/bibo/doi">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
 
     <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
@@ -126,11 +153,13 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
 
+
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote"/>
     
 
 
     <!-- https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright -->
+
 
     <owl:AnnotationProperty rdf:about="https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright"/>
     
@@ -144,10 +173,12 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- xsd:anyURI -->
+
 
     <rdfs:Datatype rdf:about="xsd:anyURI"/>
     
@@ -161,10 +192,12 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://purl.org/dc/terms/creator -->
+
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
         <rdfs:domain rdf:resource="http://purl.org/spar/fabio/ResearchPaper"/>
@@ -174,6 +207,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://purl.org/dc/terms/isPartOf -->
 
+
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf">
         <rdfs:domain rdf:resource="http://purl.org/spar/fabio/ResearchPaper"/>
         <rdfs:range rdf:resource="http://purl.org/ontology/bibo/Proceedings"/>
@@ -182,6 +216,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- http://purl.org/spar/cito/cites -->
+
 
     <owl:ObjectProperty rdf:about="http://purl.org/spar/cito/cites">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -195,6 +230,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://www.essepuntato.it/2008/12/pattern#contains -->
 
+
     <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2008/12/pattern#contains">
         <rdfs:domain rdf:resource="http://purl.org/spar/doco/DiscourseElement"/>
         <rdfs:range rdf:resource="http://purl.org/spar/doco/DiscourseElement"/>
@@ -206,6 +242,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
     <!-- http://www.essepuntato.it/2008/12/pattern#isContainedByAsHeader -->
 
+
     <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2008/12/pattern#isContainedByAsHeader">
         <rdfs:domain rdf:resource="http://purl.org/spar/doco/Section"/>
         <rdfs:range rdf:resource="http://purl.org/spar/doco/SectionTitle"/>
@@ -214,6 +251,7 @@ The SUDO Graph addresses this limitation by introducing an ontology-centered fra
 
 
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
@@ -229,6 +267,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
     <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
@@ -242,6 +281,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
     <!-- https://w3id.org/twc/sudo/ontology#HyponymOf -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#HyponymOf">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -250,6 +290,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
 
     <!-- https://w3id.org/twc/sudo/ontology#causes -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#causes">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Cause"/>
@@ -260,6 +301,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
     <!-- https://w3id.org/twc/sudo/ontology#concede -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#concede">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="http://purl.org/spar/amo/Argument"/>
@@ -269,6 +311,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
     <!-- https://w3id.org/twc/sudo/ontology#condition -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#condition">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Condition"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -277,6 +320,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
 
     <!-- https://w3id.org/twc/sudo/ontology#contextualizes -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#contextualizes">
         <rdfs:domain>
@@ -301,6 +345,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
     <!-- https://w3id.org/twc/sudo/ontology#contrast -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#contrast">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="http://purl.org/spar/amo/Argument"/>
@@ -309,6 +354,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
 
     <!-- https://w3id.org/twc/sudo/ontology#elaborates -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#elaborates">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Elaboration"/>
@@ -319,6 +365,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
     <!-- https://w3id.org/twc/sudo/ontology#enables -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#enables">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="http://purl.org/spar/amo/Argument"/>
@@ -327,6 +374,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
 
     <!-- https://w3id.org/twc/sudo/ontology#evaluates -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#evaluates">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Evaluation"/>
@@ -337,6 +385,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
     <!-- https://w3id.org/twc/sudo/ontology#evidence -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#evidence">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Approach"/>
         <rdfs:range rdf:resource="http://purl.org/spar/amo/Evidence"/>
@@ -345,6 +394,7 @@ The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
 
 
     <!-- https://w3id.org/twc/sudo/ontology#featureOf -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#featureOf">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -360,6 +410,7 @@ E.g.  prior knowledge of the model  genre-specific regularities of discourse str
 
     <!-- https://w3id.org/twc/sudo/ontology#forces -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#forces">
         <rdfs:domain rdf:resource="http://purl.org/spar/amo/Qualifier"/>
         <rdfs:range rdf:resource="http://purl.org/spar/amo/Claim"/>
@@ -368,6 +419,7 @@ E.g.  prior knowledge of the model  genre-specific regularities of discourse str
 
 
     <!-- https://w3id.org/twc/sudo/ontology#interprets -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#interprets">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Interpretation"/>
@@ -378,6 +430,7 @@ E.g.  prior knowledge of the model  genre-specific regularities of discourse str
 
     <!-- https://w3id.org/twc/sudo/ontology#justify -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#justify">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="http://purl.org/spar/amo/Argument"/>
@@ -386,6 +439,7 @@ E.g.  prior knowledge of the model  genre-specific regularities of discourse str
 
 
     <!-- https://w3id.org/twc/sudo/ontology#leadsTo -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#leadsTo">
         <rdfs:domain rdf:resource="http://purl.org/spar/amo/Warrant"/>
@@ -396,6 +450,7 @@ E.g.  prior knowledge of the model  genre-specific regularities of discourse str
 
     <!-- https://w3id.org/twc/sudo/ontology#mentions -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#mentions">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Proposition"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -404,6 +459,7 @@ E.g.  prior knowledge of the model  genre-specific regularities of discourse str
 
 
     <!-- https://w3id.org/twc/sudo/ontology#motivates -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#motivates">
         <rdfs:domain>
@@ -428,6 +484,7 @@ E.g.  prior knowledge of the model  genre-specific regularities of discourse str
 
     <!-- https://w3id.org/twc/sudo/ontology#partOf -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#partOf">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -441,6 +498,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- https://w3id.org/twc/sudo/ontology#proves -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#proves">
         <rdfs:domain rdf:resource="http://purl.org/spar/amo/Evidence"/>
         <rdfs:range rdf:resource="http://purl.org/spar/amo/Claim"/>
@@ -450,6 +508,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- https://w3id.org/twc/sudo/ontology#purposes -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#purposes">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Purpose"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -458,6 +517,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- https://w3id.org/twc/sudo/ontology#responsesTo -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#responsesTo">
         <rdfs:domain>
@@ -475,6 +535,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- https://w3id.org/twc/sudo/ontology#restates -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#restates">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Restatement"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -483,6 +544,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- https://w3id.org/twc/sudo/ontology#result -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#result">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Result"/>
@@ -493,6 +555,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- https://w3id.org/twc/sudo/ontology#solves -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#solves">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Solutionhood"/>
         <rdfs:range rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -501,6 +564,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- https://w3id.org/twc/sudo/ontology#summarizes -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#summarizes">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Summary"/>
@@ -511,6 +575,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- https://w3id.org/twc/sudo/ontology#supports -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#supports">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
         <rdfs:range rdf:resource="http://purl.org/spar/amo/Argument"/>
@@ -519,6 +584,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- https://w3id.org/twc/sudo/ontology#usedFor -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/twc/sudo/ontology#usedFor">
         <rdfs:domain rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -535,22 +601,21 @@ E.g.  The system includes two models: speech recognition and natural language un
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://purl.org/dc/terms/issued -->
 
+
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued">
         <rdfs:domain rdf:resource="http://purl.org/spar/fabio/ResearchPaper"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</rdfs:comment>
-        <rdfs:label>Date Issued</rdfs:label>
-        <prov:definition>Date of formal issuance of the resource.</prov:definition>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://purl.org/dc/terms/subject -->
+
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/subject">
         <rdfs:domain rdf:resource="http://purl.org/spar/fabio/ResearchPaper"/>
@@ -564,6 +629,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://purl.org/dc/terms/title -->
 
+
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
         <rdfs:domain rdf:resource="http://purl.org/spar/fabio/ResearchPaper"/>
         <rdfs:comment>A name given to the resource.</rdfs:comment>
@@ -574,14 +640,15 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://purl.org/ontology/bibo/doi -->
 
+
     <owl:DatatypeProperty rdf:about="http://purl.org/ontology/bibo/doi">
         <rdfs:domain rdf:resource="http://purl.org/spar/fabio/ResearchPaper"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://schema.org/position -->
+
 
     <owl:DatatypeProperty rdf:about="http://schema.org/position">
         <rdfs:domain rdf:resource="http://purl.org/spar/doco/DiscourseElement"/>
@@ -594,11 +661,13 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
+
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
         <rdfs:domain rdf:resource="http://purl.org/spar/fabio/ResearchPaper"/>
@@ -608,11 +677,13 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://www.w3.org/ns/prov#derivedFrom -->
 
+
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#derivedFrom"/>
     
 
 
     <!-- http://www.w3.org/ns/prov#value -->
+
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#value"/>
     
@@ -620,11 +691,13 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
 
+
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#citationCount -->
+
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/twc/sudo/ontology#citationCount">
         <rdfs:domain rdf:resource="http://purl.org/spar/fabio/ResearchPaper"/>
@@ -643,10 +716,12 @@ E.g.  The system includes two models: speech recognition and natural language un
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://purl.org/ontology/bibo/Proceedings -->
+
 
     <owl:Class rdf:about="http://purl.org/ontology/bibo/Proceedings">
         <rdfs:comment>A compilation of documents published from an event, such as a conference.</rdfs:comment>
@@ -656,6 +731,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- http://purl.org/spar/amo/Argument -->
+
 
     <rdf:Description rdf:about="http://purl.org/spar/amo/Argument">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Proposition"/>
@@ -676,6 +752,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://purl.org/spar/amo/Backing -->
 
+
     <rdf:Description rdf:about="http://purl.org/spar/amo/Backing">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Argument"/>
     </rdf:Description>
@@ -683,6 +760,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- http://purl.org/spar/amo/Claim -->
+
 
     <rdf:Description rdf:about="http://purl.org/spar/amo/Claim">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Argument"/>
@@ -692,6 +770,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://purl.org/spar/amo/Evidence -->
 
+
     <rdf:Description rdf:about="http://purl.org/spar/amo/Evidence">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Argument"/>
     </rdf:Description>
@@ -699,6 +778,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- http://purl.org/spar/amo/Qualifier -->
+
 
     <rdf:Description rdf:about="http://purl.org/spar/amo/Qualifier">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Argument"/>
@@ -708,6 +788,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://purl.org/spar/amo/Rebuttal -->
 
+
     <rdf:Description rdf:about="http://purl.org/spar/amo/Rebuttal">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Argument"/>
     </rdf:Description>
@@ -715,6 +796,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- http://purl.org/spar/amo/Warrant -->
+
 
     <rdf:Description rdf:about="http://purl.org/spar/amo/Warrant">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Argument"/>
@@ -724,6 +806,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://purl.org/spar/doco/DiscourseElement -->
 
+
     <owl:Class rdf:about="http://purl.org/spar/doco/DiscourseElement">
         <rdfs:comment>An element of a document that carries out a rhetorical function.</rdfs:comment>
         <rdfs:label>discourse element</rdfs:label>
@@ -732,6 +815,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- http://purl.org/spar/doco/Paragraph -->
+
 
     <owl:Class rdf:about="http://purl.org/spar/doco/Paragraph">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/doco/DiscourseElement"/>
@@ -743,6 +827,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://purl.org/spar/doco/Section -->
 
+
     <owl:Class rdf:about="http://purl.org/spar/doco/Section">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/doco/DiscourseElement"/>
         <rdfs:comment>A logical division of the text, usually numbered and/or titled, which may contain subsections.</rdfs:comment>
@@ -752,6 +837,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- http://purl.org/spar/doco/SectionTitle -->
+
 
     <owl:Class rdf:about="http://purl.org/spar/doco/SectionTitle">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/doco/DiscourseElement"/>
@@ -763,6 +849,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
     <!-- http://purl.org/spar/doco/Sentence -->
 
+
     <owl:Class rdf:about="http://purl.org/spar/doco/Sentence">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/doco/DiscourseElement"/>
         <rdfs:comment>An expression in natural language forming a single grammatical unit. A sentence minimally consists of a subject and an intransitive verb, or a subject, a transitive verb and an object, and may include additional dependent clauses. In written text, a sentence is always terminated by a full stop. A sentence can include words grouped meaningfully to express a statement, a question, an exclamation, a request or a command.</rdfs:comment>
@@ -772,6 +859,7 @@ E.g.  The system includes two models: speech recognition and natural language un
 
 
     <!-- http://purl.org/spar/fabio/ResearchPaper -->
+
 
     <owl:Class rdf:about="http://purl.org/spar/fabio/ResearchPaper">
         <rdfs:comment>A scholarly work that reports original research contributions addressing theoretical, analytical or experimental aspects of a particular scholarly domain.
@@ -784,11 +872,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- http://www.w3.org/ns/prov#Agent -->
 
+
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
     
 
 
     <!-- http://xmlns.com/foaf/0.1/Person -->
+
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
         <rdfs:comment>A Person.</rdfs:comment>
@@ -799,6 +889,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Approach -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Approach">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Argument"/>
         <rdfs:comment>An Argument Proposition that presents, applies, or operationalizes a method, system, framework, dataset construction process, experimental setup, or other scholarly means used to address an Issue or realize an Idea. Approaches capture how a publication proposes to act on, investigate, or solve a research problem.</rdfs:comment>
@@ -808,6 +899,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Artifact -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Artifact">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Concept"/>
@@ -836,6 +928,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Cause -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Cause">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
     </owl:Class>
@@ -843,6 +936,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Circumstance -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Circumstance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
@@ -858,6 +952,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Concept -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Concept">
         <owl:disjointWith rdf:resource="https://w3id.org/twc/sudo/ontology#Proposition"/>
     </owl:Class>
@@ -866,6 +961,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Condition -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Condition">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
     </owl:Class>
@@ -873,6 +969,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Descriptor -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Descriptor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Proposition"/>
@@ -895,6 +992,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Elaboration -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Elaboration">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
     </owl:Class>
@@ -903,6 +1001,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Evaluation -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Evaluation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
     </owl:Class>
@@ -910,6 +1009,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Idea -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Idea">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Argument"/>
@@ -927,6 +1027,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Interpretation -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Interpretation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
     </owl:Class>
@@ -934,6 +1035,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Issue -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Issue">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/amo/Argument"/>
@@ -945,6 +1047,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Material -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Material">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
     </owl:Class>
@@ -952,6 +1055,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Method -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Method">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -961,6 +1065,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Metric -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Metric">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
     </owl:Class>
@@ -968,6 +1073,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Proposition -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Proposition">
         <owl:disjointUnionOf rdf:parseType="Collection">
@@ -980,6 +1086,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Purpose -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Purpose">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
     </owl:Class>
@@ -987,6 +1094,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Restatement -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Restatement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
@@ -996,6 +1104,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Result -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Result">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
     </owl:Class>
@@ -1003,6 +1112,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Solutionhood -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Solutionhood">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
@@ -1012,6 +1122,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Summary -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Summary">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Descriptor"/>
     </owl:Class>
@@ -1020,6 +1131,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Task -->
 
+
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Task">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
     </owl:Class>
@@ -1027,6 +1139,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Term -->
+
 
     <owl:Class rdf:about="https://w3id.org/twc/sudo/ontology#Term">
         <rdfs:subClassOf rdf:resource="https://w3id.org/twc/sudo/ontology#Artifact"/>
@@ -1042,10 +1155,12 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- https://orcid.org/0000-0002-9313-0925 -->
+
 
     <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-9313-0925"/>
     
@@ -1053,13 +1168,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology">
-        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-9313-0925"/>
-    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Argument -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Argument">
         <rdfs:label>Argument</rdfs:label>
@@ -1069,11 +1184,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Artifact -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Artifact"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Cause -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Cause"/>
     
@@ -1081,11 +1198,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Circumstance -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Circumstance"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Concept -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Concept"/>
     
@@ -1093,11 +1212,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Condition -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Condition"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Descriptor -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Descriptor"/>
     
@@ -1105,17 +1226,20 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Elaboration -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Elaboration"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Evaluation -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Evaluation"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#FeatureOf -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#FeatureOf">
         <rdfs:label>feature of</rdfs:label>
@@ -1126,11 +1250,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#HyponymOf -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#HyponymOf"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Interpretation -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Interpretation"/>
     
@@ -1138,11 +1264,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Material -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Material"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Method -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Method"/>
     
@@ -1150,11 +1278,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Metric -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Metric"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#PartOf -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#PartOf">
         <rdfs:label>part of</rdfs:label>
@@ -1165,11 +1295,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Proposition -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Proposition"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Purpose -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Purpose"/>
     
@@ -1177,11 +1309,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Restatement -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Restatement"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Result -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Result"/>
     
@@ -1189,11 +1323,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Solutionhood -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Solutionhood"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Summary -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Summary"/>
     
@@ -1201,17 +1337,20 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#Task -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Task"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#Term -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#Term"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#backs -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#backs">
         <rdfs:label>backs</rdfs:label>
@@ -1221,11 +1360,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#causes -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#causes"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#concede -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#concede"/>
     
@@ -1233,11 +1374,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#condition -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#condition"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#contextualizes -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#contextualizes"/>
     
@@ -1245,11 +1388,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#contrast -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#contrast"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#elaborates -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#elaborates"/>
     
@@ -1257,11 +1402,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#enables -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#enables"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#evaluates -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#evaluates"/>
     
@@ -1269,11 +1416,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#evidence -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#evidence"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#forces -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#forces"/>
     
@@ -1281,11 +1430,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#interprets -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#interprets"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#isValidUnless -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#isValidUnless">
         <rdfs:label>is valid unless</rdfs:label>
@@ -1295,11 +1446,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#justify -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#justify"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#leadsTo -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#leadsTo"/>
     
@@ -1307,11 +1460,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#mentions -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#mentions"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#motivates -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#motivates"/>
     
@@ -1319,11 +1474,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#proves -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#proves"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#purposes -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#purposes"/>
     
@@ -1331,11 +1488,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#responsesTo -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#responsesTo"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#restates -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#restates"/>
     
@@ -1343,11 +1502,13 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#result -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#result"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#solves -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#solves"/>
     
@@ -1355,17 +1516,20 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
 
     <!-- https://w3id.org/twc/sudo/ontology#summarizes -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#summarizes"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#supports -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#supports"/>
     
 
 
     <!-- https://w3id.org/twc/sudo/ontology#usedFor -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/twc/sudo/ontology#usedFor"/>
     
@@ -1379,10 +1543,16 @@ E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.</rdfs:
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
         <rdfs:comment>Recommended practice is to identify the creator with a URI. If this is not possible or feasible, a literal value that identifies the creator may be provided.</rdfs:comment>
         <rdfs:label>Creator</rdfs:label>
         <prov:definition>An entity responsible for making the resource.</prov:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+        <rdfs:comment>Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</rdfs:comment>
+        <rdfs:label>Date Issued</rdfs:label>
+        <prov:definition>Date of formal issuance of the resource.</prov:definition>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/twc/sudo/ontology#Artifact">
         <rdfs:comment>A source-grounded, paper-local mention of a scholarly object, method, dataset, metric, task, term, or other noun-phrase referent. Artifacts preserve the original textual expression of concepts within a publication and may be aligned to canonical Concepts across papers.</rdfs:comment>
@@ -1619,5 +1789,6 @@ E.g.  The TISPER system has been designed to enable many text applications.</rdf
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
 

@@ -1,0 +1,621 @@
+<div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#http://purl.org/ontology/bibo/Proceedings">http://purl.org/ontology/bibo/Proceedings</a>
+<ul>
+<li>Added: rdfs:comment "A compilation of documents published from an event, such as a conference."^^xsd:string</li>
+<li>Added: rdfs:label "Proceedings"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/doco/DiscourseElement">http://purl.org/spar/doco/DiscourseElement</a>
+<ul>
+<li>Added: rdfs:comment "An element of a document that carries out a rhetorical function."^^xsd:string</li>
+<li>Added: rdfs:label "discourse element"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/doco/Paragraph">http://purl.org/spar/doco/Paragraph</a>
+<ul>
+<li>Added: rdfs:comment "A self-contained unit of discourse that deals with a particular point or idea. Paragraphs contains one or more sentences. The start of a paragraph is indicated by beginning on a new line, which may be indented or separated by a small vertical space by the preceding paragraph."^^xsd:string</li>
+<li>Added: rdfs:label "paragraph"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/doco/Section">http://purl.org/spar/doco/Section</a>
+<ul>
+<li>Added: rdfs:label "section"^^xsd:string</li>
+<li>Added: rdfs:comment "A logical division of the text, usually numbered and/or titled, which may contain subsections."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/doco/SectionTitle">http://purl.org/spar/doco/SectionTitle</a>
+<ul>
+<li>Added: rdfs:label "section title"^^xsd:string</li>
+<li>Added: rdfs:comment "The title of a section."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/doco/Sentence">http://purl.org/spar/doco/Sentence</a>
+<ul>
+<li>Added: rdfs:comment "An expression in natural language forming a single grammatical unit. A sentence minimally consists of a subject and an intransitive verb, or a subject, a transitive verb and an object, and may include additional dependent clauses. In written text, a sentence is always terminated by a full stop. A sentence can include words grouped meaningfully to express a statement, a question, an exclamation, a request or a command."^^xsd:string</li>
+<li>Added: rdfs:label "sentence"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/fabio/ResearchPaper">http://purl.org/spar/fabio/ResearchPaper</a>
+<ul>
+<li>Added: rdfs:label "research paper"^^xsd:string</li>
+<li>Added: rdfs:comment "A scholarly work that reports original research contributions addressing theoretical, analytical or experimental aspects of a particular scholarly domain.
+
+E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://xmlns.com/foaf/0.1/Person">http://xmlns.com/foaf/0.1/Person</a>
+<ul>
+<li>Added: rdfs:label "(foaf) Person"^^xsd:string</li>
+<li>Added: rdfs:comment "A Person."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Approach">https://w3id.org/twc/sudo/ontology#Approach</a>
+<ul>
+<li>Added: rdfs:label "approach"^^xsd:string</li>
+<li>Added: rdfs:comment "An Argument Proposition that presents, applies, or operationalizes a method, system, framework, dataset construction process, experimental setup, or other scholarly means used to address an Issue or realize an Idea. Approaches capture how a publication proposes to act on, investigate, or solve a research problem."^^xsd:string</li>
+<li>Added: SubClass of http://purl.org/spar/amo/Argument</li>
+</ul>
+<ul>
+<li>Deleted: SubClass of https://w3id.org/twc/sudo/ontology#Argument</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Artifact">https://w3id.org/twc/sudo/ontology#Artifact</a>
+<ul>
+<li>Added: rdfs:label "artifact"^^xsd:string</li>
+<li><li><li>Added: rdfs:comment "A source-grounded, paper-local mention of a scholarly object, method, dataset, metric, task, term, or other noun-phrase referent. Artifacts preserve the original textual expression of concepts within a publication and may be aligned to canonical Concepts across papers."^^xsd:string</li>
+<li>Added: DisjointUnion DisjointUnion(&lt;https://w3id.org/twc/sudo/ontology#Artifact&gt; &lt;https://w3id.org/twc/sudo/ontology#Material&gt; &lt;https://w3id.org/twc/sudo/ontology#Method&gt; &lt;https://w3id.org/twc/sudo/ontology#Metric&gt; &lt;https://w3id.org/twc/sudo/ontology#Task&gt; &lt;https://w3id.org/twc/sudo/ontology#Term&gt;)</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Cause">https://w3id.org/twc/sudo/ontology#Cause</a>
+<ul>
+<li>Added: rdfs:label "cause"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Circumstance">https://w3id.org/twc/sudo/ontology#Circumstance</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "circumstance"^^xsd:string</li>
+<li></ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Concept">https://w3id.org/twc/sudo/ontology#Concept</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/twc/sudo/ontology#Concept&gt; &lt;https://w3id.org/twc/sudo/ontology#Proposition&gt;)</li>
+<li>Added: rdfs:label "concept"^^xsd:string</li>
+<li>Added: rdfs:comment "A canonical scholarly concept that provides a cross-publication identity for recurring paper-local Artifact mentions. Concepts abstract over source-specific phrasings while preserving links to the Artifacts through which they are expressed in individual publications"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Condition">https://w3id.org/twc/sudo/ontology#Condition</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "condition"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Descriptor">https://w3id.org/twc/sudo/ontology#Descriptor</a>
+<ul>
+<li>Added: rdfs:label "descriptor"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:anyURI</li>
+<li>Added: rdfs:comment "A Proposition that contextualizes, qualifies, characterizes, or elaborates an Artifact or another Proposition rather than advancing the publication's main research argument. Descriptors preserve local explanatory, evaluative, definitional, and conditional details that give scholarly concepts and statements their paper-specific meaning."^^xsd:string</li>
+<li>Added: DisjointUnion DisjointUnion(&lt;https://w3id.org/twc/sudo/ontology#Descriptor&gt; &lt;https://w3id.org/twc/sudo/ontology#Cause&gt; &lt;https://w3id.org/twc/sudo/ontology#Circumstance&gt; &lt;https://w3id.org/twc/sudo/ontology#Condition&gt; &lt;https://w3id.org/twc/sudo/ontology#Elaboration&gt; &lt;https://w3id.org/twc/sudo/ontology#Evaluation&gt; &lt;https://w3id.org/twc/sudo/ontology#Interpretation&gt; &lt;https://w3id.org/twc/sudo/ontology#Purpose&gt; &lt;https://w3id.org/twc/sudo/ontology#Restatement&gt; &lt;https://w3id.org/twc/sudo/ontology#Result&gt; &lt;https://w3id.org/twc/sudo/ontology#Solutionhood&gt; &lt;https://w3id.org/twc/sudo/ontology#Summary&gt;)</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Elaboration">https://w3id.org/twc/sudo/ontology#Elaboration</a>
+<ul>
+<li>Added: rdfs:label "elaboration"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Evaluation">https://w3id.org/twc/sudo/ontology#Evaluation</a>
+<ul>
+<li>Added: rdfs:label "evaluation"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Idea">https://w3id.org/twc/sudo/ontology#Idea</a>
+<ul>
+<li>Added: SubClass of http://purl.org/spar/amo/Argument</li>
+<li>Added: rdfs:label "idea"^^xsd:string</li>
+<li><li>Added: rdfs:comment "An Argument Proposition that introduces a proposed insight, hypothesis, design principle, conceptual direction, or motivating proposal that guides the publication's response to an Issue. Ideas often motivate one or more concrete Approaches but may remain more conceptual than implementation-specific."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: SubClass of https://w3id.org/twc/sudo/ontology#Argument</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Interpretation">https://w3id.org/twc/sudo/ontology#Interpretation</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "interpretation"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Issue">https://w3id.org/twc/sudo/ontology#Issue</a>
+<ul>
+<li>Added: rdfs:label "issue"^^xsd:string</li>
+<li>Added: rdfs:comment "An Argument Proposition that identifies a research problem, limitation, gap, challenge, question, or motivating condition addressed by the publication. Issues provide the argumentative context to which Ideas and Approaches respond."^^xsd:string</li>
+<li>Added: SubClass of http://purl.org/spar/amo/Argument</li>
+</ul>
+<ul>
+<li>Deleted: SubClass of https://w3id.org/twc/sudo/ontology#Argument</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Material">https://w3id.org/twc/sudo/ontology#Material</a>
+<ul>
+<li>Added: rdfs:seeAlso "http://arxiv.org/abs/1808.09602"^^xsd:string</li>
+<li>Added: rdfs:label "material"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Method">https://w3id.org/twc/sudo/ontology#Method</a>
+<ul>
+<li>Added: rdfs:label "method"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "http://arxiv.org/abs/1808.09602"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Metric">https://w3id.org/twc/sudo/ontology#Metric</a>
+<ul>
+<li>Added: rdfs:label "metric"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "http://arxiv.org/abs/1808.09602"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Proposition">https://w3id.org/twc/sudo/ontology#Proposition</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/twc/sudo/ontology#Concept&gt; &lt;https://w3id.org/twc/sudo/ontology#Proposition&gt;)</li>
+<li>Added: rdfs:label "proposition"^^xsd:string</li>
+<li>Added: DisjointUnion DisjointUnion(&lt;https://w3id.org/twc/sudo/ontology#Proposition&gt; &lt;http://purl.org/spar/amo/Argument&gt; &lt;https://w3id.org/twc/sudo/ontology#Descriptor&gt;)</li>
+<li>Added: rdfs:comment "A source-grounded representation of the meaning expressed by a finite clause in a publication. Propositions preserve what the author asserts, proposes, explains, evaluates, qualifies, or otherwise communicates, and serve as first-class nodes for modeling scholarly discourse and relations that cannot be reduced to entity-to-entity triples."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Purpose">https://w3id.org/twc/sudo/ontology#Purpose</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "purpose"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Restatement">https://w3id.org/twc/sudo/ontology#Restatement</a>
+<ul>
+<li>Added: rdfs:label "restatement"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Result">https://w3id.org/twc/sudo/ontology#Result</a>
+<ul>
+<li>Added: rdfs:label "result"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Solutionhood">https://w3id.org/twc/sudo/ontology#Solutionhood</a>
+<ul>
+<li>Added: rdfs:comment "The proposition representing the situation that solves by the artifact."^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "solutionhood"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Summary">https://w3id.org/twc/sudo/ontology#Summary</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "summary"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Task">https://w3id.org/twc/sudo/ontology#Task</a>
+<ul>
+<li>Added: rdfs:seeAlso "http://arxiv.org/abs/1808.09602"^^xsd:string</li>
+<li>Added: rdfs:label "task"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Term">https://w3id.org/twc/sudo/ontology#Term</a>
+<ul>
+<li>Added: rdfs:label "term"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "http://arxiv.org/abs/1808.09602"^^xsd:string</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://purl.org/spar/amo/Argument">http://purl.org/spar/amo/Argument</a>
+<ul>
+<li>Added: DisjointUnion DisjointUnion(&lt;http://purl.org/spar/amo/Argument&gt; &lt;http://purl.org/spar/amo/Backing&gt; &lt;http://purl.org/spar/amo/Claim&gt; &lt;http://purl.org/spar/amo/Evidence&gt; &lt;http://purl.org/spar/amo/Qualifier&gt; &lt;http://purl.org/spar/amo/Rebuttal&gt; &lt;http://purl.org/spar/amo/Warrant&gt; &lt;https://w3id.org/twc/sudo/ontology#Approach&gt; &lt;https://w3id.org/twc/sudo/ontology#Idea&gt; &lt;https://w3id.org/twc/sudo/ontology#Issue&gt;)</li>
+<li>Added: SubClass of https://w3id.org/twc/sudo/ontology#Proposition</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/amo/Backing">http://purl.org/spar/amo/Backing</a>
+<ul>
+<li>Added: SubClass of http://purl.org/spar/amo/Argument</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/amo/Claim">http://purl.org/spar/amo/Claim</a>
+<ul>
+<li>Added: SubClass of http://purl.org/spar/amo/Argument</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/amo/Evidence">http://purl.org/spar/amo/Evidence</a>
+<ul>
+<li>Added: SubClass of http://purl.org/spar/amo/Argument</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/amo/Qualifier">http://purl.org/spar/amo/Qualifier</a>
+<ul>
+<li>Added: SubClass of http://purl.org/spar/amo/Argument</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/amo/Rebuttal">http://purl.org/spar/amo/Rebuttal</a>
+<ul>
+<li>Added: SubClass of http://purl.org/spar/amo/Argument</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/amo/Warrant">http://purl.org/spar/amo/Warrant</a>
+<ul>
+<li>Added: SubClass of http://purl.org/spar/amo/Argument</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted classes</u></summary>
+<ul><li><a href="#https://w3id.org/twc/sudo/ontology#Argument">https://w3id.org/twc/sudo/ontology#Argument</a>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Backing">https://w3id.org/twc/sudo/ontology#Backing</a>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Claim">https://w3id.org/twc/sudo/ontology#Claim</a>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Evidence">https://w3id.org/twc/sudo/ontology#Evidence</a>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Qualifier">https://w3id.org/twc/sudo/ontology#Qualifier</a>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Rebuttal">https://w3id.org/twc/sudo/ontology#Rebuttal</a>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#Warrant">https://w3id.org/twc/sudo/ontology#Warrant</a>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#http://purl.org/dc/terms/creator">http://purl.org/dc/terms/creator</a>
+<ul>
+<li>Added: rdfs:label "Creator"^^xsd:string</li>
+<li>Added: <http://www.w3.org/ns/prov#definition> "An entity responsible for making the resource."^^xsd:string</li>
+<li>Added: rdfs:comment "Recommended practice is to identify the creator with a URI. If this is not possible or feasible, a literal value that identifies the creator may be provided."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/spar/cito/cites">http://purl.org/spar/cito/cites</a>
+<ul>
+<li>Added: rdfs:label "cites"^^xsd:string</li>
+<li>Added: rdfs:comment "The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.essepuntato.it/2008/12/pattern#contains">http://www.essepuntato.it/2008/12/pattern#contains</a>
+<ul>
+<li>Added: rdfs:label "contains"^^xsd:string</li>
+<li>Added: domain http://purl.org/spar/doco/DiscourseElement</li>
+<li>Added: Range http://purl.org/spar/doco/DiscourseElement</li>
+<li>Added: rdfs:comment "A structured element contains another generic element."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2004/02/skos/core#altLabel">http://www.w3.org/2004/02/skos/core#altLabel</a>
+<ul>
+<li>Added: Range https://w3id.org/twc/sudo/ontology#Concept</li>
+<li>Added: domain https://w3id.org/twc/sudo/ontology#Concept</li>
+<li>Added: rdfs:label "alternative label"^^xsd:string</li>
+<li>Added: rdfs:comment "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.
+The range of skos:altLabel is the class of RDF plain literals."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Artifact</li>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Artifact</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2004/02/skos/core#closeMatch">http://www.w3.org/2004/02/skos/core#closeMatch</a>
+<ul>
+<li>Added: rdfs:comment "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property."^^xsd:string</li>
+<li>Added: rdfs:label "has close match"^^xsd:string</li>
+<li>Added: Range https://w3id.org/twc/sudo/ontology#Concept</li>
+<li>Added: domain https://w3id.org/twc/sudo/ontology#Concept</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Artifact</li>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Artifact</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#HyponymOf">https://w3id.org/twc/sudo/ontology#HyponymOf</a>
+<ul>
+<li>Added: rdfs:label "hyponym of"^^xsd:string</li>
+<li>Added: rdfs:comment "B is a hyponym of A, B is a  type of A. 
+
+E.g.  TUIT is a software library  NLP applications such as machine translation and language generation"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "http://arxiv.org/abs/1808.09602"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#causes">https://w3id.org/twc/sudo/ontology#causes</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "causes"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#concede">https://w3id.org/twc/sudo/ontology#concede</a>
+<ul>
+<li>Added: Range http://purl.org/spar/amo/Argument</li>
+<li>Added: rdfs:comment "Relates one Proposition to another Proposition when the source acknowledges a limitation, exception, counterpoint, or opposing consideration while leaving the target proposition still relevant or defensible. This predicate is derived from the RST Concession relation."^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "concede"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Argument</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#condition">https://w3id.org/twc/sudo/ontology#condition</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "condition"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#contextualizes">https://w3id.org/twc/sudo/ontology#contextualizes</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: Range Union of (http://purl.org/spar/amo/Argument, https://w3id.org/twc/sudo/ontology#Artifact)</li>
+<li>Added: domain Union of (https://w3id.org/twc/sudo/ontology#Artifact, https://w3id.org/twc/sudo/ontology#Circumstance)</li>
+<li>Added: rdfs:label "contextualizes"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Argument</li>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Artifact</li>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Circumstance</li>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Artifact</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#contrast">https://w3id.org/twc/sudo/ontology#contrast</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:comment "Relates one Proposition to another Proposition that it contrasts with, opposes, or presents as an alternative perspective. This predicate is derived from the RST Antithesis relation."^^xsd:string</li>
+<li>Added: Range http://purl.org/spar/amo/Argument</li>
+<li>Added: rdfs:label "contrast"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Argument</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#elaborates">https://w3id.org/twc/sudo/ontology#elaborates</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "elaborates"^^xsd:string</li>
+<li>Added: rdfs:comment "The proposition presents additiona detail about the situation or some element of subject mattern which is presentes in the artifact or inferentially accessible in N in one or more of the way listed below;
+set: member
+abstract : instance 
+whole : part
+process : step
+object : attribute
+generalization : specific"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#enables">https://w3id.org/twc/sudo/ontology#enables</a>
+<ul>
+<li>Added: rdfs:label "enables"^^xsd:string</li>
+<li>Added: Range http://purl.org/spar/amo/Argument</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Argument</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#evaluates">https://w3id.org/twc/sudo/ontology#evaluates</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "evaluates"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#evidence">https://w3id.org/twc/sudo/ontology#evidence</a>
+<ul>
+<li>Added: Range http://purl.org/spar/amo/Evidence</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "evidence"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Evidence</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#forces">https://w3id.org/twc/sudo/ontology#forces</a>
+<ul>
+<li>Added: domain http://purl.org/spar/amo/Qualifier</li>
+<li>Added: rdfs:label "forces"^^xsd:string</li>
+<li>Added: Range http://purl.org/spar/amo/Claim</li>
+</ul>
+<ul>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Qualifier</li>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Claim</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#interprets">https://w3id.org/twc/sudo/ontology#interprets</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "interprets"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#justify">https://w3id.org/twc/sudo/ontology#justify</a>
+<ul>
+<li>Added: Range http://purl.org/spar/amo/Argument</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:comment "Relates one Proposition to another Proposition when the source provides a reason, explanation, or argumentative basis that makes the target acceptable or warranted. This predicate is derived from the RST Justify relation."^^xsd:string</li>
+<li>Added: rdfs:label "justify"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Argument</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#leadsTo">https://w3id.org/twc/sudo/ontology#leadsTo</a>
+<ul>
+<li>Added: domain http://purl.org/spar/amo/Warrant</li>
+<li>Added: rdfs:label "leads to"^^xsd:string</li>
+<li>Added: Range http://purl.org/spar/amo/Claim</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Claim</li>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Warrant</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#mentions">https://w3id.org/twc/sudo/ontology#mentions</a>
+<ul>
+<li>Added: rdfs:label "mentions"^^xsd:string</li>
+<li>Added: rdfs:comment "Relates a Proposition to an Artifact that is explicitly mentioned in the Proposition's source text, without asserting a more specific semantic role between them."^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: domain https://w3id.org/twc/sudo/ontology#Proposition</li>
+</ul>
+<ul>
+<li>Deleted: domain Union of (https://w3id.org/twc/sudo/ontology#Argument, https://w3id.org/twc/sudo/ontology#Descriptor)</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#motivates">https://w3id.org/twc/sudo/ontology#motivates</a>
+<ul>
+<li>Added: rdfs:label "motivates"^^xsd:string</li>
+<li>Added: Range Union of (http://purl.org/spar/amo/Argument, https://w3id.org/twc/sudo/ontology#Approach)</li>
+<li>Added: domain Union of (https://w3id.org/twc/sudo/ontology#Artifact, https://w3id.org/twc/sudo/ontology#Idea)</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Argument</li>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Approach</li>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Idea</li>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Artifact</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#proves">https://w3id.org/twc/sudo/ontology#proves</a>
+<ul>
+<li>Added: Range http://purl.org/spar/amo/Claim</li>
+<li>Added: rdfs:label "proves"^^xsd:string</li>
+<li>Added: domain http://purl.org/spar/amo/Evidence</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Claim</li>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Evidence</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#purposes">https://w3id.org/twc/sudo/ontology#purposes</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "purposes"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#responsesTo">https://w3id.org/twc/sudo/ontology#responsesTo</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:comment "Relates a Proposition to another Proposition that it addresses as a motivating problem, question, need, or proposed response. This predicate is used both when an Idea responds to an Issue and when an Approach responds to an Issue by operationalizing a way to address it."^^xsd:string</li>
+<li>Added: rdfs:label "response to"^^xsd:string</li>
+<li>Added: domain Union of (https://w3id.org/twc/sudo/ontology#Approach, https://w3id.org/twc/sudo/ontology#Idea)</li>
+</ul>
+<ul>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Idea</li>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Approach</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#restates">https://w3id.org/twc/sudo/ontology#restates</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "restates"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#result">https://w3id.org/twc/sudo/ontology#result</a>
+<ul>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+<li>Added: rdfs:label "result"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: SubProperty of https://w3id.org/twc/sudo/ontology#restates</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#solves">https://w3id.org/twc/sudo/ontology#solves</a>
+<ul>
+<li>Added: rdfs:label "solves"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#summarizes">https://w3id.org/twc/sudo/ontology#summarizes</a>
+<ul>
+<li>Added: rdfs:label "summarizes"^^xsd:string</li>
+<li>Added: rdfs:seeAlso "https://www.sfu.ca/rst/05bibliographies/bibs/ISI_RS_87_190.pdf"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#supports">https://w3id.org/twc/sudo/ontology#supports</a>
+<ul>
+<li>Added: Range http://purl.org/spar/amo/Argument</li>
+<li>Added: rdfs:label "supports"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Warrant</li>
+<li>Deleted: domain https://w3id.org/twc/sudo/ontology#Evidence</li>
+<li>Deleted: Range https://w3id.org/twc/sudo/ontology#Argument</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#usedFor">https://w3id.org/twc/sudo/ontology#usedFor</a>
+<ul>
+<li>Added: rdfs:comment "B is used for A, B models A, A is  trained on B, B exploits A, A is based on B. 
+
+E.g.  The TISPER system has been designed to enable many text applications."^^xsd:string</li>
+<li>Added: rdfs:seeAlso "http://arxiv.org/abs/1808.09602"^^xsd:anyURI</li>
+<li>Added: rdfs:label "used for"^^xsd:string</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#https://w3id.org/twc/sudo/ontology#featureOf">https://w3id.org/twc/sudo/ontology#featureOf</a>
+<ul>
+<li>Added: domain https://w3id.org/twc/sudo/ontology#Artifact</li>
+<li>Added: Range https://w3id.org/twc/sudo/ontology#Artifact</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#partOf">https://w3id.org/twc/sudo/ontology#partOf</a>
+<ul>
+<li>Added: Range https://w3id.org/twc/sudo/ontology#Artifact</li>
+<li>Added: domain https://w3id.org/twc/sudo/ontology#Artifact</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted object properties</u></summary>
+<ul><li><a href="#http://purl.org/pav/createdBy">http://purl.org/pav/createdBy</a>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#hadPrimarySource">http://www.w3.org/ns/prov#hadPrimarySource</a>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#wasDerivedFrom">http://www.w3.org/ns/prov#wasDerivedFrom</a>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#FeatureOf">https://w3id.org/twc/sudo/ontology#FeatureOf</a>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#PartOf">https://w3id.org/twc/sudo/ontology#PartOf</a>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#backs">https://w3id.org/twc/sudo/ontology#backs</a>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#isValidUnless">https://w3id.org/twc/sudo/ontology#isValidUnless</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Modified data properties</u></summary>
+<ul><li><a href="#http://purl.org/dc/terms/issued">http://purl.org/dc/terms/issued</a>
+<ul>
+<li>Added: rdfs:comment "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."^^xsd:string</li>
+<li>Added: <http://www.w3.org/ns/prov#definition> "Date of formal issuance of the resource."^^xsd:string</li>
+<li>Added: rdfs:label "Date Issued"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/dc/terms/subject">http://purl.org/dc/terms/subject</a>
+<ul>
+<li>Added: rdfs:comment "Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary."^^xsd:string</li>
+<li>Added: rdfs:label "Subject"^^xsd:string</li>
+<li>Added: <http://www.w3.org/ns/prov#definition> "A topic of the resource."^^xsd:string</li>
+<li>Added: Domain http://purl.org/spar/fabio/ResearchPaper</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Research field related to the publication"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://purl.org/dc/terms/title">http://purl.org/dc/terms/title</a>
+<ul>
+<li>Added: rdfs:label "Title"^^xsd:string</li>
+<li>Added: rdfs:comment "A name given to the resource."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://schema.org/position">http://schema.org/position</a>
+<ul>
+<li>Added: rdfs:label "position"^^xsd:string</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#integer</li>
+<li>Added: rdfs:comment "The position of an item in a series or sequence of items."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2000/01/rdf-schema#seeAlso">http://www.w3.org/2000/01/rdf-schema#seeAlso</a>
+<ul>
+<li>Deleted: Range http://www.w3.org/2001/XMLSchema#anyURI</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/twc/sudo/ontology#citationCount">https://w3id.org/twc/sudo/ontology#citationCount</a>
+<ul>
+<li>Added: rdfs:label "citation count"^^xsd:string</li>
+<li>Added: rdfs:comment "The number of citations received by a scholarly publication, work, or other citable resource according to a specified bibliographic source or index."^^xsd:string</li>
+</ul>
+</li>
+</ul></details></div>
